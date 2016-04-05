@@ -1,6 +1,6 @@
-﻿h3
+﻿#welcome
 {
-	margin-top: 0px;
+	margin-top: auto !important; /*WHY CAN I NOT OVERRIDE BOOTSTRAP!?!?!?*/
 }
 
 #wrapper
