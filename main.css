@@ -1,0 +1,11 @@
+﻿#wrapper
+{
+	height: 1024px;
+	background: #004;
+	color: white;
+}
+
+header
+{
+	position: absolute;
+}
