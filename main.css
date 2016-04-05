@@ -1,4 +1,9 @@
-﻿#wrapper
+﻿h3
+{
+	margin-top: 0px;
+}
+
+#wrapper
 {
 	/*height: 1024px;*/
 	background: -ms-linear-gradient(0deg, lightblue, black);
