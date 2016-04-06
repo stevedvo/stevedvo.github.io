@@ -15,16 +15,12 @@
 
 	<body>
 		<div id="wrapper" class="col-lg-12 col-md-12 col-sm-12">
-
 			<?php
 				$page_title = "Home";
 				include ("includes/header.html");
 				include ("includes/about.html");
-
 			?>
-
 		</div>
-		
 	<body>
 
 <html>

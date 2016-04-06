@@ -1,4 +1,10 @@
-﻿.head1, .head3
+﻿#background
+{
+	opacity: 0.1;
+	position: fixed;
+}
+
+.head1, .head3
 {
 	margin-top: auto;
 }
@@ -17,5 +23,5 @@
 	background: -o-linear-gradient(0deg, lightblue, black);
 	background: linear-gradient(0deg, lightblue, black);
 	color: white;
+	padding-left: 0px;
 }
-
