@@ -1,4 +1,14 @@
-﻿#wrapper
+﻿.head1, .head3
+{
+	margin-top: auto;
+}
+
+.navitem
+{
+	margin: 0px 10px 0px 10px;
+}
+
+#wrapper
 {
 	/*height: 1024px;*/
 	background: -ms-linear-gradient(0deg, lightblue, black);
