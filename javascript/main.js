@@ -3,14 +3,30 @@ function resizeBackground ()
 	var xWidth = $(window).width();
 	var yHeight = $(window).height();
 
-	if (yHeight > xWidth)
+	var imgWidth = $("#background").width();
+	var imgHeight = $("#background").height();
+
+	
+	if (imgWidth>xWidth && imgHeight>yHeight)
+	{
+		$("#background").width(xWidth);
+		$("#background").height(xWidth*imgHeight/imgWidth);
+	}
+
+	if (imgWidth<xWidth)
+	{
+		$("#background").width(xWidth);
+		$("#background").height(xWidth*imgHeight/imgWidth);
+	}
+
+	if (imgHeight<yHeight)
 	{
 		$("#background").height(yHeight);
+		$("#background").width(yHeight*imgWidth/imgHeight);
 	}
-	else
-	{
-		$("#background").width(xWidth);			
-	}
+
+	console.log ("Window width is: "+xWidth+"; Img width is: "+imgWidth);
+	console.log ("Window height is: "+yHeight+"; Img height is: "+imgHeight);
 
 }
 

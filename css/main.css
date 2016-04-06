@@ -1,6 +1,6 @@
 ﻿#background
 {
-	opacity: 0.3;
+	opacity: 0.1;
 	position: fixed;
 }
 
@@ -23,4 +23,5 @@
 	background: -o-linear-gradient(0deg, lightblue, black);
 	background: linear-gradient(0deg, lightblue, black);
 	color: white;
+	padding-left: 0px;
 }
