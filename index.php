@@ -4,6 +4,8 @@
 
 	<head>
 		<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- additional options to content to prevent zooming on mobile devices, maximum-scale=1, user-scalable=no"-->
 		<link rel="stylesheet" type="text/css" href="css/main.css"/>
 		<script type="text/javascript" src="javascript/main.js"></script>
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
@@ -14,12 +16,14 @@
 	</head>
 
 	<body>
-		<div id="wrapper" class="col-lg-12 col-md-12 col-sm-12">
-			<?php
-				$page_title = "Home";
-				include ("includes/header.html");
-				include ("includes/about.html");
-			?>
+		<div class="container-fluid">
+			<div id="wrapper" class="col-lg-12 col-md-12 col-sm-12">
+				<?php
+					$page_title = "Home";
+					include ("includes/header.html");
+					include ("includes/about.html");
+				?>
+			</div>
 		</div>
 	<body>
 
