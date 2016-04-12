@@ -1,38 +1,56 @@
+var	xImg;
+var	yImg;
+var	ratioImg;
+var yWrap;
+
 function resizeBackground ()
 {
-	var xWidth = $(window).width();
-	var yHeight = $(window).height();
+	xWind = $(window).width();
+	yWind = $(window).height();
+	ratioWind = xWind/yWind;
 
-	var imgWidth = $("#background").width();
-	var imgHeight = $("#background").height();
+	xImg = $("#background").width();
+	yImg = $("#background").height();
+	newImgRatio = xImg/yImg;
 
+	if (ratioImg > ratioWind)
+	{
+		$("#background").height(yWind);
+		$("#background").width(yImg*ratioImg);
+	}
+	else
+	{
+		$("#background").width(xWind);
+		$("#background").height(xImg/ratioImg);
+	}
+
+	yWrap = $("#wrapper").height();
+	yCont = $("#page-content-wrapper").height();
+	console.log ("Pre if statement: yWrap="+yWrap);
+	console.log ("Pre if statement: page="+yCont);
 	
-	if (imgWidth>xWidth && imgHeight>yHeight)
-	{
-		$("#background").width(xWidth);
-		$("#background").height(xWidth*imgHeight/imgWidth);
-		/*$("#wrapper").width(xWidth);
-		$("#wrapper").height(xWidth*imgHeight/imgWidth);
-	*/}
+	yDoc = $(document).height();
 
-	if (imgWidth<xWidth)
+	/*if ($(document).height() > yWind)
 	{
-		$("#background").width(xWidth);
-		$("#background").height(xWidth*imgHeight/imgWidth);
-/*		$("#wrapper").width(xWidth);
-		$("#wrapper").height(xWidth*imgHeight/imgWidth);
-*/	}
-
-	if (imgHeight<yHeight)
+		// $("#wrapper").height($(document).height());
+	}
+	
+	if (yWrap < yWind)
 	{
-		$("#background").height(yHeight);
-		$("#background").width(yHeight*imgWidth/imgHeight);
-/*		$("#wrapper").height(yHeight);
-		$("#wrapper").width(yHeight*imgWidth/imgHeight);
-*/	}
-
-	console.log ("Window width is: "+xWidth+"; Img width is: "+imgWidth);
-	console.log ("Window height is: "+yHeight+"; Img height is: "+imgHeight);
+		console.log ("Wrapper too small");
+		$("#wrapper").height(yWind);
+		console.log ("Wrapper resized?");
+	}
+	// else {console.log ("Wrapper big enough");}
+	*/
+	yWrap = $("#wrapper").height();
+	console.log ("Post if statement: yWrap="+yWrap);
+	
+	console.log ("xWind="+xWind+";yWind="+yWind+";ratio="+ratioWind);
+	console.log ("xImg="+xImg+";yImg="+yImg+";ratio="+newImgRatio);
+	console.log ("yWrap="+yWrap);
+	console.log ("document.height="+yDoc);
 
 }
 
@@ -50,8 +68,14 @@ function init ()
 		$(this).animate({backgroundColor: jQuery.Color({alpha: 0}), color: "#337ab7"}, 250);
 	});
 
+	$(".left").mouseover(function()
+	{
+		$(this).css('font-weight', 'bold');
+	});
+
 	$(".left").mouseout(function()
 	{
+		$(this).css('font-weight', 'normal');
 		$(this).animate({backgroundColor: jQuery.Color({alpha: 0}), color: "#white"}, 250);
 	});
 
@@ -62,49 +86,70 @@ function init ()
 	});
 
 	$(".sections").css('display', 'none');
-	$("#section_1").css('display', 'block');
+	// $(".sections").css('visibility', 'hidden');
+	// $("#section_1").css('visibility', 'visible');
 	$(".temphdr").css("background", "yellow");
-	$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 2000);
+	$("#section_1").show("fold", 500).delay(500).css('display', 'block');
+	$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1000);
 
 	$("#li_1").click(function()
 	{
 		$(".sections").css('display', 'none');
+		// $(".sections").css('visibility', 'hidden');
+		// $("#section_1").css('visibility', 'visible');
 		$(".temphdr").css("background", "yellow");
-		$("#section_1").show("fold", 1000);
-		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 2000);
+		$("#section_1").show("fold", 500).delay(500).css('display', 'block');
+		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1000);
+		resizeBackground();
 	});
 
 	$("#li_2").click(function()
 	{
 		$(".sections").css('display', 'none');
+		// $(".sections").css('visibility', 'hidden');
+		// $("#section_2").css('visibility', 'visible');
 		$(".temphdr").css("background", "yellow");
-		$("#section_2").show("fold", 1000);
-		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 2000);
+		$("#section_2").show("fold", 500).delay(500).css('display', 'block');
+		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1000);
+		resizeBackground();
 	});
 
 	$("#li_3").click(function()
 	{
 		$(".sections").css('display', 'none');
+		// $(".sections").css('visibility', 'hidden');
+		// $("#section_3").css('visibility', 'visible');
 		$(".temphdr").css("background", "yellow");
-		$("#section_3").show("fold", 1000);
-		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 2000);
+		$("#section_3").show("fold", 500).delay(500).css('display', 'block');
+		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1000);
+		resizeBackground();
 	});
 
 	$("#li_4").click(function()
 	{
 		$(".sections").css('display', 'none');
+		// $(".sections").css('visibility', 'hidden');
+		// $("#section_4").css('visibility', 'visible');
 		$(".temphdr").css("background", "yellow");
-		$("#section_4").show("fold", 1000);
-		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 2000);
+		$("#section_4").show("fold", 500).delay(500).css('display', 'block');
+		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1000);
+		resizeBackground();
 	});
 
 	$("#li_5").click(function()
 	{
 		$(".sections").css('display', 'none');
+		// $(".sections").css('visibility', 'hidden');
+		// $("#section_5").css('visibility', 'visible');
 		$(".temphdr").css("background", "yellow");
-		$("#section_5").show("fold", 1000);
-		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 2000);
+		$("#section_5").show("fold", 500).delay(500).css('display', 'block');
+		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1000);
+		resizeBackground();
 	});
+
+	xImg = $("#background").width();
+	yImg = $("#background").height();
+	ratioImg = xImg/yImg;
 
 	resizeBackground();
 }
