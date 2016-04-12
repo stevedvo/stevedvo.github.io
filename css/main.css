@@ -1,6 +1,6 @@
 ﻿#background
 {
-	opacity: 0.1;
+	opacity: 0.25;
 	position: fixed;
 }
 
@@ -24,4 +24,28 @@
 	background: linear-gradient(0deg, lightblue, black);
 	color: white;
 	padding-left: 0px;
+}
+
+#page-content-wrapper
+{
+	position: relative;
+	top: -15px;
+}
+
+.sidebar-nav
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sidebar-nav li
+{
+	text-indent: 20px;
+	line-height: 40px;
+}
+
+.temphdr
+{
+	height: 15px;
 }

@@ -3,41 +3,151 @@
 <html lang="en">
 
 	<head>
-		<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
-		<title><?php echo $page_title;?></title>
-		<link rel="stylesheet" type="text/css" href="css/main.css"/>
-		<script type="text/javascript" src="javascript/main.js"></script>
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-		<script type="text/javascript" src="http://code.jquery.com/color/jquery.color-2.1.2.js"></script>
-		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
 	</head>
 
 	<body>
-		<section id="about" class="col-lg-12 col-md-12 col-sm-12 body_content">
-			<h3 class="head3">About Me</h3>
-			<p>Spreadsheet, data and programming enthusiast.<p>
-			<p>Having spent my teens in the 90's I have grown up with computers and followed with interest the advances in technology and the emergence of the Internet. Throughout my education and employment I have used a variety of platforms: from BBC Micros, Acorns & Atari STs through to various versions of Apple & Microsoft operating systems & environments.<p>
-			<p>Studying Mathematics, Physics, Computing, and Astronomy at college and university gave me some excellent skills with regards to problem-solving, logical thinking, programming and the ability to accurately capture data and process it in an efficient and useful manner.<p>
-			<p>Working for MoD contractors for 9+ years I have honed my skills in data-analysis: my main duties involving the exporting & merging job & accounts data from a variety of bespoke software applications into Excel and producing a number of daily/weekly/monthly/ad hoc reports to monitor operational & commercial performance. I always relished the opportunity to try something new, to think about how to break down the data in different ways to measure performance and how to utilise my generated reports to optimise business processes and maximise margins.</p>
-			<p>I am self-studying to further my knowledge of HTML5, PHP, MySQL, JavaScript and CSS3 to open up new opportunities & challenges in web development and data & project management, and have put my skills to good use by joining DVO Media as Product Owner & Client Services Manager.</p>
-			<p>Although I've been tinkering with web development for over a year, this is my first attempt at creating my own website.</p>
-			<p>First things done:</p>
-			<ul>
-				<li>Purchased a domain from 123-Reg</li>
-				<li>Purchased hosting from 123-Reg</li>
-				<li>Set up a new repo on my pre-existing Git account</li>
-				<li>Figured out [I think] how to link my complimentary Git site to my registered domain</li>
-				</ul>
-			<p>Using Bootstrap and jQuery libraries to enhance the look/style of the site.</p>
-			<p>Just need to add some content!</p>
-			<p>Update: realised that the freebie site offered by Git does NOT support dynamic web pages. Did not fancy copying & pasting the header onto every page so uploading files to 123-Reg... by FTP!!! #retro
-			<p>Added a section to showcase some of the Astronomy Pics that I've taken over the years.<p>
-			<p>Added <a href="tictactoe.php">Tic Tac Toe</a> game to play.<p>
-			
-		</section>
-		
+		<div id="sidebar-wrapper" class="col-lg-2 col-md-2 col-sm-2">
+			<ul class="sidebar-nav">
+				<li id="li_1" class="navitem left">Who am I?</li>
+				<li id="li_2" class="navitem left">Education</li>
+				<li id="li_3" class="navitem left">Development</li>
+				<li id="li_4" class="navitem left">Interests</li>
+				<li id="li_5" class="navitem left">Blog</li>
+			</ul>
+		</div>
+
+		<div id="page-content-wrapper" class="col-lg-10 col-md-10 col-sm-10">
+			<section id="section_1" class="sections">
+				<article class="temphdr"></article>
+				<h3 class="head3">Who am I?</h3>
+				<hr/>
+				<article>
+					<p>Steve DeVeaux BSc (Hons)</p>
+					<p>Spreadsheet, data and programming enthusiast.</p>
+					<p>Having spent my teens in the 90's I have grown up with computers and followed with great interest the advances in technology and the emergence of the Internet. Throughout my education and employment I have used a variety of platforms: from the early days of BBC Micros, Acorns & Atari STs through to various versions of Apple & "IBM-Compatible" PCs. For my web development I am accustomed to using both Microsoft operating systems & environments as well as Apple OS X.</p>
+				</article>
+			</section>
+			<section id="section_2" class="sections">
+				<article class="temphdr"></article>
+				<h3 class="head3">Education</h3>
+				<hr/>
+				<article>
+					<p>Studying Mathematics, Physics, Computing, and Astronomy in further & higher education gave me some excellent skills with regards to problem-solving, logical thinking, programming and the ability to accurately capture data and process it in an efficient and useful manner.</p>
+					<p><a href="http://www.shef.ac.uk/" target="_blank">The University of Sheffield</a></p>
+					<p>-->Mathematics & Astronomy BSc [2:1]</p>
+					<br/>
+					<p><a href="http://www.thomroth.ac.uk/" target="_blank">Thomas Rotherham College</a></p>
+					<p>-->Mathematics & Mechanics 'A'-level [A]</p>
+					<p>-->Physics [A]</p>
+					<p>-->Computing [A]</p>
+					<p>-->RSA Document Processing Level III [Distinction]</p>
+				</article>
+			</section>
+			<section id="section_3" class="sections">
+				<article class="temphdr"></article>
+				<h3 class="head3">Development</h3>
+				<hr/>
+				<article>
+					<p>Working as a Commercial Manager with MoD contractors for 9+ years I have honed my skills in data-analysis: my main duties involving the exporting & merging job & accounts data from a variety of bespoke software applications into Excel and producing a number of daily/weekly/monthly/ad hoc reports to monitor operational & commercial performance. I always relished the opportunity to try something new, to think about how to break down the data in different ways to measure performance and how to utilise my generated reports to optimise business processes and maximise margins.</p>
+					<p>Having left the contract I'd been working on for so long I was more than ready to face some new challenges and decided to concentrate my efforts on web development. The HTML that I'd casually picked up whilst at school/college is a far cry from current technologies, and I am self-studying to improve my knowledge of - to begin with - HTML5, PHP, MySQL, JavaScript and CSS3. Putting my newfound knowledge together with my previous skills & experience I joined <a href="http://dvomedia.net" target="_blank">DVO Media</a> as Client Services Manager & Product Owner, where I gained valuable experience in Agile Software Development methodologies and development & task-management software:</p>
+					<ul>
+						<li>Daily Scrum stand-up</li>
+						<li>Backlog refinement</li>
+						<li>Sprint planning and retrospective/review</li>
+						<li>JIRA</li>
+						<li>Trello</li>
+						<li>Asana</li>
+						<li>Xero</li>
+						<li>Git & GitHub</li>
+						<li>Sublime Text</li>
+						<li>Slackware</li>
+						<li>Bootstrap</li>
+						<li>jQuery</li>
+					</ul>
+					<p>There was also ample opportunity for the whole development team to participate in additional events to further expand our knowledge and skills: attending monthly talks at a local <a href="https://phpminds.org/" target="_blank">php[Minds]</a> group, regular team Dev Lunch / knowledge share sessions, and attending the <a href="http://phpconference.co.uk/" target="_blank">2016 PHP UK Conference</a> in London.</p>
+					<p>Although I've been tinkering with web development for over a year, this is my first attempt at creating my own website.</p>
+				</article>
+			</section>
+			<section id="section_4" class="sections">
+				<article class="temphdr"></article>
+				<h3 class="head3">Hobbies & Interests</h3>
+				<hr/>
+				<article>
+					<p>Besides getting my head into web development and technology, I have several other hobbies & interests:</p>
+					<p>Drumming</p>
+					<p>Astronomy</p>
+					<p>Photography</p>
+					<p>Sci-fi</p>
+					<p>Tom Clancy novels</p>
+					<p>Baking</p>
+					<p>Walking</p>
+				</article>
+			</section>
+			<section id="section_5" class="sections">
+				<article class="temphdr"></article>
+				<h3 class="head3">Blog</h3>
+				<hr/>
+				<!--article id="">
+					<h4></h4>
+					<p></p>
+				</article>
+				<hr/-->
+				<article id="20160412">
+					<h4>12 April 2016</h4>
+					<p>Continuing to add more content to the "about me" section.</p>
+					<p>Structured the blog in a better way and added more detail.</p>
+				</article>
+				<hr/-->
+				<article id="20160411">
+					<h4>11 April 2016</h4>
+					<p>Working on the left nav on the homepage. Added additional sections to break down the "about me" blurb and used some CSS styling and jQuery effects to snazz it up a bit.</p>
+					<p>Adding more content to each of the "about me" sections.</p>
+				</article>
+				<hr/>
+				<article id="20160410">
+					<h4>10 April 2016</h4>
+					<p>Downloaded the jQuery and jQueryUI libraries to the site to allow use of these offline.</p>
+					<p>Realised I was duplicating a lot of &lt;head&gt; info in the php pages and the html content that is pulled from the require() function. Removed the duplication for hopefully a little performace benefit.</p>
+				</article>
+				<hr/>
+				<article id="20160407">
+					<h4>07 April 2016</h4>
+					<p>Had the power out for an electrical inspection for several hours so not a lot of progress today - just added some additional lines in the &lt;head&gt; for Bootstrap stuff. Tried to plan ahead for the outage by creating all the branches on Git and having various reference websites opened up so I could work offline on my local machine and just push the changes once the router was back up. One thing I didn't think of was that I am using Bootstrap and jQuery over CDNs, so as soon as I lost my Internet connexion the CSS on the website died :( #n00b</p>
+					<p>Spent my time doing some self studying instead - learning about the HTML5 canvas from my <a href="http://lpmj.net" target="_blank">Learning PHP, MySQL & JavaScript</a> book.</p>
+				</article>
+				<hr/>
+				<article id="20160406">
+					<h4>06 April 2016</h4>
+					<p>So much to do to get the site anywhere near how I'd like it! Decided to take a structured disciplined approach: broke everything down into "user stories" and raised these as issues on GitHub. For every issue I can create a separate branch from Master to make all the changes, then merge in to Master when I'm happy that the issue is complete.</p>
+					<p>Had the background set as a linear gradient, which is nice, but also liked the idea of also having a nice picture of the Andromeda galaxy [M31]. Decided to have both, and researched how to change the opacity of a background image.</p>
+					<p>Need to ensure that the background image looks good on all devices. Added some JavaScript to set the image an appropriate size depending on the initial viewport size, then change dynamically as the window is resized.</p>
+				</article>
+				<hr/>
+				<article id="20160405">
+					<h4>05 April 2016</h4>
+					<p>>Added a couple more [mostly blank] html pages to put together a very basic shell to navigate around, including a header.</p>
+					<p>>Incorporated Bootstrap & jQuery libraries to enhance the look/style of the site.</p>
+					<p>>More content needed!</p>
+					<p>>Repeating the header on every html page far from efficient: changed the pages to php and using require() to point to separate html files which contain the header and page content.</p>
+					<p>>Site no longer loads... realised that the freebie site offered by Git only supports static content e.g. no support for PHP or any other dynamic content. Seems I'll have to upload changes to the site by FTP!! #retro</p>
+					<p>>Still using Git for branches & version control.</p>
+					<p>>Added a section to showcase some of the Astronomy Pics that I've taken over the years.</p>
+					<p>>Added <a href="tictactoe.php">Tic Tac Toe</a> game to play.</p>
+					<p>>Added Twitter widget to the header.</p>
+				</article>
+				<hr/>
+				<article id="20160404">
+					<h4>04 April 2016</h4>
+					<p>>First things done:</p>
+					<ul>
+						<li>Purchased this domain and a hosting package from 123-Reg.</li>
+						<li>Set up a new repo on my pre-existing Git account.</li>
+						<li>Using the complimentary Git site to link to my registered domain with CNAME file in Git and DNS settings with 123-Reg. Changes uploaded to master branch are now immediately visible on the site.</li>
+						<li>Created the first basic html Homepage.</li>
+					</ul>
+				</article>
+			</section>				
+		</div>		
 	<body>
 
 <html>
