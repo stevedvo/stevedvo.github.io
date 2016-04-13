@@ -27,13 +27,14 @@
 #wrapper
 {
 	/*height: 1024px !important;*/
-	background: -ms-linear-gradient(0deg, #007, black);
-	background: -moz-linear-gradient(0deg, #007, black);
-	background: -webkit-linear-gradient(0deg, #007, black);
-	background: -o-linear-gradient(0deg, #007, black);
-	background: linear-gradient(0deg, #007, black);
+	background: -ms-linear-gradient(0deg, lightblue, black);
+	background: -moz-linear-gradient(0deg, lightblue, black);
+	background: -webkit-linear-gradient(0deg, lightblue, black);
+	background: -o-linear-gradient(0deg, lightblue, black);
+	background: linear-gradient(0deg, lightblue, black);
+	/*background: black;*/
 	color: white;
-	padding-left: 0px;
+	padding: 0px;
 }
 
 #page-content-wrapper
