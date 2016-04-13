@@ -1,38 +1,27 @@
+var	xImg;
+var	yImg;
+var	ratioImg;
+
 function resizeBackground ()
 {
-	var xWidth = $(window).width();
-	var yHeight = $(window).height();
+	xWind = $(window).width();
+	yWind = $(window).height();
+	ratioWind = xWind/yWind;
 
-	var imgWidth = $("#background").width();
-	var imgHeight = $("#background").height();
+	xImg = $("#background").width();
+	yImg = $("#background").height();
+	newImgRatio = xImg/yImg;
 
-	
-	if (imgWidth>xWidth && imgHeight>yHeight)
+	if (ratioImg > ratioWind)
 	{
-		$("#background").width(xWidth);
-		$("#background").height(xWidth*imgHeight/imgWidth);
-		/*$("#wrapper").width(xWidth);
-		$("#wrapper").height(xWidth*imgHeight/imgWidth);
-	*/}
-
-	if (imgWidth<xWidth)
+		$("#background").height(yWind);
+		$("#background").width(yImg*ratioImg);
+	}
+	else
 	{
-		$("#background").width(xWidth);
-		$("#background").height(xWidth*imgHeight/imgWidth);
-/*		$("#wrapper").width(xWidth);
-		$("#wrapper").height(xWidth*imgHeight/imgWidth);
-*/	}
-
-	if (imgHeight<yHeight)
-	{
-		$("#background").height(yHeight);
-		$("#background").width(yHeight*imgWidth/imgHeight);
-/*		$("#wrapper").height(yHeight);
-		$("#wrapper").width(yHeight*imgWidth/imgHeight);
-*/	}
-
-	console.log ("Window width is: "+xWidth+"; Img width is: "+imgWidth);
-	console.log ("Window height is: "+yHeight+"; Img height is: "+imgHeight);
+		$("#background").width(xWind);
+		$("#background").height(xImg/ratioImg);
+	}
 
 }
 
@@ -50,8 +39,14 @@ function init ()
 		$(this).animate({backgroundColor: jQuery.Color({alpha: 0}), color: "#337ab7"}, 250);
 	});
 
+	$(".left").mouseover(function()
+	{
+		$(this).css('font-weight', 'bold');
+	});
+
 	$(".left").mouseout(function()
 	{
+		$(this).css('font-weight', 'normal');
 		$(this).animate({backgroundColor: jQuery.Color({alpha: 0}), color: "#white"}, 250);
 	});
 
@@ -62,49 +57,83 @@ function init ()
 	});
 
 	$(".sections").css('display', 'none');
-	$("#section_1").css('display', 'block');
-	$(".temphdr").css("background", "yellow");
-	$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 2000);
+	$("#section_5").css('visibility', 'hidden');
+	$("#section_5").css('display', 'block');
+	$("#section_1").show("fold", 500);
+	// $("#section_1").css('display', 'block');
+	$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1000);
 
 	$("#li_1").click(function()
 	{
 		$(".sections").css('display', 'none');
+		$("#section_5").css('visibility', 'hidden');
+		$("#section_5").css('display', 'block');
+		// $(".sections").css('visibility', 'hidden');
+		// $("#section_1").css('visibility', 'visible');
 		$(".temphdr").css("background", "yellow");
-		$("#section_1").show("fold", 1000);
-		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 2000);
+		$("#section_1").show("fold", 500);
+		// $("#section_1").css('display', 'block');
+		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1000);
+		resizeBackground();
 	});
 
 	$("#li_2").click(function()
 	{
 		$(".sections").css('display', 'none');
+		$("#section_5").css('visibility', 'hidden');
+		$("#section_5").css('display', 'block');
+		// $(".sections").css('visibility', 'hidden');
+		// $("#section_2").css('visibility', 'visible');
 		$(".temphdr").css("background", "yellow");
-		$("#section_2").show("fold", 1000);
-		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 2000);
+		$("#section_2").show("fold", 500);
+		// $("#section_2").css('display', 'block');
+		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1000);
+		resizeBackground();
 	});
 
 	$("#li_3").click(function()
 	{
 		$(".sections").css('display', 'none');
+		$("#section_5").css('visibility', 'hidden');
+		$("#section_5").css('display', 'block');
+		// $(".sections").css('visibility', 'hidden');
+		// $("#section_3").css('visibility', 'visible');
 		$(".temphdr").css("background", "yellow");
-		$("#section_3").show("fold", 1000);
-		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 2000);
+		$("#section_3").show("fold", 500);
+		// $("#section_3").css('display', 'block');
+		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1000);
+		resizeBackground();
 	});
 
 	$("#li_4").click(function()
 	{
 		$(".sections").css('display', 'none');
+		$("#section_5").css('visibility', 'hidden');
+		$("#section_5").css('display', 'block');
+		// $(".sections").css('visibility', 'hidden');
+		// $("#section_4").css('visibility', 'visible');
 		$(".temphdr").css("background", "yellow");
-		$("#section_4").show("fold", 1000);
-		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 2000);
+		$("#section_4").show("fold", 500);
+		// $("#section_4").css('display', 'block');
+		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1000);
+		resizeBackground();
 	});
 
 	$("#li_5").click(function()
 	{
 		$(".sections").css('display', 'none');
+		// $(".sections").css('visibility', 'hidden');
+		$("#section_5").css('visibility', 'visible');
 		$(".temphdr").css("background", "yellow");
-		$("#section_5").show("fold", 1000);
-		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 2000);
+		$("#section_5").show("fold", 500);
+		// $("#section_5").css('display', 'block');
+		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1000);
+		resizeBackground();
 	});
+
+	xImg = $("#background").width();
+	yImg = $("#background").height();
+	ratioImg = xImg/yImg;
 
 	resizeBackground();
 }
