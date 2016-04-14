@@ -58,22 +58,22 @@ function init ()
 
 	$(".sections").css('display', 'none');
 	$(".largest").css('visibility', 'hidden');
-	$(".default").show("fold", 500);
-	$(".largest").css('display', 'block').css('z-index', '-1');
+	$(".default").show("fold", 1000);
+	$(".largest").css('display', 'block');
 	// $("#section_1").css('display', 'block');
-	$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1000);
+	$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1500);
 
 	$("#li_1").click(function()
 	{
 		$(".sections").css('display', 'none');
 		$(".largest").css('visibility', 'hidden');
 		$(".temphdr").css("background", "yellow");
-		$("#section_1").show("fold", 500);
+		$("#section_1").show("fold", 1000);
 		$(".largest").css('display', 'block');
 		// $(".sections").css('visibility', 'hidden');
 		// $("#section_1").css('visibility', 'visible');
 		// $("#section_1").css('display', 'block');
-		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1000);
+		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1500);
 		resizeBackground();
 	});
 
@@ -82,12 +82,12 @@ function init ()
 		$(".sections").css('display', 'none');
 		$(".largest").css('visibility', 'hidden');
 		$(".temphdr").css("background", "yellow");
-		$("#section_2").show("fold", 500);
+		$("#section_2").show("fold", 1000);
 		$(".largest").css('display', 'block');
 		// $(".sections").css('visibility', 'hidden');
 		// $("#section_2").css('visibility', 'visible');
 		// $("#section_2").css('display', 'block');
-		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1000);
+		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1500);
 		resizeBackground();
 	});
 
@@ -96,12 +96,12 @@ function init ()
 		$(".sections").css('display', 'none');
 		$(".largest").css('visibility', 'hidden');
 		$(".temphdr").css("background", "yellow");
-		$("#section_3").show("fold", 500);
+		$("#section_3").show("fold", 1000);
 		$(".largest").css('display', 'block');
 		// $(".sections").css('visibility', 'hidden');
 		// $("#section_3").css('visibility', 'visible');
 		// $("#section_3").css('display', 'block');
-		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1000);
+		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1500);
 		resizeBackground();
 	});
 
@@ -110,12 +110,12 @@ function init ()
 		$(".sections").css('display', 'none');
 		$(".largest").css('visibility', 'hidden');
 		$(".temphdr").css("background", "yellow");
-		$("#section_4").show("fold", 500);
+		$("#section_4").show("fold", 1000);
 		$(".largest").css('display', 'block');
 		// $(".sections").css('visibility', 'hidden');
 		// $("#section_4").css('visibility', 'visible');
 		// $("#section_4").css('display', 'block');
-		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1000);
+		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1500);
 		resizeBackground();
 	});
 
@@ -124,12 +124,12 @@ function init ()
 		$(".sections").css('display', 'none');
 		$(".largest").css('visibility', 'hidden');
 		$(".temphdr").css("background", "yellow");
-		$("#section_5").show("fold", 500);
+		$("#section_5").show("fold", 1000);
 		$(".largest").css('display', 'block');
 		// $(".sections").css('visibility', 'hidden');
 		// $("#section_5").css('visibility', 'visible');
 		// $("#section_5").css('display', 'block');
-		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1000);
+		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1500);
 		resizeBackground();
 	});
 
@@ -138,19 +138,21 @@ function init ()
 		$(".sections").css('display', 'none');
 		$(".largest").css('visibility', 'hidden');
 		$(".temphdr").css("background", "yellow");
-		$("#section_6").show("fold", 500);
+		$("#section_6").show("fold", 1000);
 		$(".largest").css('display', 'block');
 		// $(".sections").css('visibility', 'hidden');
 		// $("#section_6").css('visibility', 'visible');
 		// $("#section_6").css('display', 'block');
-		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1000);
+		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1500);
 		resizeBackground();
 	});
 
 	$(".lrg").click(function()
 	{
-		$(".largest").css('visibility', 'visible').css('z-index', '0');
+		$(".largest").css('visibility', 'visible');
 	});
+
+	$(".sections").width($(".largest").width());
 
 	xImg = $("#background").width();
 	yImg = $("#background").height();
