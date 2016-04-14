@@ -159,6 +159,14 @@ function init ()
 	ratioImg = xImg/yImg;
 
 	resizeBackground();
+
+	$(".thumb").attr('title', 'Click to see larger version');
+
+	$(".thumb").click(function()
+	{
+		lrgStr = $(this).attr('src').replace("thb", "lrg");
+		lrgImg = window.open(lrgStr, "PopUp", "top=0,left=0,width="+window.screen.availWidth+",height="+window.screen.availHeight+",location=no");
+	});
 }
 
 document.addEventListener("DOMContentLoaded", init, false);
