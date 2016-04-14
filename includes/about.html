@@ -12,12 +12,12 @@
 				<li id="li_2" class="navitem left">Education</li>
 				<li id="li_3" class="navitem left">Development</li>
 				<li id="li_4" class="navitem left">Interests</li>
-				<li id="li_5" class="navitem left">Blog</li>
+				<li id="li_5" class="navitem left lrg">Blog</li>
 			</ul>
 		</div>
 
 		<div id="page-content-wrapper" class="col-lg-10 col-md-10 col-sm-10">
-			<section id="section_1" class="sections">
+			<section id="section_1" class="sections default">
 				<article class="temphdr"></article>
 				<h3 class="head3">Who am I?</h3>
 				<hr/>
@@ -83,7 +83,7 @@
 					<p>Walking</p>
 				</article>
 			</section>
-			<section id="section_5" class="sections">
+			<section id="section_5" class="sections largest">
 				<article class="temphdr"></article>
 				<h3 class="head3">Blog</h3>
 				<hr/>
@@ -92,60 +92,67 @@
 					<p></p>
 				</article>
 				<hr/-->
+				<article id="20160414">
+					<h4>14 April 2016</h4>
+					<p>> Tweaked the CSS & JavaScript to ensure that the sections display as intended for both the Homepage and AstroPics.</p>
+					<p>> Cropped/Resized all AstroPics images and used Bootstrap to control how these are viewed depending on screen size. For thumbnails, used jQuery to add a title attribute and a click event to open up a larger version of the image in a new window. Uses string manipulation from the source of the image that is clicked to determine the filename of the larger image to be shown, then queries the user's display resolution to create a window of the correct size to fit the screen. Quite pleased with that - seemed rather clever :)</p>
+				</article>
+				<hr/-->
 				<article id="20160413">
 					<h4>13 April 2016</h4>
-					<p>>Spent another huge chunk of time trying to get the #wrapper div [and corresponding gradient fill] to change dynamically. Accessing the heights of various properties e.g. div height, document height, window height, etc. For one reason or another, just can't get everything to work together. Settled for a solution, but not ideal as the div is always as tall as the section with most content, even if that section is hidden - which allows you can scroll into nothing. It'll do for now, spent far too much time on this already.</p>
+					<p>> Spent another huge chunk of time trying to get the #wrapper div [and corresponding gradient fill] to change dynamically. Accessing the heights of various properties e.g. div height, document height, window height, etc. For one reason or another, just can't get everything to work together. Settled for a solution, but not ideal as the div is always as tall as the section with most content, even if that section is hidden - which allows you can scroll into nothing. It'll do for now, spent far too much time on this already!!</p>
+					<p>> Moved on to some work on the AstroPics page. Rather than displaying everything all at once, have broken this down into sections for a:) a more logical browsing experience; and b:) reducing load times.</p>
 				</article>
 				<hr/-->
 				<article id="20160412">
 					<h4>12 April 2016</h4>
-					<p>>Continuing to add more content to the "about me" section.</p>
-					<p>>Structured the blog in a better way and added more detail.</p>
-					<p>>Made a better job of the logic that sorts out the dynamic resizing of the background image as the window size is changed.</p>
-					<p>>Spent a loooong time trying to work out how to get the #wrapper div to change dynamically correctly as the window is resized or different content is displayed, to ensure that the gradient fill displays as expected. Still a work in progress!</p>
+					<p>> Continuing to add more content to the "about me" section.</p>
+					<p>> Structured the blog in a better way and added more detail.</p>
+					<p>> Made a better job of the logic that sorts out the dynamic resizing of the background image as the window size is changed.</p>
+					<p>> Spent a loooong time trying to work out how to get the #wrapper div to change dynamically correctly as the window is resized or different content is displayed, to ensure that the gradient fill displays as expected. Still a work in progress!</p>
 				</article>
 				<hr/-->
 				<article id="20160411">
 					<h4>11 April 2016</h4>
-					<p>>Working on the left nav on the homepage. Added additional sections to break down the "about me" blurb and used some CSS styling and jQuery effects to snazz it up a bit.</p>
-					<p>>Adding more content to each of the "about me" sections.</p>
+					<p>> Working on the left nav on the homepage. Added additional sections to break down the "about me" blurb and used some CSS styling and jQuery effects to snazz it up a bit.</p>
+					<p>> Adding more content to each of the "about me" sections.</p>
 				</article>
 				<hr/>
 				<article id="20160410">
 					<h4>10 April 2016</h4>
-					<p>>Downloaded the jQuery and jQueryUI libraries to the site to allow use of these offline.</p>
-					<p>>Realised I was duplicating a lot of &lt;head&gt; info in the php pages and the html content that is pulled from the require() function. Removed the duplication for hopefully a little performace benefit.</p>
+					<p>> Downloaded the jQuery and jQueryUI libraries to the site to allow use of these offline.</p>
+					<p>> Realised I was duplicating a lot of &lt;head&gt; info in the php pages and the html content that is pulled from the require() function. Removed the duplication for hopefully a little performace benefit.</p>
 				</article>
 				<hr/>
 				<article id="20160407">
 					<h4>07 April 2016</h4>
-					<p>>Had the power out for an electrical inspection for several hours so not a lot of progress today - just added some additional lines in the &lt;head&gt; for Bootstrap stuff. Tried to plan ahead for the outage by creating all the branches on Git and having various reference websites opened up so I could work offline on my local machine and just push the changes once the router was back up. One thing I didn't think of was that I am using Bootstrap and jQuery over CDNs, so as soon as I lost my Internet connexion the CSS on the website died :( #n00b</p>
-					<p>>Spent my time doing some self studying instead - learning about the HTML5 canvas from my <a href="http://lpmj.net" target="_blank">Learning PHP, MySQL & JavaScript</a> book.</p>
+					<p>> Had the power out for an electrical inspection for several hours so not a lot of progress today - just added some additional lines in the &lt;head&gt; for Bootstrap stuff. Tried to plan ahead for the outage by creating all the branches on Git and having various reference websites opened up so I could work offline on my local machine and just push the changes once the router was back up. One thing I didn't think of was that I am using Bootstrap and jQuery over CDNs, so as soon as I lost my Internet connexion the CSS on the website died :( #n00b</p>
+					<p>> Spent my time doing some self studying instead - learning about the HTML5 canvas from my <a href="http://lpmj.net" target="_blank">Learning PHP, MySQL & JavaScript</a> book.</p>
 				</article>
 				<hr/>
 				<article id="20160406">
 					<h4>06 April 2016</h4>
-					<p>>So much to do to get the site anywhere near how I'd like it! Decided to take a structured disciplined approach: broke everything down into "user stories" and raised these as issues on GitHub. For every issue I can create a separate branch from Master to make all the changes, then merge in to Master when I'm happy that the issue is complete.</p>
-					<p>>Had the background set as a linear gradient, which is nice, but also liked the idea of also having a nice picture of the Andromeda galaxy [M31]. Decided to have both, and researched how to change the opacity of a background image.</p>
-					<p>>Need to ensure that the background image looks good on all devices. Added some JavaScript to set the image an appropriate size depending on the initial viewport size, then change dynamically as the window is resized.</p>
+					<p>> So much to do to get the site anywhere near how I'd like it! Decided to take a structured disciplined approach: broke everything down into "user stories" and raised these as issues on GitHub. For every issue I can create a separate branch from Master to make all the changes, then merge in to Master when I'm happy that the issue is complete.</p>
+					<p>> Had the background set as a linear gradient, which is nice, but also liked the idea of also having a nice picture of the Andromeda galaxy [M31]. Decided to have both, and researched how to change the opacity of a background image.</p>
+					<p>> Need to ensure that the background image looks good on all devices. Added some JavaScript to set the image an appropriate size depending on the initial viewport size, then change dynamically as the window is resized.</p>
 				</article>
 				<hr/>
 				<article id="20160405">
 					<h4>05 April 2016</h4>
-					<p>>Added a couple more [mostly blank] html pages to put together a very basic shell to navigate around, including a header.</p>
-					<p>>Incorporated Bootstrap & jQuery libraries to enhance the look/style of the site.</p>
-					<p>>More content needed!</p>
-					<p>>Repeating the header on every html page far from efficient: changed the pages to php and using require() to point to separate html files which contain the header and page content.</p>
-					<p>>Site no longer loads... realised that the freebie site offered by Git only supports static content e.g. no support for PHP or any other dynamic content. Seems I'll have to upload changes to the site by FTP!! #retro</p>
-					<p>>Still using Git for branches & version control.</p>
-					<p>>Added a section to showcase some of the Astronomy Pics that I've taken over the years.</p>
-					<p>>Added <a href="tictactoe.php">Tic Tac Toe</a> game to play.</p>
-					<p>>Added Twitter widget to the header.</p>
+					<p>> Added a couple more [mostly blank] html pages to put together a very basic shell to navigate around, including a header.</p>
+					<p>> Incorporated Bootstrap & jQuery libraries to enhance the look/style of the site.</p>
+					<p>> More content needed!</p>
+					<p>> Repeating the header on every html page far from efficient: changed the pages to php and using require() to point to separate html files which contain the header and page content.</p>
+					<p>> Site no longer loads... realised that the freebie site offered by Git only supports static content e.g. no support for PHP or any other dynamic content. Seems I'll have to upload changes to the site by FTP!! #retro</p>
+					<p>> Still using Git for branches & version control.</p>
+					<p>> Added a section to showcase some of the Astronomy Pics that I've taken over the years.</p>
+					<p>> Added <a href="tictactoe.php">Tic Tac Toe</a> game to play.</p>
+					<p>> Added Twitter widget to the header.</p>
 				</article>
 				<hr/>
 				<article id="20160404">
 					<h4>04 April 2016</h4>
-					<p>>First things done:</p>
+					<p>> First things done:</p>
 					<ul>
 						<li>Purchased this domain and a hosting package from 123-Reg.</li>
 						<li>Set up a new repo on my pre-existing Git account.</li>

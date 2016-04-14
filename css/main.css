@@ -39,7 +39,7 @@
 
 #page-content-wrapper
 {
-	position: relative;
+	/*position: relative;*/
 	top: -15px;
 }
 
@@ -52,11 +52,22 @@
 
 .sidebar-nav
 {
-	text-indent: 20px;
+	text-indent: 10px;
 	line-height: 40px;
 }
 
 .temphdr
 {
 	height: 15px;
+}
+
+.sections
+{
+	position: absolute;
+	top: 0px;
+}
+
+.largest
+{
+	position: static;
 }
