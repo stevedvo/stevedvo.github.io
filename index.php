@@ -19,7 +19,7 @@
 		<div class="container-fluid">
 			<div id="wrapper" class="col-lg-12 col-md-12 col-sm-12">
 				<?php
-					$page_title = "Home";
+					$page_title = "Welcome To My Website";
 					include ("includes/header.html");
 					include ("includes/about.html");
 				?>
