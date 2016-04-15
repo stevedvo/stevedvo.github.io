@@ -1,25 +1,45 @@
 ﻿var playerX, playerO, iconX, iconO, A1, A2, A3, B1, B2, B3, C1, C2, C3, btn, turnX, leftX, leftO, msgs;
 
-function hover()
-{
-	this.style.background = "aqua";
-}
-
-function unhover()
-{
-	this.style.background = "white";
-}
-
 function doTurn()
 {
-	playerX = document.getElementById("playerX").value;
-	playerO = document.getElementById("playerO").value;
+	playerX = O("playerX").value;
+	playerO = O("playerO").value;
+
+	if (turnX)
+	{
+		if ($(this).html() !== "")
+		{
+			return false;
+		}
+		else
+		{
+			$(this).html("X");
+			turnX = !turnX;
+			S(iconO).background = "aqua";
+			S(iconX).background = "#444";	
+		}
+	}
+	else
+	{
+		if ($(this).html() !== "")
+		{
+			return false;
+		}
+		else
+		{
+			$(this).html("O");
+			turnX = !turnX;
+			S(iconX).background = "aqua";
+			S(iconO).background = "#444";
+		}
+	}
+
 	
 	if((A1.innerHTML === B1.innerHTML) && (A1.innerHTML === C1.innerHTML) && ((A1.innerHTML === "X") || (A1.innerHTML === "O")))
 	{
-		A1.style.background = "yellow";
-		B1.style.background = "yellow";
-		C1.style.background = "yellow";
+		S(A1).background = "yellow";
+		S(B1).background = "yellow";
+		S(C1).background = "yellow";
 		if (A1.innerHTML === "X")
 		{
 			alert(playerX+" wins the game!");
@@ -32,9 +52,9 @@ function doTurn()
 	
 	if((A2.innerHTML === B2.innerHTML) && (A2.innerHTML === C2.innerHTML) && ((A2.innerHTML === "X") || (A2.innerHTML === "O")))
 	{
-		A2.style.background = "yellow";
-		B2.style.background = "yellow";
-		C2.style.background = "yellow";
+		S(A2).background = "yellow";
+		S(B2).background = "yellow";
+		S(C2).background = "yellow";
 		if (A2.innerHTML === "X")
 		{
 			alert(playerX+" wins the game!");
@@ -47,9 +67,9 @@ function doTurn()
 	
 	if((A3.innerHTML === B3.innerHTML) && (A3.innerHTML === C3.innerHTML) && ((A3.innerHTML === "X") || (A3.innerHTML === "O")))
 	{
-		A3.style.background = "yellow";
-		B3.style.background = "yellow";
-		C3.style.background = "yellow";
+		S(A3).background = "yellow";
+		S(B3).background = "yellow";
+		S(C3).background = "yellow";
 		if (A3.innerHTML === "X")
 		{
 			alert(playerX+" wins the game!");
@@ -62,9 +82,9 @@ function doTurn()
 	
 	if((A1.innerHTML === A2.innerHTML) && (A1.innerHTML === A3.innerHTML) && ((A1.innerHTML === "X") || (A1.innerHTML === "O")))
 	{
-		A1.style.background = "yellow";
-		A2.style.background = "yellow";
-		A3.style.background = "yellow";
+		S(A1).background = "yellow";
+		S(A2).background = "yellow";
+		S(A3).background = "yellow";
 		if (A1.innerHTML === "X")
 		{
 			alert(playerX+" wins the game!");
@@ -77,9 +97,9 @@ function doTurn()
 	
 	if((B1.innerHTML === B2.innerHTML) && (B1.innerHTML === B3.innerHTML) && ((B1.innerHTML === "X") || (B1.innerHTML === "O")))
 	{
-		B1.style.background = "yellow";
-		B2.style.background = "yellow";
-		B3.style.background = "yellow";
+		S(B1).background = "yellow";
+		S(B2).background = "yellow";
+		S(B3).background = "yellow";
 		if (B1.innerHTML === "X")
 		{
 			alert(playerX+" wins the game!");
@@ -92,9 +112,9 @@ function doTurn()
 	
 	if((C1.innerHTML === C2.innerHTML) && (C1.innerHTML === C3.innerHTML) && ((C1.innerHTML === "X") || (C1.innerHTML === "O")))
 	{
-		C1.style.background = "yellow";
-		C2.style.background = "yellow";
-		C3.style.background = "yellow";
+		S(C1).background = "yellow";
+		S(C2).background = "yellow";
+		S(C3).background = "yellow";
 		if (C1.innerHTML === "X")
 		{
 			alert(playerX+" wins the game!");
@@ -107,9 +127,9 @@ function doTurn()
 	
 	if((A1.innerHTML === B2.innerHTML) && (A1.innerHTML === C3.innerHTML) && ((A1.innerHTML === "X") || (A1.innerHTML === "O")))
 	{
-		A1.style.background = "yellow";
-		B2.style.background = "yellow";
-		C3.style.background = "yellow";
+		S(A1).background = "yellow";
+		S(B2).background = "yellow";
+		S(C3).background = "yellow";
 		if (A1.innerHTML === "X")
 		{
 			alert(playerX+" wins the game!");
@@ -122,9 +142,9 @@ function doTurn()
 	
 	if((A3.innerHTML === B2.innerHTML) && (A3.innerHTML === C1.innerHTML) && ((A3.innerHTML === "X") || (A3.innerHTML === "O")))
 	{
-		A3.style.background = "yellow";
-		B2.style.background = "yellow";
-		C1.style.background = "yellow";
+		S(A3).background = "yellow";
+		S(B2).background = "yellow";
+		S(C1).background = "yellow";
 		if (A3.innerHTML === "X")
 		{
 			alert(playerX+" wins the game!");
@@ -135,28 +155,6 @@ function doTurn()
 		}
 	}
 	
-	if (turnX)
-	{
-//		iconX.style.visibility = "visible";
-		iconX.style.background = "white";
-		iconX.onmouseover = hover;
-		iconX.onmouseout = unhover;
-//		iconO.style.visibility = "hidden";
-		iconO.style.background = "#AAA";
-		iconO.onmouseover = null;
-		iconO.onmouseout = null;
-	}
-	else
-	{
-//		iconO.style.visibility = "visible";
-		iconO.style.background = "white";
-		iconO.onmouseover = hover;
-		iconO.onmouseout = unhover;
-//		iconX.style.visibility = "hidden";
-		iconX.style.background = "#AAA";	
-		iconX.onmouseover = null;
-		iconX.onmouseout = null;
-	}
 	
 /*	if (leftX = 0)
 	{
@@ -174,7 +172,7 @@ function newGame()
 	leftO = 4;
 	turnX = true;
 	
-//	msgs.innerHTML += "Num X left: "+leftX+"<br/>Num O left: "+leftO+"<br/>";
+	// msgs.innerHTML += "Num X left: "+leftX+"<br/>Num O left: "+leftO+"<br/>";
 	
 	A1.innerHTML = "";
 	A2.innerHTML = "";
@@ -186,85 +184,43 @@ function newGame()
 	C2.innerHTML = "";
 	C3.innerHTML = "";
 	
-	A1.style.background = "white";
-	A2.style.background = "white";
-	A3.style.background = "white";
-	B1.style.background = "white";
-	B2.style.background = "white";
-	B3.style.background = "white";
-	C1.style.background = "white";
-	C2.style.background = "white";
-	C3.style.background = "white";
+	S(A1).background = "white";
+	S(A2).background = "white";
+	S(A3).background = "white";
+	S(B1).background = "white";
+	S(B2).background = "white";
+	S(B3).background = "white";
+	S(C1).background = "white";
+	S(C2).background = "white";
+	S(C3).background = "white";
 	
-	doTurn();
+	S(iconX).background = "aqua";
+	S(iconO).background = "#444";
+	// doTurn();
 
 }
-
-function drag(event)
-{
-	if (turnX && event.target.innerHTML !== "X")
-	{
-		return false;
-	}
-	else if (!turnX && event.target.innerHTML === "X")
-	{
-		return false;
-	}
-	else
-	{
-		event.dataTransfer.setData("Text",event.target.innerHTML);
-	}
-}
-
-function drop(event)
-{
-	if ((event.target.innerHTML === "X") || (event.target.innerHTML === "O"))
-	{
-		return false;
-	}
-	else
-	{
-		event.preventDefault();
-		event.target.innerHTML = event.dataTransfer.getData("Text");
-		if ((event.target.innerHTML === "X") || (event.target.innerHTML === "O"))
-		{
-			(event.target.innerHTML === "X") ? leftX-- : leftO--;
-			turnX = !turnX;
-			doTurn();
-		}
-	}
-}
-
-function allow(event)
-{
-	if ((event.target.innerHTML === "X") || (event.target.innerHTML === "O"))
-	{
-		return false;
-	}
-	else
-	{
-		event.preventDefault();
-	}
-}
-
 
 function init()
 {
-	msgs = document.getElementById("msgs");
-	iconX = document.getElementById("iconX");
-	iconO = document.getElementById("iconO");
+	msgs = O("msgs");
+	iconX = O("iconX");
+	iconO = O("iconO");
 	
-	A1 = document.getElementById("A1");
-	A2 = document.getElementById("A2");
-	A3 = document.getElementById("A3");
-	B1 = document.getElementById("B1");
-	B2 = document.getElementById("B2");
-	B3 = document.getElementById("B3");
-	C1 = document.getElementById("C1");
-	C2 = document.getElementById("C2");
-	C3 = document.getElementById("C3");
+	A1 = O("A1");
+	A2 = O("A2");
+	A3 = O("A3");
+	B1 = O("B1");
+	B2 = O("B2");
+	B3 = O("B3");
+	C1 = O("C1");
+	C2 = O("C2");
+	C3 = O("C3");
 
 	newGame();
+
+	$("#btn").click(newGame);
+
+	$(".gridPlace").click(doTurn);
 	
 }
 

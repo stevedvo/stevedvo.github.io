@@ -13,6 +13,7 @@
 		<script type="text/javascript" src="jQuery/jquery-ui-1.11.4/jquery-ui.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="javascript/tictactoe.js"></script>
+		<script type="text/javascript" src="javascript/OSC.js"></script>
 		<link type="text/css" rel="stylesheet" href="css/tictactoe.css"/>
 		
 	</head>

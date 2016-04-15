@@ -23,6 +23,13 @@ function resizeBackground ()
 		$("#background").height(xImg/ratioImg);
 	}
 
+/*	console.log ($("#wrapper").height());
+
+	if ($("#wrapper").height() < yWind)
+	{
+		$("#wrapper").height(yWind);
+	}
+*/
 }
 
 function init ()

@@ -15,6 +15,7 @@
 
 table.icons
 {
+	border:medium blue solid;
 	font-size:x-large;
 }
 
@@ -39,4 +40,11 @@ table.grid
 	border:medium blue solid;
 	border-collapse:collapse;
 	font-size:x-large;
+}
+
+#btn
+{
+	background: red;
+	font-size: small;
+	font-weight: bold;
 }
