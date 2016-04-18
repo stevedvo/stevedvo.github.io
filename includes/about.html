@@ -6,17 +6,25 @@
 	</head>
 
 	<body>
-		<div id="sidebar-wrapper" class="col-lg-2 col-md-2 col-sm-2">
+		<div id="sidebar-wrapper" class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
 			<ul class="sidebar-nav">
-				<li id="li_1" class="navitem left btn col-lg-12 col-md-12 col-sm-12">Who am I?</li>
-				<li id="li_2" class="navitem left btn col-lg-12 col-md-12 col-sm-12">Education</li>
-				<li id="li_3" class="navitem left btn col-lg-12 col-md-12 col-sm-12">Development</li>
-				<li id="li_4" class="navitem left btn col-lg-12 col-md-12 col-sm-12">Interests</li>
-				<li id="li_5" class="navitem left btn col-lg-12 col-md-12 col-sm-12 lrg">Blog</li>
+				<li id="burger_2y" class="navitem left btn hidden-lg hidden-md hidden-sm col-xs-12"><span class="glyphicon glyphicon-menu-hamburger" aria-label="Sections"></span>
+					<ul id="filling_2y">
+						<li class="navitem left btn col-xs-12 li_1">Who am I?</li>
+						<li class="navitem left btn col-xs-12 li_2">Education</li>
+						<li class="navitem left btn col-xs-12 li_3">Development</li>
+						<li class="navitem left btn col-xs-12 li_4">Interests</li>
+						<li class="navitem left btn col-xs-12 li_5 lrg">Blog</li>
+					</ul></li>
+				<li class="navitem left btn col-lg-12 col-md-12 col-sm-12 hidden-xs li_1">Who am I?</li>
+				<li class="navitem left btn col-lg-12 col-md-12 col-sm-12 hidden-xs li_2">Education</li>
+				<li class="navitem left btn col-lg-12 col-md-12 col-sm-12 hidden-xs li_3">Development</li>
+				<li class="navitem left btn col-lg-12 col-md-12 col-sm-12 hidden-xs li_4">Interests</li>
+				<li class="navitem left btn col-lg-12 col-md-12 col-sm-12 hidden-xs li_5 lrg">Blog</li>
 			</ul>
 		</div>
 
-		<div id="page-content-wrapper" class="col-lg-9 col-md-9 col-sm-9">
+		<div id="page-content-wrapper" class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
 			<section id="section_1" class="sections default">
 				<article class="temphdr"></article>
 				<h3 class="head3">Who am I?</h3>
@@ -82,17 +90,23 @@
 					<p>Baking</p>
 					<p>Walking</p>
 					<p>Formula 1</p>
+					<p>Snooker</p>
 				</article>
 			</section>
 			<section id="section_5" class="sections largest">
 				<article class="temphdr"></article>
 				<h3 class="head3">Blog</h3>
 				<hr/>
-				<!--article id="">
+				<!-- <article id="">
 					<h4></h4>
 					<p></p>
 				</article>
-				<hr/-->
+				<hr/> -->
+				<article id="20160418">
+					<h4>18 April 2016</h4>
+					<p>Worked today with Bootstrap & jQuery to make the site look better on mobile screens: coded the "burger menus" to slide in & out on clicking, and configured the visibility of the burger & standard menus according to the size of the screen that is being used.</p>
+				</article>
+				<hr/>
 				<article id="20160415">
 					<h4>15 April 2016</h4>
 					<p>> Thought of lots more things to add to the website "To Do" list: created additional issues for these in GitHub.</p>

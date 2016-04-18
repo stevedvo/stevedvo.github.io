@@ -34,6 +34,13 @@ function resizeBackground ()
 
 function init ()
 {
+	// $("#burger").css('display', 'none');
+	$("#burger").css('color', '#337ab7');
+	$("#filling").css('display', 'none');
+	
+	// $("#burger_2y").css('display', 'none');
+	$("#filling_2y").css('display', 'none');
+	
 	$(".navitem").mouseover(function()
 	{
 		$(this).css('background', 'yellow');
@@ -63,6 +70,16 @@ function init ()
 		$(this).css('color', 'black');
 	});
 
+	$("#burger").click(function()
+	{
+		$("#filling").slideToggle("slow");
+	});
+
+	$("#burger_2y").click(function()
+	{
+		$("#filling_2y").slideToggle("slow");
+	});
+
 	$(".sections").css('display', 'none');
 	$(".largest").css('visibility', 'hidden');
 	$(".default").show("fold", 1000);
@@ -70,7 +87,7 @@ function init ()
 	// $("#section_1").css('display', 'block');
 	$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1500);
 
-	$("#li_1").click(function()
+	$(".li_1").click(function()
 	{
 		$(".sections").css('display', 'none');
 		$(".largest").css('visibility', 'hidden');
@@ -84,7 +101,7 @@ function init ()
 		resizeBackground();
 	});
 
-	$("#li_2").click(function()
+	$(".li_2").click(function()
 	{
 		$(".sections").css('display', 'none');
 		$(".largest").css('visibility', 'hidden');
@@ -98,7 +115,7 @@ function init ()
 		resizeBackground();
 	});
 
-	$("#li_3").click(function()
+	$(".li_3").click(function()
 	{
 		$(".sections").css('display', 'none');
 		$(".largest").css('visibility', 'hidden');
@@ -112,7 +129,7 @@ function init ()
 		resizeBackground();
 	});
 
-	$("#li_4").click(function()
+	$(".li_4").click(function()
 	{
 		$(".sections").css('display', 'none');
 		$(".largest").css('visibility', 'hidden');
@@ -126,7 +143,7 @@ function init ()
 		resizeBackground();
 	});
 
-	$("#li_5").click(function()
+	$(".li_5").click(function()
 	{
 		$(".sections").css('display', 'none');
 		$(".largest").css('visibility', 'hidden');
@@ -140,7 +157,7 @@ function init ()
 		resizeBackground();
 	});
 
-	$("#li_6").click(function()
+	$(".li_6").click(function()
 	{
 		$(".sections").css('display', 'none');
 		$(".largest").css('visibility', 'hidden');

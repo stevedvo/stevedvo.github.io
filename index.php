@@ -10,15 +10,17 @@
 		<script type="text/javascript" src="javascript/main.js"></script>
 		<link rel="shortcut icon" href="/images/3.ico"/>
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+		<!-- <link rel="stylesheet" href="jQuery/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css"/> -->
 		<script type="text/javascript" src="jQuery/jquery-1.12.3.min.js"></script>
 		<script type="text/javascript" src="jQuery/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+		<!-- <script type="text/javascript" src="jQuery/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 		
 	</head>
 
 	<body>
 		<div class="container-fluid">
-			<div id="wrapper" class="col-lg-12 col-md-12 col-sm-12">
+			<div id="wrapper" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<?php
 					$page_title = "Welcome To My Website";
 					include ("includes/header.html");

@@ -20,7 +20,7 @@
 
 	<body>
 		<div class="container-fluid">
-			<div id="wrapper" class="col-lg-12 col-md-12 col-sm-12">
+			<div id="wrapper" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<?php
 					$page_title = "Canvas Animation";
 					include ("includes/header.html");

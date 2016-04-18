@@ -17,11 +17,24 @@
 .topnav
 {
 	padding-left: 0px;
+	list-style: none;
 }
 
-.topnav li
+.li_inline
 {
 	display: inline;
+}
+
+#filling, #filling_2y
+{
+	padding-left: 0px;
+	list-style: none;
+	text-align: center;
+}
+
+#burger_2y
+{
+	top: -15px;
 }
 
 .btn
