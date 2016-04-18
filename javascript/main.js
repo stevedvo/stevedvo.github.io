@@ -68,6 +68,7 @@ function init ()
 	{
 		$(this).css('background', 'green');
 		$(this).css('color', 'black');
+		$(this).animate({backgroundColor: jQuery.Color({alpha: 0}), color: "#white"}, 750);
 	});
 
 	$("#burger").click(function()
