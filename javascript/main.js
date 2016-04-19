@@ -34,12 +34,12 @@ function resizeBackground ()
 
 function init ()
 {
-	// $("#burger").css('display', 'none');
+	// $("#burger").hide();
 	$("#burger").css('color', '#337ab7');
-	$("#filling").css('display', 'none');
+	$("#filling").hide();
 	
-	// $("#burger_2y").css('display', 'none');
-	$("#filling_2y").css('display', 'none');
+	// $("#burger_2y").hide();
+	$("#filling_2y").hide();
 	
 	$(".navitem").mouseover(function()
 	{
@@ -81,7 +81,7 @@ function init ()
 		$("#filling_2y").slideToggle("slow");
 	});
 
-	$(".sections").css('display', 'none');
+	$(".sections").hide();
 	$(".largest").css('visibility', 'hidden');
 	$(".default").show("fold", 1000);
 	$(".largest").css('display', 'block');
@@ -90,7 +90,7 @@ function init ()
 
 	$(".li_1").click(function()
 	{
-		$(".sections").css('display', 'none');
+		$(".sections").hide();
 		$(".largest").css('visibility', 'hidden');
 		$(".temphdr").css("background", "yellow");
 		$("#section_1").show("fold", 1000);
@@ -104,7 +104,7 @@ function init ()
 
 	$(".li_2").click(function()
 	{
-		$(".sections").css('display', 'none');
+		$(".sections").hide();
 		$(".largest").css('visibility', 'hidden');
 		$(".temphdr").css("background", "yellow");
 		$("#section_2").show("fold", 1000);
@@ -118,7 +118,7 @@ function init ()
 
 	$(".li_3").click(function()
 	{
-		$(".sections").css('display', 'none');
+		$(".sections").hide();
 		$(".largest").css('visibility', 'hidden');
 		$(".temphdr").css("background", "yellow");
 		$("#section_3").show("fold", 1000);
@@ -132,7 +132,7 @@ function init ()
 
 	$(".li_4").click(function()
 	{
-		$(".sections").css('display', 'none');
+		$(".sections").hide();
 		$(".largest").css('visibility', 'hidden');
 		$(".temphdr").css("background", "yellow");
 		$("#section_4").show("fold", 1000);
@@ -146,7 +146,7 @@ function init ()
 
 	$(".li_5").click(function()
 	{
-		$(".sections").css('display', 'none');
+		$(".sections").hide();
 		$(".largest").css('visibility', 'hidden');
 		$(".temphdr").css("background", "yellow");
 		$("#section_5").show("fold", 1000);
@@ -160,7 +160,7 @@ function init ()
 
 	$(".li_6").click(function()
 	{
-		$(".sections").css('display', 'none');
+		$(".sections").hide();
 		$(".largest").css('visibility', 'hidden');
 		$(".temphdr").css("background", "yellow");
 		$("#section_6").show("fold", 1000);
