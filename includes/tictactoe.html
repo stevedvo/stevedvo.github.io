@@ -1,34 +1,23 @@
-<!DOCTYPE html>
+<section id="about" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	<h3 class="head3">Tic Tac Toe Game</h3>
+	<p>This is a little game I put together whilst I was learning JavaScript.</p>
+	<p>Was originally played by dragging & dropping the 'X' and 'O' icons onto the grid, but this was not very mobile-friendly! Updated to respond to click events instead. Enjoy!</p>
+</section>
 
-<html lang="en">
-
-	<head>
-	</head>
-
-	<body>
-		<section id="about" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<h3 class="head3">Tic Tac Toe Game</h3>
-			<p>This is a little game I put together whilst I was learning JavaScript.</p>
-			<p>Was originally played by dragging & dropping the 'X' and 'O' icons onto the grid, but this was not very mobile-friendly! Updated to respond to click events instead. Enjoy!</p>
-		</section>
-		<section id="tttGame" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<table class="players">
-				<tr><td class="pName">Player X:</td><td><input id="playerX" type="text" value="Player 1"/></td></tr>
-				<tr><td class="pName">Player O:</td><td><input id="playerO" type="text" value="Player 2"/></td></tr>
-			</table>
-			<p id="instructions">Player X goes first. Tap onto grid to place the first X and begin the game.</p>
-			<table class="icons">
-				<tr><td id="iconX">X</td><td id="iconO">O</td><td id="btn">Reset</td></tr>
-			</table>
-			<table class="grid">
-				<tr><td id="A1" class="gridPlace">a1</td><td id="B1" class="gridPlace">b1</td><td id="C1" class="gridPlace">c1</td></tr>
-				<tr><td id="A2" class="gridPlace">a2</td><td id="B2" class="gridPlace">b2</td><td id="C2" class="gridPlace">c2</td></tr>
-				<tr><td id="A3" class="gridPlace">a3</td><td id="B3" class="gridPlace">b3</td><td id="C3" class="gridPlace">c3</td></tr>
-			</table>
-			<br/>
-			<div id="msgs"></div>
-		</section>
-		
-	<body>
-
-<html>
+<section id="tttGame" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	<table class="players">
+		<tr><td class="pName">Player X:</td><td><input id="playerX" type="text" value="Player 1"/></td></tr>
+		<tr><td class="pName">Player O:</td><td><input id="playerO" type="text" value="Player 2"/></td></tr>
+	</table>
+	<p id="instructions">Player X goes first. Tap onto grid to place the first X and begin the game.</p>
+	<table class="icons">
+		<tr><td id="iconX">X</td><td id="iconO">O</td><td id="btn">Reset</td></tr>
+	</table>
+	<table class="grid">
+		<tr><td id="A1" class="gridPlace">a1</td><td id="B1" class="gridPlace">b1</td><td id="C1" class="gridPlace">c1</td></tr>
+		<tr><td id="A2" class="gridPlace">a2</td><td id="B2" class="gridPlace">b2</td><td id="C2" class="gridPlace">c2</td></tr>
+		<tr><td id="A3" class="gridPlace">a3</td><td id="B3" class="gridPlace">b3</td><td id="C3" class="gridPlace">c3</td></tr>
+	</table>
+	<br/>
+	<div id="msgs"></div>
+</section>
