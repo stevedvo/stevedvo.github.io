@@ -36,12 +36,18 @@
 {
 	padding-left: 0px;
 	list-style: none;
-	text-align: center;
 }
 
 #burger_2y
 {
 	top: -15px;
+}
+
+#burger_2y, #filling_2y
+{
+	position: relative;
+	float: right;
+	z-index: 2;	
 }
 
 .btn
@@ -56,19 +62,22 @@
 
 .left
 {
-	text-align: left !important;
 	margin-top: 1px;
 	margin-bottom: 1px;
+	text-align: right !important;
+}
+
+@media only screen and (min-device-width: 768px)
+{
+	.left
+	{
+		text-align: left !important;
+	}
 }
 
 #wrapper
 {
-/*	background: -ms-linear-gradient(0deg, lightblue, black);
-	background: -moz-linear-gradient(0deg, lightblue, black);
-	background: -webkit-linear-gradient(0deg, lightblue, black);
-	background: -o-linear-gradient(0deg, lightblue, black);
-	background: linear-gradient(0deg, lightblue, black);
-*/	color: white;
+	color: white;
 	padding: 0px;
 
 	background: url("../images/background_sml.jpg");
@@ -76,7 +85,7 @@
 	background-attachment: fixed;
 }
 
-@media only screen and (min-device-width: 500px)
+@media only screen and (min-device-width: 769px)
 {
 	#wrapper
 	{
@@ -88,8 +97,15 @@
 
 #page-content-wrapper
 {
-	/*position: relative;*/
-	top: -15px;
+	top: -55px;
+}
+
+@media only screen and (min-device-width: 768px)
+{
+	#page-content-wrapper
+	{
+		top: -15px;
+	}
 }
 
 .sidebar-nav
