@@ -3,11 +3,12 @@
 	padding: 0px !important;
 }
 
-#background
+#gradfill
 {
-	opacity: 0.25;
-	position: fixed;
-	size: cover;
+	opacity: 0.5;
+	position: absolute;
+	width: 100%;
+	height: 100%;
 }
 
 .head1, .head3
@@ -62,17 +63,27 @@
 
 #wrapper
 {
-/*	background-image: url("../images/andromeda_sml.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-*/
-	background: -ms-linear-gradient(0deg, lightblue, black);
+/*	background: -ms-linear-gradient(0deg, lightblue, black);
 	background: -moz-linear-gradient(0deg, lightblue, black);
 	background: -webkit-linear-gradient(0deg, lightblue, black);
 	background: -o-linear-gradient(0deg, lightblue, black);
 	background: linear-gradient(0deg, lightblue, black);
-	color: white;
+*/	color: white;
 	padding: 0px;
+
+	background: url("../images/background_sml.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+@media only screen and (min-device-width: 500px)
+{
+	#wrapper
+	{
+		background: url("../images/background.jpg");
+		background-size: cover;
+		background-attachment: fixed;
+	}
 }
 
 #page-content-wrapper

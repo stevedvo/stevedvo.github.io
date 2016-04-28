@@ -13,6 +13,7 @@
 	<body>
 		<div class="container-fluid">
 			<div id="wrapper" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<img id="gradfill" src="images/gradfill.jpg" alt="gradfill"/>
 				<?php
 					$page_title = "Canvas Animation";
 					include ("includes/header.html");

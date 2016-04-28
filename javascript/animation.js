@@ -39,17 +39,18 @@ function init()
 	canvas = O("canvas");
 	ctx = canvas.getContext("2d");
 	$("#canvas").css('margin-left', '15px');	
+	$("#canvas").css('position', 'relative');	
 	xWind = $(window).width();
-	$("#canvas").width(xWind/2);
-	$("#canvas").height(xWind/4);
+	$("#canvas").width(xWind*5/6);
+	$("#canvas").height(xWind*5/12);
 	w = canvas.width; 
 	h = canvas.height;
 	
-	x1=20; y1=20; r1=20;
-	dx1=3; dy1=1;
+	x1=w*5/15; y1=x1; r1=x1/8;
+	dx1=x1/40; dy1=x1/120;
 	
-	x2=30; y2=40; r2=30;
-	dx2=2; dy2=3;
+	x2=w*6/15; y2=x2/2; r2=x2/8;
+	dx2=x2/120; dy2=x2/90;
 	
 	linear1 = ctx.createLinearGradient(0, 0, w, 0);
 	linear1.addColorStop(0.00, "red");

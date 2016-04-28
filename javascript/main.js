@@ -2,35 +2,19 @@ var	xImg;
 var	yImg;
 var	ratioImg;
 
-function resizeBackground ()
+function resizeGradFill ()
 {
-	xWind = $(window).width();
-	yWind = $(window).height();
-	ratioWind = xWind/yWind;
+/*	$("#gradfill").width($(window).width());
 
-	xImg = $("#background").width();
-	yImg = $("#background").height();
-	newImgRatio = xImg/yImg;
-
-	if (ratioImg > ratioWind)
+	if ($("#wrapper").height() < $(window).height())
 	{
-		$("#background").height(yWind);
-		$("#background").width(yImg*ratioImg);
+		$("#gradfill").height($(window).height());
 	}
 	else
 	{
-		$("#background").width(xWind);
-		$("#background").height(xImg/ratioImg);
+		$("#gradfill").height($("#wrapper").height());
 	}
-
-/*	console.log ($("#wrapper").height());
-
-	if ($("#wrapper").height() < yWind)
-	{
-		$("#wrapper").height(yWind);
-	}
-*/
-}
+*/}
 
 function init ()
 {
@@ -99,7 +83,7 @@ function init ()
 		// $("#section_1").css('visibility', 'visible');
 		// $("#section_1").css('display', 'block');
 		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1500);
-		resizeBackground();
+		resizeGradFill();
 	});
 
 	$(".li_2").click(function()
@@ -113,7 +97,7 @@ function init ()
 		// $("#section_2").css('visibility', 'visible');
 		// $("#section_2").css('display', 'block');
 		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1500);
-		resizeBackground();
+		resizeGradFill();
 	});
 
 	$(".li_3").click(function()
@@ -127,7 +111,7 @@ function init ()
 		// $("#section_3").css('visibility', 'visible');
 		// $("#section_3").css('display', 'block');
 		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1500);
-		resizeBackground();
+		resizeGradFill();
 	});
 
 	$(".li_4").click(function()
@@ -141,7 +125,7 @@ function init ()
 		// $("#section_4").css('visibility', 'visible');
 		// $("#section_4").css('display', 'block');
 		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1500);
-		resizeBackground();
+		resizeGradFill();
 	});
 
 	$(".li_5").click(function()
@@ -155,7 +139,7 @@ function init ()
 		// $("#section_5").css('visibility', 'visible');
 		// $("#section_5").css('display', 'block');
 		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1500);
-		resizeBackground();
+		resizeGradFill();
 	});
 
 	$(".li_6").click(function()
@@ -169,7 +153,7 @@ function init ()
 		// $("#section_6").css('visibility', 'visible');
 		// $("#section_6").css('display', 'block');
 		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1500);
-		resizeBackground();
+		resizeGradFill();
 	});
 
 	$(".lrg").click(function()
@@ -179,11 +163,11 @@ function init ()
 
 	$(".sections").width($(".largest").width());
 
-	xImg = $("#background").width();
-	yImg = $("#background").height();
-	ratioImg = xImg/yImg;
+	// xImg = $("#gradfill").width();
+	// yImg = $("#gradfill").height();
+	// ratioImg = xImg/yImg;
 
-	resizeBackground();
+	resizeGradFill();
 
 	$(".thumb").attr('title', 'Click to see larger version');
 
@@ -195,4 +179,4 @@ function init ()
 }
 
 document.addEventListener("DOMContentLoaded", init, false);
-window.addEventListener("resize", resizeBackground, false);
+window.addEventListener("resize", resizeGradFill, false);
