@@ -67,7 +67,7 @@
 	text-align: right !important;
 }
 
-@media only screen and (min-device-width: 768px)
+@media only screen and (min-width: 768px)
 {
 	.left
 	{
@@ -85,7 +85,7 @@
 	background-attachment: fixed;
 }
 
-@media only screen and (min-device-width: 769px)
+@media only screen and (orientation: landscape)
 {
 	#wrapper
 	{
@@ -100,7 +100,7 @@
 	top: -55px;
 }
 
-@media only screen and (min-device-width: 768px)
+@media only screen and (min-width: 768px)
 {
 	#page-content-wrapper
 	{
