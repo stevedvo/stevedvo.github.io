@@ -14,6 +14,13 @@
 		<p>> The problem seems to be that the background image is NOT obeying the "fixed" and "cover" attributes that should be set - the image should not scroll.</p>
 		<p>> OK, so reading up about it this is a common problem! Attempted a few different ways of trying to get around this "bug". Thought I was onto a winner with a bit of JavaScript that adjusts the background position by the amount that the page has been scrolled by. This still did not work on the iPhone, and although it worked on the PC the repositioning of the background with REALLY clunky and was not the beautiful smooth scroll that you get when it's just set to "fixed" & "cover".</p>
 		<p>> Spent several hours trying to figure out some other solution but getting nowhere. I can at least test what the actual outcome is with my iPhone now, but I don't have an iPad to hand to test what happens there. Had to come to a compromise with some @media queries that displays the background as a repeating scrollable image on mobile/tablets. Not 100% happy but moving on now!</p>
+		<p>> Looking at improving SEO and performance:</p>
+		<ul>
+			<li>Added a config file to enable GZIP compression.</li>
+			<li>Changed the 2 pixel gradient image file format from jpg to png.</li>
+			<li>Changed the ordering of the main CSS.</li>
+			<li>Added an "async" attribute to the external script calls where possible i.e. not critical for initial page load.</li>
+		</ul>
 	</article>
 	<hr/>
 	<article id="20140503">
