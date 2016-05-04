@@ -75,14 +75,12 @@
 	}
 }
 
-#wrapper
+@media only screen and (orientation: portrait)
 {
-	color: white;
-	padding: 0px;
-
-	background: url("../images/background_sml.jpg");
-	background-size: cover;
-	background-attachment: fixed;
+	#wrapper
+	{
+		background: url("../images/background_sml.jpg");
+	}
 }
 
 @media only screen and (orientation: landscape)
@@ -90,10 +88,32 @@
 	#wrapper
 	{
 		background: url("../images/background.jpg");
-		background-size: cover;
-		background-attachment: fixed;
 	}
 }
+
+@media only screen and (min-width: 769px)
+{
+	#wrapper
+	{
+		background-size: cover;
+		background-attachment: fixed;		
+	}
+}
+
+@media only screen and (max-width: 768px)
+{
+	#wrapper
+	{
+		background-size: 100% auto;
+	}
+}
+
+#wrapper
+{
+	color: white;
+	padding: 0px;
+}
+
 
 #page-content-wrapper
 {

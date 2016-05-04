@@ -7,11 +7,26 @@
 		<p>> </p>
 	</article>
 	<hr/> -->
+	<article id="20140504">
+		<h4>04 May 2016</h4>
+		<p>> HAPPY STAR WARS DAY!</p>
+		<p>> Remembered that I can actually access my local webserver over the LAN - so I can point my iPhone Safari browser to my laptop's local IP address and view the dev version of the site on mobile without having to upload to live. Woop!</p>
+		<p>> The problem seems to be that the background image is NOT obeying the "fixed" and "cover" attributes that should be set - the image should not scroll.</p>
+		<p>> OK, so reading up about it this is a common problem! Attempted a few different ways of trying to get around this "bug". Thought I was onto a winner with a bit of JavaScript that adjusts the background position by the amount that the page has been scrolled by. This still did not work on the iPhone, and although it worked on the PC the repositioning of the background with REALLY clunky and was not the beautiful smooth scroll that you get when it's just set to "fixed" & "cover".</p>
+		<p>> Spent several hours trying to figure out some other solution but getting nowhere. I can at least test what the actual outcome is with my iPhone now, but I don't have an iPad to hand to test what happens there. Had to come to a compromise with some @media queries that displays the background as a repeating scrollable image on mobile/tablets. Not 100% happy but moving on now!</p>
+	</article>
+	<hr/>
+	<article id="20140503">
+		<h4>03 May 2016</h4>
+		<p>> Had just a very small amount of time to try to figure out why the background image isn't displaying correctly on iPhone. Read up a little more on the CSS @media queries and played about to change the CSS depending on orientation rather than display width. Looked like from the Chrome dev tools that this would work but found that it didn't after uploading to live and viewing on the iPhone for real. Only had half an hour or so so will look into this problem more tomorrow.</p>
+	</article>
+	<hr/>
 	<article id="20160428">
 		<h4>28 April 2016</h4>
 		<p>> After a few days off, gotten my head back into website mode. Made excellent progress in sorting out the sizing of the background gradient fill and background image. Switched it around so that the image is the background and the gradient fill just comes from a 1px x 2px jpg that gets stretched according to the window size. Had to fiddle a bit with the opacity settings and some position attributes to make sure each page looked right. Easy when you know how - but took me a while to get there!!</p>
 		<p>> Been having my first little play around with CSS media queries to see if I can display different images depending on the device width.</p>
 		<p>> Successfully got the background image to change on the specified breakpoint, which looks a lot better. Also whilst playing with media queries I have adjusted the layout of the secondary burger menu to be all right-aligned. Primary burger menu could use a little attention.</p>
+		<p>> After uploading these latest changes to the live site, discovered that the background image is NOT actually displaying as intended on my iPhone - despite what Chrome's user agent spoofing is telling me. Hmmm... tricky - how can I test any changes are working correctly before I upload to the live site if the dev tools don't report properly?!
 	</article>
 	<hr/>
 	<article id="20160422">

@@ -1,23 +1,6 @@
-var	xImg;
-var	yImg;
-var	ratioImg;
-
-function resizeGradFill ()
-{
-/*	$("#gradfill").width($(window).width());
-
-	if ($("#wrapper").height() < $(window).height())
-	{
-		$("#gradfill").height($(window).height());
-	}
-	else
-	{
-		$("#gradfill").height($("#wrapper").height());
-	}
-*/}
-
 function init ()
 {
+
 	// $("#burger").hide();
 	$("#burger").css('color', '#337ab7');
 	$("#filling").hide();
@@ -83,7 +66,7 @@ function init ()
 		// $("#section_1").css('visibility', 'visible');
 		// $("#section_1").css('display', 'block');
 		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1500);
-		resizeGradFill();
+		
 	});
 
 	$(".li_2").click(function()
@@ -97,7 +80,7 @@ function init ()
 		// $("#section_2").css('visibility', 'visible');
 		// $("#section_2").css('display', 'block');
 		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1500);
-		resizeGradFill();
+		
 	});
 
 	$(".li_3").click(function()
@@ -111,7 +94,7 @@ function init ()
 		// $("#section_3").css('visibility', 'visible');
 		// $("#section_3").css('display', 'block');
 		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1500);
-		resizeGradFill();
+		
 	});
 
 	$(".li_4").click(function()
@@ -125,7 +108,7 @@ function init ()
 		// $("#section_4").css('visibility', 'visible');
 		// $("#section_4").css('display', 'block');
 		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1500);
-		resizeGradFill();
+		
 	});
 
 	$(".li_5").click(function()
@@ -139,7 +122,7 @@ function init ()
 		// $("#section_5").css('visibility', 'visible');
 		// $("#section_5").css('display', 'block');
 		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1500);
-		resizeGradFill();
+		
 	});
 
 	$(".li_6").click(function()
@@ -153,7 +136,7 @@ function init ()
 		// $("#section_6").css('visibility', 'visible');
 		// $("#section_6").css('display', 'block');
 		$(".temphdr").animate({backgroundColor: jQuery.Color({alpha: 0})}, 1500);
-		resizeGradFill();
+		
 	});
 
 	$(".lrg").click(function()
@@ -167,7 +150,7 @@ function init ()
 	// yImg = $("#gradfill").height();
 	// ratioImg = xImg/yImg;
 
-	resizeGradFill();
+	
 
 	$(".thumb").attr('title', 'Click to see larger version');
 
@@ -179,4 +162,3 @@ function init ()
 }
 
 document.addEventListener("DOMContentLoaded", init, false);
-window.addEventListener("resize", resizeGradFill, false);
