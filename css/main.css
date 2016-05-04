@@ -11,14 +11,6 @@
 	height: 100%;
 }
 
-@media only screen and (min-width: 768px)
-{
-	.left
-	{
-		/*text-align: left !important;*/
-	}
-}
-
 @media only screen and (orientation: portrait)
 {
 	#wrapper
@@ -57,6 +49,30 @@
 	color: white;
 	padding: 0px;
 }
+
+@media only screen and (min-width: 1200px)
+{
+	#pageTitle, #social, #main_nav
+	{
+		left: 15px;
+	}
+
+	#sidebar-wrapper
+	{
+		left: -50px;
+	}
+
+	#page-content-wrapper
+	{
+		left: -35px;
+	}
+
+	.left
+	{
+		width: 150px;
+	}
+}
+
 
 .head1, .head3
 {
