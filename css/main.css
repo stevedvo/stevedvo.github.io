@@ -15,7 +15,7 @@
 {
 	.left
 	{
-		text-align: left !important;
+		/*text-align: left !important;*/
 	}
 }
 
@@ -100,11 +100,7 @@
 .btn
 {
 	margin: auto;
-}
-
-#sidebar-wrapper
-{
-	margin-left: 15px;
+	white-space: normal !important;
 }
 
 .left
@@ -130,15 +126,15 @@
 
 .sidebar-nav
 {
-	margin: 0;
-	padding: 0;
+	margin: 0px;
+	padding: 0px;
 	list-style: none;
+	line-height: 40px;
 }
 
-.sidebar-nav
+#sidebar-wrapper
 {
-	/*text-indent: 10px;*/
-	line-height: 40px;
+	padding: 0px;
 }
 
 .temphdr
