@@ -6,6 +6,7 @@
 		<?php
 			include ("includes/headinfo.html");
 		?>
+		<meta name="description" content="Information about Sepsis (aka septicaemia / blood-poisoning): what it is, how it is diagnosed, and how it is treated. More info from UK Sepsis Trust."/>
 	</head>
 
 	<body>

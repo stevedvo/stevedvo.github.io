@@ -11,14 +11,6 @@
 	height: 100%;
 }
 
-@media only screen and (min-width: 768px)
-{
-	.left
-	{
-		text-align: left !important;
-	}
-}
-
 @media only screen and (orientation: portrait)
 {
 	#wrapper
@@ -42,6 +34,10 @@
 		background-size: cover;
 		background-attachment: fixed;		
 	}
+	#profilePic
+	{
+		padding-bottom: 15px;
+	}
 }
 
 @media only screen and (max-width: 768px)
@@ -49,6 +45,14 @@
 	#wrapper
 	{
 		background-size: 100% auto;
+	}
+	#social_mob
+	{
+		padding: 0px 15px 0px 15px;
+	}
+	#burger
+	{
+		float: right;
 	}
 }
 
@@ -58,7 +62,24 @@
 	padding: 0px;
 }
 
-.head1, .head3
+@media only screen and (min-width: 992px)
+{
+	#profilePic, #sidebar-wrapper
+	{
+		width: 14.28571429%;
+	}
+}
+
+@media only screen and (min-width: 1200px)
+{
+	#profilePic, #sidebar-wrapper
+	{
+		width: 12.5%;
+	}
+}
+
+
+.head2, .head3
 {
 	margin: auto;
 }
@@ -66,23 +87,6 @@
 .navitem
 {
 	margin: 0px 10px 0px 10px;
-}
-
-.topnav
-{
-	padding-left: 0px;
-	list-style: none;
-}
-
-.li_inline
-{
-	display: inline;
-}
-
-#filling, #filling_2y
-{
-	padding-left: 0px;
-	list-style: none;
 }
 
 #burger_2y
@@ -100,11 +104,7 @@
 .btn
 {
 	margin: auto;
-}
-
-#sidebar-wrapper
-{
-	margin-left: 15px;
+	white-space: normal !important;
 }
 
 .left
@@ -128,17 +128,9 @@
 	}
 }
 
-.sidebar-nav
+#sidebar-wrapper
 {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-.sidebar-nav
-{
-	/*text-indent: 10px;*/
-	line-height: 40px;
+	padding: 0px;
 }
 
 .temphdr
