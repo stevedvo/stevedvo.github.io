@@ -34,6 +34,10 @@
 		background-size: cover;
 		background-attachment: fixed;		
 	}
+	#profilePic
+	{
+		padding-bottom: 15px;
+	}
 }
 
 @media only screen and (max-width: 768px)
@@ -41,6 +45,14 @@
 	#wrapper
 	{
 		background-size: 100% auto;
+	}
+	#social_mob
+	{
+		padding: 0px 15px 0px 15px;
+	}
+	#burger
+	{
+		float: right;
 	}
 }
 
@@ -50,31 +62,24 @@
 	padding: 0px;
 }
 
+@media only screen and (min-width: 992px)
+{
+	#profilePic, #sidebar-wrapper
+	{
+		width: 14.28571429%;
+	}
+}
+
 @media only screen and (min-width: 1200px)
 {
-	#pageTitle, #social, #main_nav
+	#profilePic, #sidebar-wrapper
 	{
-		left: 15px;
-	}
-
-	#sidebar-wrapper
-	{
-		left: -50px;
-	}
-
-	#page-content-wrapper
-	{
-		left: -35px;
-	}
-
-	.left
-	{
-		width: 150px;
+		width: 12.5%;
 	}
 }
 
 
-.head1, .head3
+.head2, .head3
 {
 	margin: auto;
 }
@@ -82,23 +87,6 @@
 .navitem
 {
 	margin: 0px 10px 0px 10px;
-}
-
-.topnav
-{
-	padding-left: 0px;
-	list-style: none;
-}
-
-.li_inline
-{
-	display: inline;
-}
-
-#filling, #filling_2y
-{
-	padding-left: 0px;
-	list-style: none;
 }
 
 #burger_2y
@@ -138,14 +126,6 @@
 	{
 		top: -15px;
 	}
-}
-
-.sidebar-nav
-{
-	margin: 0px;
-	padding: 0px;
-	list-style: none;
-	line-height: 40px;
 }
 
 #sidebar-wrapper

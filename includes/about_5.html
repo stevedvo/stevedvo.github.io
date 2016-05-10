@@ -7,7 +7,21 @@
 		<p>> </p>
 	</article>
 	<hr/> -->
-	<article id="20140504">
+	<article id="20160510">
+		<h4>10 May 2016</h4>
+		<p>> Continued the work with the CSS / Bootstrap / @media queries to improve the look of the site across a variety of screen types/sizes:</p>
+		<ul>
+			<li>Adjusted the widths of some of the images and Bootstrap grid columns to different %s to behave more reponsively.</li>
+			<li>Re-jigged the column widths and arrangement of the social links, and added different icons to appear when viewing on smaller screens.</li>
+			<li>Changed the h1 heading to h2 to allow a better fit on the smallest mobile screens.</li>
+			<li>Removed the "async" attribute from the script call that loads the main JS file - realised this was causing an issue with the burger menus not being initially hidden when viewing the site on my phone, although this was not apparent with the user-agent-spoofing.</li>
+		</ul>
+		<p>> Feeling quite happy with the look and functionality of the headers & menus on across all devices now :D</p>
+		<p>> Added meta descriptions to each of the pages to hopefully help with Google search results. Was going to add meta keywords too but reading up a little about it I see these are very old hat and no longer have any influence with site rankings!</p>
+		<p>> Had a response from the 123-Reg tech support team regarding the problem experienced with the web.config file contents - turns out they had omitted to include a particular opening & closing tag. Google still reckons I don't have GZIP compression enabled, however! #fml</p>
+	</article>
+	<hr/>
+	<article id="20160504">
 		<h4>04 May 2016</h4>
 		<p>> HAPPY STAR WARS DAY!</p>
 		<p>> Remembered that I can actually access my local webserver over the LAN - so I can point my iPhone Safari browser to my laptop's local IP address and view the dev version of the site on mobile without having to upload to live. Woop!</p>
@@ -22,10 +36,10 @@
 			<li>Added an "async" attribute to the external script calls where possible i.e. not critical for initial page load.</li>
 		</ul>
 		<p>> Oh... the website now just shows an HTTP 500 error when I try to load it. Figured it must be something to do with the web.config file that has been added to the root directory for the GZIP compression, since taking this file out resolves the issue! Copied and pasted the file contents exactly as instructed on the 123-Reg support page so it seems a little strange that this would kill it. Removed the config file for now.</p>
-		<p>> Done some CSS work to tweak the margins & padding for various sections and improve the look of the site.</p>
+		<p>> Started doing some tweaking / fine-tuning with the CSS / Bootstrap / @media queries to get the margins, padding, spacing, widths, etc for various sections looking better throughout the site on each screen type.</p>
 	</article>
 	<hr/>
-	<article id="20140503">
+	<article id="20160503">
 		<h4>03 May 2016</h4>
 		<p>> Had just a very small amount of time to try to figure out why the background image isn't displaying correctly on iPhone. Read up a little more on the CSS @media queries and played about to change the CSS depending on orientation rather than display width. Looked like from the Chrome dev tools that this would work but found that it didn't after uploading to live and viewing on the iPhone for real. Only had half an hour or so so will look into this problem more tomorrow.</p>
 	</article>

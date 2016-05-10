@@ -6,6 +6,7 @@
 		<?php
 			include ("includes/headinfo.html");
 		?>
+		<meta name="description" content="Tic Tac Toe / Noughts & Crosses game made using JavaScript."/>
 		<script type="text/javascript" src="javascript/tictactoe.js"></script>
 		<script type="text/javascript" src="javascript/OSC.js"></script>
 		<link type="text/css" rel="stylesheet" href="css/tictactoe.css"/>

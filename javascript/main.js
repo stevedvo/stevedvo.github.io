@@ -43,7 +43,17 @@ function init ()
 		$("#filling").slideToggle("slow");
 	});
 
+	$("#filling").click(function()
+	{
+		$("#filling").slideToggle("slow");
+	});
+
 	$("#burger_2y").click(function()
+	{
+		$("#filling_2y").slideToggle("slow");
+	});
+
+	$("#filling_2y").click(function()
 	{
 		$("#filling_2y").slideToggle("slow");
 	});
