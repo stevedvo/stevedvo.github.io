@@ -149,18 +149,31 @@
 	position: static;
 }
 
-/*.iframe-container
+.screenshot-container
 {
-	position: relative;
-	height: 0px;
-	overflow: hidden;
+	padding-bottom: 30px;
+	width: 100%;
 }
 
-.iframe-container iframe
+.screenshot
 {
-	position: absolute;
-	top: 0;
-	left: 0;
 	width: 100%;
-	height: 100%;
-}*/
+}
+
+@media only screen and (max-width: 575px)
+{
+	.screenshot-container
+	{
+		float: left;
+		width: 100%;
+	}
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px)
+{
+	.screenshot-container
+	{
+		float: left;
+		width: 50%;
+	}
+}

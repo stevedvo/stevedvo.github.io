@@ -7,6 +7,13 @@
 		<p>> </p>
 	</article>
 	<hr/> -->
+	<article id="20160511">
+		<h4>11 May 2016</h4>
+		<p>> Continued the work I started yesterday with adding numerous iframes into the <a href="links.php" target="_blank">Links</a> section. Got so far with it, and had 15 or so iframes loading into the page... but it didn't look great and didn't work great. As suspected, it took f-o-r-e-v-e-r [well, 60-90 seconds] to load the page and make all the requests [approx 1,000!!]. And then when all the iframes DID finally load, the parts of the pages that were visible were not what I wanted. Depending on ow well the destination page could cope with narrow viewports the results varied. I COULD have spent a while playing with CSS & JS to set the scroll height & width upon loading... but considering how long it took to load everything in the first place I gave that idea up!</p>
+		<p>> So instead I changed the links page to just display a load of screenshots instead which link to the pages on a new tab. Visited each of the destination pages to take the screenshots and trim/resize to suitable dimensions. Once confirmed that all the images & links worked correctly I re-organised them into categories and then checked how it all looked on different screen sizes. Needed a few tweaks with the .clearfix div class.</p>
+		<p>> Removed some duplicate headings that were apparent on pages within my site that didn't have a secondary navigation.</p>
+	</article>
+	<hr/>
 	<article id="20160510">
 		<h4>10 May 2016</h4>
 		<p>> Continued the work with the CSS / Bootstrap / @media queries to improve the look of the site across a variety of screen types/sizes:</p>
@@ -21,7 +28,7 @@
 		<p>> Had a response from the 123-Reg tech support team regarding the problem experienced with the web.config file contents - turns out they had omitted to include a particular opening & closing tag. Google still reckons I don't have GZIP compression enabled, however! #fml</p>
 		<p>> Generated a new sitemap and updated in Google webmaster tools. Google seems to have forgotten that I previously submitted one!? Also now getting a crawl error saying that /mobile and /m don't exist. WTF?? Why is Google even trying to find these non-existent pages that I've never even tried to access?</p>
 		<p>> Was getting a couple of errors on the live site [but not on test env] relating to the glyphicon-halflings woff and woff2 filetypes. Found a few lines of code to add to the web.config file to make that go away.</p>
-		<p>> Added a new section: <a href="links.php" target="_blank">Links & Resources</a>. Intention is to use a bunch of iframes and screenshots to display a numerous useful links - kinda like a "favourites" menu but with some pages pre-loaded to see the latest info at a glance. May be quite slow to load the page, though as it will require a lot of requests.</p>
+		<p>> Added a new section: <a href="links.php" target="_blank">Links & Resources</a>. The intention is to use a bunch of iframes and screenshots to display a numerous useful links - kinda like a "favourites" menu but with some pages pre-loaded to see the latest info at a glance. May be quite slow to load the page, though, as it will likely require a lot of requests.</p>
 	</article>
 	<hr/>
 	<article id="20160504">
