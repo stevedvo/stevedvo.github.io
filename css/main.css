@@ -166,20 +166,20 @@
 	width: 100%;
 }
 
-@media only screen and (max-width: 575px)
-{
-	.screenshot-container, .astropic-container
-	{
-		float: left;
-		width: 100%;
-	}
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px)
+@media only screen and (max-width: 479px)
 {
 	.screenshot-container, .astropic-container
 	{
 		float: left;
 		width: 50%;
+	}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px)
+{
+	.screenshot-container, .astropic-container
+	{
+		float: left;
+		width: 33.33333333%;
 	}
 }
