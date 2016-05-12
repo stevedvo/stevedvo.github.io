@@ -112,13 +112,31 @@
 	white-space: normal !important;
 }
 
+@media only screen and (max-width: 991px)
+{
+	.list-inline>li
+	{
+		padding: 0px !important;
+	}
+}
+
+@media only screen and (min-width: 992px)
+{
+	.top
+	{
+		padding: 10px 16px !important;
+		font-size: 18px !important;
+		line-height: 1.33333333 !important;
+		border-radius: 6px !important;
+	}
+}
+
 .left
 {
 	margin-top: 1px;
 	margin-bottom: 1px;
 	text-align: right !important;
 }
-
 
 #page-content-wrapper
 {

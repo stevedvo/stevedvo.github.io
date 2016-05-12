@@ -7,6 +7,13 @@
 		<p>> </p>
 	</article>
 	<hr/> -->
+	<article id="20160512">
+		<h4>12 May 2016</h4>
+		<p>> Added some more links & screenshots to the <a href="links.php" target="_blank">Links</a> page, and did some more re-organisation and Bootstrap-tweaking.</p>
+		<p>> Made the top navigation a little more responsive: since adding an extra button ["Links"] this meant that there was a narrow band of screen sizes in the "sm" Bootstrap category where the navigation bar was too long and wrapping around onto two lines. Fixed this with some media queries to set the buttons to the default size and remove some additional padding on "sm" screens, and for larger displays set the buttons to the larger size and re-instate the padding. Works well, but this is only a temporary measure... as the site grows and more buttons are added to the top navigation bar I will need to figure out a better solution.</p>
+		<p>> Made a couple of Bootstrap tweaks to the Astro Pics page. I DID have this working fine yesterday, but then some of the CSS tweaks I made this morning affected the AstroPics containers as well as the screenshots so just needed a couple of extra .clearfix divs to ensure tidyness on all screen types.</p>
+	</article>
+	<hr/>
 	<article id="20160511">
 		<h4>11 May 2016</h4>
 		<p>> Continued the work I started yesterday with adding numerous iframes into the <a href="links.php" target="_blank">Links</a> section. Got so far with it, and had 15 or so iframes loading into the page... but it didn't look great and didn't work great. As suspected, it took f-o-r-e-v-e-r [well, 60-90 seconds] to load the page and make all the requests [approx 1,000!!]. And then when all the iframes DID finally load, the parts of the pages that were visible were not what I wanted. Depending on how well the destination page could cope with narrow viewports the results varied. I COULD have spent a while playing with CSS & JS to set the scroll height & width upon loading... but considering how long it took to load everything in the first place I gave that idea up!</p>
