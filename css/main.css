@@ -201,3 +201,15 @@
 		width: 33.33333333%;
 	}
 }
+
+#viewperiod
+{
+	background: transparent;
+	float: right;
+	border-radius: 4px;
+}
+
+.periodSelect
+{
+	color: black;
+}

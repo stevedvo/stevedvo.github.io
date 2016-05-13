@@ -133,6 +133,13 @@ function init ()
 		lrgStr = $(this).attr('src').replace("thb", "lrg");
 		lrgImg = window.open(lrgStr, "PopUp", "top=0,left=0,width="+window.screen.availWidth+",height="+window.screen.availHeight+",location=no");
 	});
+
+	$("#viewperiod").bind('change', function()
+	{
+		$(".period").css('display', 'none');
+		$("#"+$("#viewperiod option:selected").val()).css('display', 'block');
+	});
+
 }
 
 document.addEventListener("DOMContentLoaded", init, false);
