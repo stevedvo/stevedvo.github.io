@@ -54,6 +54,10 @@
 	{
 		float: right;
 	}
+	#page-content-wrapper
+	{
+		width: 95%;
+	}
 }
 
 #wrapper
@@ -202,14 +206,27 @@
 	}
 }
 
-#viewperiod
+#viewperiod-button
 {
-	background: transparent;
 	float: right;
-	border-radius: 4px;
+	background: transparent;
+	width: 135px !important;
 }
 
-.periodSelect
+#viewperiod-menu
 {
-	color: black;
+	background: transparent;
+	color: #1c94c4;
+}
+
+.ui-menu-item
+{
+	background: transparent !important;
+	color: #1c94c4 !important;
+}
+
+.ui-menu-item:hover
+{
+	background: yellow !important;
+	color: black !important;
 }

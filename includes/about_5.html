@@ -1,22 +1,40 @@
 <section id="section_5" class="sections largest">
 	<article class="temphdr"></article>
-	<h3 class="head3 col-lg-6 col-md-6 col-sm-6 col-xs-6">Blog</h3>
-	<select name="viewperiod" id="viewperiod">
-		<option class="periodSelect" value="Latest" selected="selected">Latest</option>
-		<option class="periodSelect" value="Apr-2016">Apr 2016</option>
-	</select>
-	<hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12"/>
+	<h3 class="head3 col-lg-3 col-md-3 col-sm-3 col-xs-3">Blog</h3>
+	
+	<form action="#" id="periodform">
+		 <fieldset>
+		 	<label for="viewperiod"></label>
+		 	<select name="viewperiod" id="viewperiod">
+		 		<option value="Latest">Latest</option>
+		 		<option value="Apr-2016">Apr 2016</option>
+		 	</select>
+		 </fieldset>
+	 </form>
+
+	 <hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12"/>
 		<!-- <article id="">
 			<h4></h4>
 			<p>> </p>
 		</article>
 		<hr/> -->
 	<section id="Latest" class="period col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<article id="20160516">
+			<h4>16 May 2016</h4>
+			<p>> Continued the work I started on Friday with the Blog periods. Looked up how to implement the tabs in jQuery, and it seemed simple enough: just add a few extra lines of code to contain all of the sections within a "tabs" div, with an unordered list as an index that provides the tab names; then one line of JavaScript to initiate the tabs in jQuery. SimpleZ!</p>
+			<p>> I first of all commented-out all the code I'd previously done which related to the &lt;select&gt; menu to ensure there were no conflicts - just to check that the code for the tabs was working OK. Despite the simplicity, the appearance was not what I was expecting: the page was just displaying the unordered list, but the functionality was correct since clicking on the list items would show/hide the expected Blog sections.</p>
+			<p>> Upon investigation it didn't take me long to discover that the tabs depended on an additional jQuery-UI CSS stylesheet that I'd not inluded in the &lt;head&gt; section. And THEN the thought occurred that maybe this missing stylesheet was the reason that the jQuery "selectmenu" function was not displaying as intended on Friday!</p>
+			<p>> Including the missing stylesheet fixed the tabs and left them working nicely, although the colour-scheme doesn't match the rest of the site but that can be tweaked. Commented out all this code, then went back to re-coding the "selectmenu" function for the drop-down box method of choosing a Blog period. And you know what? When you include all the files you're supposed to the formatting works!! Just needed some slight adjustments to the colour-scheme and positioning, but in very short order I got the selection menu pretty much how I wanted... AND this jQuery menu has much more configurability and I was able to set more of it to being transparent against the background.</p>
+			<p>> So now: happy with the tabs functionality, and happy with the menu functionality and appearance when they are implemented separately. The trick now is to work out how to implement one for mobile and the other for larger displays...</p>
+			<p>> After some time showing this, hiding that, trying different things with Bootstrap, @media queries, and JavaScript 'if' statements, I've not quite been able to achieve what I set out to do. I can get the selectmenu to only appear on larger displays easily enough but the tabs are quite tricky and I've not gotten them to display correctly whilst that selectmenu code is active. Upon reflection, I've decided that now that I've got the jQuery selectmenu working I do actually prefer this way of choosing the Blog periods be it on mobile or larger devices. So I've scrapped all of the tabs code, but it was a good thing to learn about and I'll try to find a way to implement that elsewhere.</p>
+			<p>> Used the time that I might have spent [in attempting to get the tabs displaying nicely] to further refine the CSS that controls the select menu effects/appearance.</p>
+		</article>
+		<hr/>
 		<article id="20160513">
 			<h4>13 May 2016</h4>
 			<p>> Tackling a new issue today: splitting up this blog into different periods, so that one can jump straight to posts from different months without having to scroll a long way down the page. My idea is that for mobile devices I will enable this option through a drop-down selection box, and for larger screens I'll implement this as selectable tabs. So starting on the mobile option first of all.</p>
 			<p>> Thought I was making quite quick progress to begin with by using some examples given on the jQuery website - using the "selectmenu" function it does exactly what I want: shows/hides the relevant section depending which option is chosen from the list. Problem is though that this implementation adds an additional div at the bottom of the document, and tries to figure out the correct position, width, CSS styles, etc. It just wasn't displaying nicely no matter how much I tried to configure it - the main gripe being the width & position settings causing the div to overflow outside of the viewport! Tried tweaking this for a little while but could not get it looking right - which was a shame because the functionality was really good!</p>
-			<p>> So I gave up on this way of doing it and instead had a go at programming this myself. Took a fair chunk of time, mainly on trying to figure out how to access the values of, and initiate click events for, the &lt;option&gt; items within the &lt;select&gt; menu. Turns out that there is no click event handler for &lt;option&gt; elements but found a way around it, and then after a little trial & error dumping stuff to the <code>console.log</code> I figured out how to manipulate which sections should be shown/hidden (using display: block/none) at the expected times. Woop! Now to work on the tab version for the larger displays...</p>
+			<p>> So I gave up on this way of doing it and instead had a go at programming this myself. Took a fair chunk of time, mainly on trying to figure out how to access the values of, and initiate click events for, the &lt;option&gt; items within the &lt;select&gt; menu. Turns out that there is no click event handler for &lt;option&gt; elements but found a way around it, and then after a little trial & error dumping stuff to the <code>console.log</code> I figured out how to manipulate which sections should be shown/hidden (using display: block/none) at the expected times. Woop! One slight gripe is that although I can make the &lt;select&gt; background transparent, I can't find a way to make the drop-down &lt;option&gt; menu similarly transparent - I'm limited to solid colours so opted for black rather than the default white. Now to work on the tab version for the larger displays...</p>
 		</article>
 		<hr/>
 		<article id="20160512">
