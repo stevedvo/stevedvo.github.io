@@ -54,6 +54,10 @@
 	{
 		float: right;
 	}
+	#page-content-wrapper
+	{
+		width: 95%;
+	}
 }
 
 #wrapper
@@ -200,4 +204,29 @@
 		float: left;
 		width: 33.33333333%;
 	}
+}
+
+#viewperiod-button
+{
+	float: right;
+	background: transparent;
+	width: 135px !important;
+}
+
+#viewperiod-menu
+{
+	background: transparent;
+	color: #1c94c4;
+}
+
+.ui-menu-item
+{
+	background: transparent !important;
+	color: #1c94c4 !important;
+}
+
+.ui-menu-item:hover
+{
+	background: yellow !important;
+	color: black !important;
 }
