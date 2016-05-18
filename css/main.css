@@ -206,14 +206,24 @@
 	}
 }
 
+.ui-selectmenu-button
+{
+	background: transparent !important;
+}
+
+#viewinterest-button
+{
+	float: left;
+	width: 150px !important;	
+}
+
 #viewperiod-button
 {
 	float: right;
-	background: transparent;
-	width: 135px !important;
+	width: 135px !important;	
 }
 
-#viewperiod-menu
+#viewperiod-menu, #viewinterest-menu
 {
 	background: transparent;
 	color: #1c94c4;
@@ -229,4 +239,9 @@
 {
 	background: yellow !important;
 	color: black !important;
+}
+
+.musicItem:hover
+{
+	background: yellow;
 }
