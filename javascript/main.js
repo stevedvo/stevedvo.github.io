@@ -1,5 +1,14 @@
+function getTime()
+{
+	now = new Date();
+	$("#datetime").html(now.toUTCString());
+	blah = setTimeout(function(){getTime()}, 1000);
+}
+
 function init ()
 {
+	getTime();
+
 	$("#burger").css('color', '#337ab7');
 	$("#filling").hide();
 	
