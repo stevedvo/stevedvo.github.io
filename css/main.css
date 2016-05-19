@@ -34,6 +34,10 @@
 		background-size: cover;
 		background-attachment: fixed;		
 	}
+}
+
+@media only screen and (min-width: 768px)
+{
 	#profilePic
 	{
 		padding-bottom: 15px;
@@ -46,6 +50,10 @@
 	{
 		background-size: 100% auto;
 	}
+}
+
+@media only screen and (max-width: 767px)
+{
 	#social_mob
 	{
 		padding: 0px 15px 0px 15px;
@@ -195,6 +203,22 @@
 		float: left;
 		width: 50%;
 	}
+	.musicItem
+	{
+		float: left;
+		width: 100%;
+	}
+	.bandsocial, .venuesocial
+	{
+		float: left;
+		width: 50%;
+	}
+	.bandwiki, .venuelink
+	{
+		float: left;
+		width: 50%;
+	}
+
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px)
@@ -203,6 +227,21 @@
 	{
 		float: left;
 		width: 33.33333333%;
+	}
+	.musicItem
+	{
+		float: left;
+		width: 50%;
+	}
+	.bandsocial, .venuesocial
+	{
+		float: left;
+		width: 50%;
+	}
+	.bandwiki, .venuelink
+	{
+		float: left;
+		width: 50%;
 	}
 }
 
@@ -241,7 +280,12 @@
 	color: black !important;
 }
 
+.musicItem a
+{
+	color: yellow;
+}
+
 .musicItem:hover
 {
-	background: yellow;
+	background: #55acee;
 }
