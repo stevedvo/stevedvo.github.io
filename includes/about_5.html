@@ -23,6 +23,8 @@
 			<h4>20 May 2016</h4>
 			<p>> Using my new 'Music' sub-section this morning to navigate to the Wikipedia pages for a couple of bands whose CDs I received in the post, realised that several of the links are not working correctly. Had not taken into account that the Wikipedia URLs are all case-sensitive past the first character! Had tested a couple of them yesterday and it seemed to be fine but I must have only clicked on single-word names. So I proceeded to work my way through all of those links, replacing all the lowercase characters with uppercase where required, then doing proper testing that all of the links work - and work directly i.e. no re-directs.</p>
 			<p>> Added the 'Astronomy' sub-section to the "Hobbies & Interests" section.</p>
+			<p>> Un-commented the additional options in the "Hobbies & Interests" section. Decided that with the menu items having a transparent background it made it difficult to read where there was other text behind it, so set the background to a solid black colour instead which raises a wry smile considering my earlier work on the <a href="#20160513">13th</a> & <a href="#20160516">16th!</a></p>
+			<p>> Added content to the 'Baking' sub-section.</p>
 		</article>
 		<hr/>
 		<article id="20160519">
@@ -79,9 +81,9 @@
 		<article id="20160511">
 			<h4>11 May 2016</h4>
 			<p>> Continued the work I started yesterday with adding numerous iframes into the <a href="links.php" target="_blank">Links</a> section. Got so far with it, and had 15 or so iframes loading into the page... but it didn't look great and didn't work great. As suspected, it took f-o-r-e-v-e-r [well, 60-90 seconds] to load the page and make all the requests [approx 1,000!!]. And then when all the iframes DID finally load, the parts of the pages that were visible were not what I wanted. Depending on how well the destination page could cope with narrow viewports the results varied. I COULD have spent a while playing with CSS & JS to set the scroll height & width upon loading... but considering how long it took to load everything in the first place I gave that idea up!</p>
-			<p>> So instead I changed the links page to just display a load of screenshots instead which link to the pages on a new tab. Visited each of the destination pages to take the screenshots and trim/resize to suitable dimensions. Once confirmed that all the images & links worked correctly I re-organised them into categories and then checked how it all looked on different screen sizes. Needed a few tweaks with the .clearfix div class.</p>
+			<p>> So instead I changed the links page to just display a load of screenshots which link to the pages on a new tab. Visited each of the destination pages to take the screenshots and trim/resize to suitable dimensions. Once confirmed that all the images & links worked correctly I re-organised them into categories and then checked how it all looked on different screen sizes. Needed a few tweaks with the .clearfix div class.</p>
 			<p>> Removed some duplicate headings that were apparent on pages within my site that didn't have a secondary navigation.</p>
-			<p>> I liked the way I'd used Bootstrap to display the screenshots for the <a href="links.php" target="_blank">links</a> - much better than how I'd dealt with the thumbs/images on the <a href="astropics.php" target="_blank">Astro Pics</a> page. So I used the same logic to improve the look of that page. Also made a few CSS / Bootstrap tweaks to improve the appearance of the secondary burger menu.</p>
+			<p>> I liked the way I'd used Bootstrap to display the screenshots for the <a href="links.php" target="_blank">links</a> - much better than how I'd dealt with the thumbs/images on the <a href="astropics.php" target="_blank">Astro Pics</a> page. So I used the same logic to improve the look of the latter. Also made a few CSS / Bootstrap tweaks to improve the appearance of the secondary burger menu.</p>
 		</article>
 		<hr/>
 		<article id="20160510">
@@ -98,7 +100,7 @@
 			<p>> Had a response from the 123-Reg tech support team regarding the problem experienced with the web.config file contents - turns out they had omitted to include a particular opening & closing tag. Google still reckons I don't have GZIP compression enabled, however! #fml</p>
 			<p>> Generated a new sitemap and updated in Google webmaster tools. Google seems to have forgotten that I previously submitted one!? Also now getting a crawl error saying that /mobile and /m don't exist. WTF?? Why is Google even trying to find these non-existent pages that I've never even tried to access?</p>
 			<p>> Was getting a couple of errors on the live site [but not on test env] relating to the glyphicon-halflings woff and woff2 filetypes. Found a few lines of code to add to the web.config file to make that go away.</p>
-			<p>> Added a new section: <a href="links.php" target="_blank">Links & Resources</a>. The intention is to use a bunch of iframes and screenshots to display a numerous useful links - kinda like a "favourites" menu but with some pages pre-loaded to see the latest info at a glance. May be quite slow to load the page, though, as it will likely require a lot of requests.</p>
+			<p>> Added a new section: <a href="links.php" target="_blank">Links & Resources</a>. The intention is to use a bunch of iframes and screenshots to display numerous useful links - kinda like a "favourites" menu but with some pages pre-loaded to see the latest info at a glance. May be quite slow to load the page, though, as it will likely require a lot of requests.</p>
 		</article>
 		<hr/>
 		<article id="20160504">
