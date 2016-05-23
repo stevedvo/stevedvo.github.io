@@ -8,7 +8,6 @@
 		?>
 		<meta name="description" content="Animation using the HTML5 Canvas and JavaScript."/>
 		<script type="text/javascript" src="javascript/animation.js"></script>
-		<script type="text/javascript" src="javascript/OSC.js"></script>
 	</head>
 
 	<body>
