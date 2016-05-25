@@ -34,6 +34,10 @@
 		background-size: cover;
 		background-attachment: fixed;		
 	}
+}
+
+@media only screen and (min-width: 768px)
+{
 	#profilePic
 	{
 		padding-bottom: 15px;
@@ -46,6 +50,10 @@
 	{
 		background-size: 100% auto;
 	}
+}
+
+@media only screen and (max-width: 767px)
+{
 	#social_mob
 	{
 		padding: 0px 15px 0px 15px;
@@ -195,6 +203,22 @@
 		float: left;
 		width: 50%;
 	}
+	.musicItem, .comicItem
+	{
+		float: left;
+		width: 100%;
+	}
+	.bandsocial, .venuesocial
+	{
+		float: left;
+		width: 50%;
+	}
+	.bandwiki, .venuelink
+	{
+		float: left;
+		width: 50%;
+	}
+
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px)
@@ -204,16 +228,41 @@
 		float: left;
 		width: 33.33333333%;
 	}
+	.musicItem, .comicItem
+	{
+		float: left;
+		width: 50%;
+	}
+	.bandsocial, .venuesocial
+	{
+		float: left;
+		width: 50%;
+	}
+	.bandwiki, .venuelink
+	{
+		float: left;
+		width: 50%;
+	}
+}
+
+.ui-selectmenu-button
+{
+	background: transparent !important;
+}
+
+#viewinterest-button
+{
+	float: left;
+	width: 150px !important;	
 }
 
 #viewperiod-button
 {
 	float: right;
-	background: transparent;
-	width: 135px !important;
+	width: 135px !important;	
 }
 
-#viewperiod-menu
+#viewperiod-menu, #viewinterest-menu
 {
 	background: transparent;
 	color: #1c94c4;
@@ -221,7 +270,7 @@
 
 .ui-menu-item
 {
-	background: transparent !important;
+	background: black !important;
 	color: #1c94c4 !important;
 }
 
@@ -229,4 +278,14 @@
 {
 	background: yellow !important;
 	color: black !important;
+}
+
+.musicItem a, .comicItem a
+{
+	color: yellow;
+}
+
+.musicItem:hover, .comicItem:hover
+{
+	background: #55acee;
 }

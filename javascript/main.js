@@ -143,6 +143,15 @@ function init ()
 		lrgImg = window.open(lrgStr, "PopUp", "top=0,left=0,width="+window.screen.availWidth+",height="+window.screen.availHeight+",location=no");
 	});
 
+	$("#viewinterest").selectmenu(
+	{
+		change: function(event, data)
+		{
+			$(".interest").css('display', 'none');
+			$("#"+$("#viewinterest option:selected").val()).css('display', 'block');			
+		}
+	});
+
 	$("#viewperiod").selectmenu(
 	{
 		change: function(event, data)

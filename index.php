@@ -1,4 +1,26 @@
-﻿<!DOCTYPE html>
+﻿<!-- <?php
+
+
+
+
+$page = $_SERVER['REQUEST_URI'];
+
+
+switch ($page) {
+	case '/stevedvo.github.io/':
+		$load = 'about.html';
+		break;
+	case '/stevedvo.github.io/animation':
+		$load = 'animation.html';
+		break;
+	default:
+		$load = '404.html';
+}
+
+?>
+
+ -->
+ <!DOCTYPE html>
 
 <html lang="en">
 
@@ -17,6 +39,7 @@
 					$page_title = "stevedeveaux.com";
 					include ("includes/header.html");
 					include ("includes/about.html");
+					// include ("includes/" . $load);
 				?>
 			</div>
 		</div>
