@@ -161,6 +161,30 @@ function init ()
 		}
 	});
 
+	$("#boincsections").selectmenu(
+	{
+		change: function(event, data)
+		{
+			$(".boincsection").css('display', 'none');
+			$("#"+$("#boincsections option:selected").val()).css('display', 'block');			
+		}
+	});
+
+	$("#boinctabs").tabs().addClass("ui-tabs-vertical ui-helper-clearfix");
+    $("#boinctabs li").removeClass("ui-corner-top").addClass("ui-corner-left");
+
+    $(".ui-tabs-anchor").attr('style', 'color: white');
+
+    $(".ui-corner-left").mouseover(function()
+    {
+    	$(this).children().css({'color': 'black', 'background': 'yellow'});
+    });
+
+    $(".ui-corner-left").mouseout(function()
+    {
+    	$(this).children().animate({backgroundColor: jQuery.Color({alpha: 0}), color: "#white"}, 250);
+    });
+
 }
 
 document.addEventListener("DOMContentLoaded", init, false);
