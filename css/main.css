@@ -90,7 +90,6 @@
 	}
 }
 
-
 .head2, .head3
 {
 	margin: auto;
@@ -371,4 +370,48 @@
 	text-align: right;
 	border-radius: 4px;
 	/*color: white;*/
+}
+
+@media only screen and (min-width: 768px)
+{
+	.ui-tabs-nav
+	{
+		width: 27.5% !important;
+	}
+	.ui-tabs-panel
+	{
+		width: 72.5% !important;
+	}
+}
+
+@media only screen and (min-width: 992px)
+{
+	.ui-tabs-nav
+	{
+		width: 22.5% !important;
+	}
+	.ui-tabs-panel
+	{
+		width: 77.5% !important;
+	}
+}
+
+@media only screen and (min-width: 1200px)
+{
+	.ui-tabs-nav
+	{
+		width: 16.66666666% !important;
+	}
+	.ui-tabs-panel
+	{
+		width: 83.33333333% !important;
+	}
+}
+
+#boinc_acronym
+{
+	border: thin yellow solid;
+	float: left;
+	margin: 0px 10px 10px 0px;
+	padding: 5px 5px 0px 5px;
 }
