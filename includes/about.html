@@ -1,29 +1,65 @@
-<div id="sidebar-wrapper" class="col-lg-2 col-md-2 col-sm-2">
-	<ul class="list-unstyled">
-		<li class="navitem left btn hidden-lg hidden-md hidden-sm col-xs-1 col-xs-offset-11">
-			<span id="burger_2y" class="glyphicon glyphicon-menu-hamburger" aria-label="Sections"></span>
-			<ul id="filling_2y">
-				<li class="navitem left btn col-xs-12 li_1">Who am I?</li>
-				<li class="navitem left btn col-xs-12 li_2">Education</li>
-				<li class="navitem left btn col-xs-12 li_3">Development</li>
-				<li class="navitem left btn col-xs-12 li_4">Interests</li>
-				<li class="navitem left btn col-xs-12 li_5 lrg">Blog</li>
-			</ul>
-		</li>							
-		<li class="navitem left btn col-lg-12 col-md-12 col-sm-12 hidden-xs li_1">Who am I?</li>
-		<li class="navitem left btn col-lg-12 col-md-12 col-sm-12 hidden-xs li_2">Education</li>
-		<li class="navitem left btn col-lg-12 col-md-12 col-sm-12 hidden-xs li_3">Development</li>
-		<li class="navitem left btn col-lg-12 col-md-12 col-sm-12 hidden-xs li_4">Interests</li>
-		<li class="navitem left btn col-lg-12 col-md-12 col-sm-12 hidden-xs li_5 lrg">Blog</li>
-	</ul>
-</div>
+<nav class="hidden-lg hidden-md hidden-sm col-xs-12">
+	<form action="#" id="aboutform">
+		 <fieldset>
+		 	<label for="aboutsections"></label>
+		 	<select name="aboutsections" id="aboutsections">
+		 		<option value="Who_menu" selected>Who am I?</option>
+		 		<option value="Education_menu">Education</option>
+		 		<option value="Dev_menu">Development</option>
+		 		<option value="Interests_menu">Interests</option>
+		 		<option value="Blog_menu">Blog</option>
+		 	</select>
+		 </fieldset>
+	 </form>
+</nav>
 
-<div id="page-content-wrapper" class="col-lg-10 col-md-10 col-sm-9 col-xs-11">
-	<?php
-		include ("includes/about_1.html");
-		include ("includes/about_2.html");
-		include ("includes/about_3.html");
-		include ("includes/about_4.html");
-		include ("includes/about_5.html");
-	?>
-</div>
+<section id="Who_menu" class="aboutsection hidden-lg hidden-md hidden-sm col-xs-12">
+	<?php include('about_1.html'); ?>
+</section>
+
+<section id="Education_menu" class="aboutsection hidden-lg hidden-md hidden-sm col-xs-12" style="display: none">
+	<?php include('about_2.html'); ?>
+</section>
+
+<section id="Dev_menu" class="aboutsection hidden-lg hidden-md hidden-sm col-xs-12" style="display: none">
+	<?php include('about_3.html'); ?>
+</section>
+
+<section id="Interests_menu" class="aboutsection hidden-lg hidden-md hidden-sm col-xs-12" style="display: none">
+	<?php include('about_4.html'); ?>
+</section>
+
+<section id="Blog_menu" class="aboutsection hidden-lg hidden-md hidden-sm col-xs-12" style="display: none">
+	<?php include('about_5.html'); ?>
+</section>
+
+<section id="abouttabs" class="col-lg-12 col-md-12 col-sm-12 hidden-xs">
+	<ul>
+		<li><a href="#Who_tab">Who am I?</a></li>
+		<li><a href="#Education_tab">Education</a></li>
+		<li><a href="#Dev_tab">Development</a></li>
+		<li><a href="#Interests_tab">Interests</a></li>
+		<li><a href="#Blog_tab">Blog</a></li>
+	</ul>
+
+	<section id="Who_tab">
+		<?php include('about_1.html'); ?>
+	</section>
+
+	<section id="Education_tab">
+		<?php include('about_2.html'); ?>
+	</section>
+
+	<section id="Dev_tab">
+		<?php include('about_3.html'); ?>
+	</section>
+
+	<section id="Interests_tab">
+		<?php include('about_4.html'); ?>
+	</section>
+
+	<section id="Blog_tab">
+		<?php include('about_5.html'); ?>
+	</section>
+
+</section>

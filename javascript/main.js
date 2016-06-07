@@ -161,6 +161,15 @@ function init ()
 		}
 	});
 
+	$("#aboutsections").selectmenu(
+	{
+		change: function(event, data)
+		{
+			$(".aboutsection").css('display', 'none');
+			$("#"+$("#aboutsections option:selected").val()).css('display', 'block');			
+		}
+	});
+
 	$("#boincsections").selectmenu(
 	{
 		change: function(event, data)
@@ -173,6 +182,9 @@ function init ()
 	$("#boinctabs").tabs().addClass("ui-tabs-vertical ui-helper-clearfix");
     $("#boinctabs li").removeClass("ui-corner-top").addClass("ui-corner-left");
 
+	$("#abouttabs").tabs().addClass("ui-tabs-vertical ui-helper-clearfix");
+    $("#abouttabs li").removeClass("ui-corner-top").addClass("ui-corner-left");
+
     $(".ui-tabs-anchor").attr('style', 'color: white');
 
     $(".ui-corner-left").mouseover(function()
@@ -184,6 +196,13 @@ function init ()
     {
     	$(this).children().animate({backgroundColor: jQuery.Color({alpha: 0}), color: "#white"}, 250);
     });
+
+	$(".ui-corner-left").click(function()
+	{
+		$(this).children().css('background', 'green');
+		$(this).children().css('color', 'black');
+		$(this).children().animate({backgroundColor: jQuery.Color({alpha: 0}), color: "#white"}, 750);
+	});
 
 }
 

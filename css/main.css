@@ -261,7 +261,7 @@
 	width: 135px !important;	
 }
 
-#boincsections-button
+#boincsections-button, #aboutsections-button
 {
 	float: left;
 	width: 240px !important;
@@ -335,7 +335,7 @@
 	float: left;
 }
 
-#boinctabs
+#boinctabs, #abouttabs
 {
 	background: transparent !important;
 }

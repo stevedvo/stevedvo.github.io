@@ -20,7 +20,7 @@ switch ($page) {
 ?>
 
  -->
- <!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en">
 
