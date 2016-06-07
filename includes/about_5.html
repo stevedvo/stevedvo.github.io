@@ -19,9 +19,19 @@
 		</article>
 		<hr/> -->
 	<section id="Latest" class="period col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<article id="20160607">
+			<h4>07 June 2016</h4>
+			<p>> Completed adding the content to the BOINC section. Happy with this - the jQuery vertical tabs are working very nicely. Spent a little time looking into how to animate the show() for the tabs to match the effect that I'd programmed myself in JavaScript for other pages (home, astropics, sepsis). The animation seemed a little clunky with the vertical tabs tbh and didn't look quite as nice, so removed the animation code.</p>
+			<p>> On reflection, the standard vertical tabs DO work ever so nicely, and having the tabs open up instantly rather than through an animated effect does give a better user experience I think! The point of loading everything on the page initially is so that there are no further time-costly requests as you navigate to different sections, so it really defeats the object when you're waiting around for an animation to display a section that has been selected - even if it only 1,000 milliseconds (or whatever I choose the setting to be). So I've decided that I'll convert these other pages to using the vertical tabs without any animation effects. This also has the advantage of solving a few other niggles:</p>
+			<ul>
+				<li>Upon loading some of the pages - the Home page especially - there is a delay of 500-1,000ms whilst the CSS & jQuery sorts out which sections should be visibile/hidden, and there is a noticeable period where all the sections can be seen overlaid atop one another. U-G-L-Y! Converting this to vertical tabs will hopefully speed this up and remove this unwanted effect.</li>
+				<li>Should hopefully resolve the issue with the "Music" sub-section of "Hobbies & Interests" not displaying the background correctly on mobile devices since the content is too large. The vertical tabs seem to do a pretty good [read: better!] job at adjusting the page background image & gradient on the fly as different tabs are selected - but then if I wasn't trying to animate it I wouldn't have had all these issues in the first place! #fml</li>
+			</ul>
+		</article>
+		<hr/>
 		<article id="20160606">
 			<h4>06 June 2016</h4>
-			<p>> Added content to the BOINC page, and added some CSS with @media queries to ensure the tab navigation and tab panels appear correctly for different screen sizes.</p>
+			<p>> Added content to the BOINC page, and added some CSS with @media queries to ensure the tab navigation and tab panels appear correctly for different screen sizes. Still more BOINC content to add - works ongoing!</p>
 		</article>
 		<hr/>
 		<article id="20160603">
