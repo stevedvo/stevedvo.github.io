@@ -12,24 +12,41 @@
 	 </fieldset>
  </form>
 
- <hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12"/>
+ <hr/>
 	<!-- <article id="">
 		<h4></h4>
 		<p>> </p>
 	</article>
 	<hr/> -->
-<section id="Latest" class="period col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<section id="Latest" class="period">
+	<article id="20160608">
+		<h4>08 June 2016</h4>
+		<p>> Started the day with finishing off the Movies & TV Shows that I'd transferred onto the external HDD overnight. Faffed about with the folder hierarchy and renamed a few files for the sake of consistency, then imported them all into my iTunes library. Scratched that itch - now back to the website!!</p>
+		<p>> Investigated why the selectmenus that are embedded in the tab panels are not working correctly, when they DO work on the mobile version. Deduced that it may well have something to do with the selectmenu [as part of a file pulled in with PHP include() to save duplication] being called twice, and it only working the first time due to referencing #IDs. That being the case, I am looking at alternative ways of selecting sub-sections on larger screens. Spent a little time besides that tweaking some Bootstrap/CSS to improve - and make consistent - the look of the BOINC- and home- pages.</p>
+		<p>> Spent a few hours trying to get the navigation tabs to display a sub-menu when clicked/hovered over, to enable the user to select a sub-section for look at. Was able to embed a menu within the tabs, so that a little right chevron is visible which expands with the available choices, as below:</p>
+		<img src="images/20160608_img1.jpg" alt="Vertical Tab Menus" style="border: thin yellow solid; width: 100%; max-width: 799px;"/>
+		<p>> However, due to the way that the jQuery function adds additional classes and numerically increasing ID's for the tab panels I couldn't find a way of getting the menu items to work as desired i.e. display the intended sub-section. A bit annoying as it feels like I'm so close with it, but I have another solution [accordion] that I'll try instead.</p>
+		<p>> OK, so a few hours later, I've undone all the changes that I'd made in trying to implement the Vertical Tab Menus and added the code for the "accordion" jQuery function. Couple of issues to begin with getting it to work but researched on StackOverflow etc for similar problem and found a solution.</p>
+		<p>> Whilst functional and working nicely, there was some work to do on the CSS. The colour of plain text and anchors, and the background colour all needed adjusted for content within the accordion structure. Was really starting to get a little peeved at the amount of !important CSS adjustments I was having to put in to override all the standard Bootstrap and jQuery configurations - especially when trying to dynamically change the text & background colours as the user hovers/clicks around the page. The CSS and JavaScript was beginning to get incredibly messy and confusing to keep track of what changed what.</p>
+		<p>> Decided enough was enough! Made my way systematically through the various page elements to comment-out all my colour overrides and see what the "natural" jQuery/Bootstrap colour-scheme is. Located where in the minified documents they were coming from and commented THOSE out so that on page load the default colour-schemes for my site are intact.</p>
+		<p>> Now just in the process of systematically re-introducing all the CSS/jQuery stuff to the correct .classes to get the effects that I want without needing to keep using the !important parameter.</p>
+	</article>
+	<hr/>
 	<article id="20160607">
 		<h4>07 June 2016</h4>
 		<p>> Completed adding the content to the BOINC section. Happy with this - the jQuery vertical tabs are working very nicely. Spent a little time looking into how to animate the show() for the tabs to match the effect that I'd programmed myself in JavaScript for other pages (home, astropics, sepsis). The animation seemed a little clunky with the vertical tabs tbh and didn't look quite as nice, so removed the animation code.</p>
 		<p>> On reflection, the standard vertical tabs DO work ever so nicely, and having the tabs open up instantly rather than through an animated effect does give a better user experience I think! The point of loading everything on the page initially is so that there are no further time-costly requests as you navigate to different sections, so it really defeats the object when you're waiting around for an animation to display a section that has been selected - even if it only 1,000 milliseconds (or whatever I choose the setting to be). So I've decided that I'll convert these other pages to using the vertical tabs without any animation effects. This also has the advantage of solving a few other niggles:</p>
 		<ul>
-			<li>Upon loading some of the pages - the Home page especially - there is a delay of 500-1,000ms whilst the CSS & jQuery sorts out which sections should be visibile/hidden, and there is a noticeable period where all the sections can be seen overlaid atop one another. U-G-L-Y! Converting this to vertical tabs will hopefully speed this up and remove this unwanted effect.</li>
+			<li>Upon loading some of the pages - the Home page especially - there is a delay of 500 - 1,000ms whilst the CSS & jQuery sorts out which sections should be visible/hidden, and there is a noticeable period where all the sections can be seen overlaid atop one another. U-G-L-Y! Converting this to vertical tabs will hopefully speed this up and remove this unwanted effect.</li>
 			<li>Should hopefully resolve the issue with the "Music" sub-section of "Hobbies & Interests" not displaying the background correctly on mobile devices since the content is too large. The vertical tabs seem to do a pretty good [read: better!] job at adjusting the page background image & gradient on the fly as different tabs are selected - but then if I wasn't trying to animate it I wouldn't have had all these issues in the first place! #fml</li>
+			<li>Will remove the need for a secondary Burger Menu on mobile screens - better navigation and cleaner transition between sections.</li>
 			<li>Will substantially reduce the main JavaScript filesize - therefore marginally reducing the load times albeit probably imperceptibly.</li>
 		</ul>
 		<p>> Made good headway with converting the Homepage to use the vertical tabs rather than my previous jQuery animation method. Lots of .classes and #IDs to unpick from the CSS & JavaScript. Got it to a point where it is working well on mobile screens (where tabs are replaced with selectmenus), but having issues on larger screens where a selectmenu doesn't seem to embed very well into the tabs.</p>
 		<p>> Didn't really have time to work through this fully - got quite distracted with the arrival of a new 3TB external hard drive that I'd ordered yesterday. Intention was to hook it up to my Apple Airport Extreme Base Station and use as a network drive for backups and media storage, but after a few failed attempts realised that the file format [NTFS] was incompatible with the AEBS. Was able to format to FAT-32, which works with both Apple AND Windows, but it didn't work too well. Was surprised actually that I managed to format a 3TB drive at all in that format! Transferring small files to the drive seemed to work OK, but larger files e.g. the movies that the drive was intended for just hung. Gave the AEBS up as a crap idea, re-formatted the drive as NTFS and connected directly to my PC. Transferred lots of movies & TV shows that I've previously ripped from DVDs, added to iTunes library and shared across the LAN for the Apple TVs to pick up. Have more files to transfer from another laptop but the concept is sound.</p>
+		<p>> Had a bit of time in the evening to transfer the remaining video files from the other laptop. The data transfer rate seemed disappointingly low, only ~20MB/s. Figured this laptop perhaps didn't have as good a USB speed - to transfer the 400GB+ of files was going to take 6 hours!</p>
+		<p>> Wondered if it would be quicker to transfer the files over the Ethernet to a different computer, then use a faster USB connexion to get the files onto the HDD. Wasn't sure of the capability of the laptop's internal Ethernet connexion - if it would do 1Gbps it might be worth a go. If it was running Windows 7 I'd just check the speed on the Networking tab of the Task Manager, but Windows 10 doesn't seem to have an easy and obvious way of getting this information! Thought a quick way to check would be to just transfer a couple of files and monitor how much of the available 1Gbps bandwidth was being used. But NO! The laptop was just not playing nicely for me at all - any time I tried to do anything with accessing the LAN or set a folder up for sharing it just kept hanging. So I could neither "push" some files from the laptop onto my desktop PC, nor access a folder from the PC to "pull" anything from the laptop. Driving me crackers!!</p>
+		<p>> Eventually managed to get a laptop folder shared on the LAN after doing a full restart, and upon measuring the data throughput found it was only around half what it was doing through the USB: ~10MB/s. So that answers the question about the Ethernet capability on the laptop: 100Mbps - too slow to be of benefit. So I resumed copying the files over using the USB like I was doing to begin with, and left it to copy overnight. Such fun!! In any case, I wouldn't have done anything further with the files until the morning and it should be done by then.</p>
 	</article>
 	<hr/>
 	<article id="20160606">
@@ -194,7 +211,7 @@
 	</article>
 </section>
 
-<section id="Apr-2016" class="period col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display: none;">
+<section id="Apr-2016" class="period" style="display: none;">
 	<article id="20160428">
 		<h4>28 April 2016</h4>
 		<p>> After a few days off, gotten my head back into website mode. Made excellent progress in sorting out the sizing of the background gradient fill and background image. Switched it around so that the image is the background and the gradient fill just comes from a 1px x 2px jpg that gets stretched according to the window size. Had to fiddle a bit with the opacity settings and some position attributes to make sure each page looked right. Easy when you know how - but took me a while to get there!!</p>

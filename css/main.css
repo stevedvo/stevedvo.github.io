@@ -257,8 +257,16 @@
 
 #viewperiod-button
 {
-	float: right;
+	float: left;
 	width: 135px !important;	
+}
+
+@media only screen and (min-width: 768px)
+{
+	#viewperiod-button
+	{
+		float: right;
+	}
 }
 
 #boincsections-button, #aboutsections-button
@@ -267,12 +275,6 @@
 	width: 240px !important;
 }
 
-/*#viewperiod-menu, #viewinterest-menu
-{
-	background: transparent;
-	color: #1c94c4;
-}
-*/
 .ui-menu-item
 {
 	background: black !important;
@@ -283,16 +285,6 @@
 {
 	background: yellow !important;
 	color: black !important;
-}
-
-.musicItem a, .comicItem a
-{
-	color: yellow;
-}
-
-.musicItem:hover, .comicItem:hover
-{
-	background: #55acee;
 }
 
 .ui-tabs-vertical
@@ -335,6 +327,11 @@
 	float: left;
 }
 
+.ui-accordion-content
+{
+	background: transparent !important;
+}
+
 #boinctabs, #abouttabs
 {
 	background: transparent !important;
@@ -343,7 +340,12 @@
 .ui-widget-content
 {
 	border:	0px !important;
-	color: white !important;
+	/*color: inherit !important;*/
+}
+
+.ui-tabs-panel a, .ui-accordion-content a
+{
+	/*color: yellow !important;*/
 }
 
 .ui-widget-header

@@ -13,7 +13,7 @@ function init ()
 	$("#filling").hide();
 	
 	$("#filling_2y").hide();
-	
+
 	$(".navitem").mouseover(function()
 	{
 		$(this).css('background', 'yellow');
@@ -143,6 +143,16 @@ function init ()
 		lrgImg = window.open(lrgStr, "PopUp", "top=0,left=0,width="+window.screen.availWidth+",height="+window.screen.availHeight+",location=no");
 	});
 
+	$(".interests_acc").accordion(
+	{
+		collapsible: true,
+		active: false,
+		animate: false,
+		heightStyle: "content"
+	});
+
+	$(".interests_acc").accordion().addClass("hidden-xs");
+
 	$("#viewinterest").selectmenu(
 	{
 		change: function(event, data)
@@ -185,25 +195,65 @@ function init ()
 	$("#abouttabs").tabs().addClass("ui-tabs-vertical ui-helper-clearfix");
     $("#abouttabs li").removeClass("ui-corner-top").addClass("ui-corner-left");
 
-    $(".ui-tabs-anchor").attr('style', 'color: white');
-
-    $(".ui-corner-left").mouseover(function()
+    $(".ui-tabs-anchor").mouseover(function()
     {
-    	$(this).children().css({'color': 'black', 'background': 'yellow'});
+    	$(this).css({'color': 'black', 'background': 'yellow'});
     });
 
-    $(".ui-corner-left").mouseout(function()
+    $(".ui-tabs-anchor").mouseout(function()
+    {
+    	$(this).animate({backgroundColor: jQuery.Color({alpha: 0}), color: "#white"}, 250);
+    });
+
+    $(".ui-tabs-anchor").click(function()
+	{
+		$(this).css({'color': 'black', 'background': 'green'});
+		$(this).animate({backgroundColor: jQuery.Color({alpha: 0}), color: "#white"}, 750);
+	});
+
+
+/*	$("#interesttabs").tabs().addClass("ui-tabs-vertical ui-helper-clearfix");
+    $("#interesttabs li").removeClass("ui-corner-top").addClass("ui-corner-left");
+*/
+    // $(".ui-tabs-anchor").attr('style', 'color: white');
+
+/*    $(".ui-corner-left").mouseover(function()
+    {
+    	$(this).children().attr('style', {'color': 'black !important', 'background': 'yellow !important'});
+    });
+*/
+/*    $(".ui-corner-left").children().mouseover(function()
+    {
+    	$(this).children().css({'color': 'black', 'background': 'yellow'});
+    });*/
+
+/*    $(".ui-corner-left").children().mouseover(function()
+    {
+    	$(this).children().attr('style', 'color: black !important');
+    });
+*/
+/*    $(".ui-corner-left").children().children().mouseover(function()
+    {
+    	$(this).attr('style', 'color: black !important');
+    });
+*/
+/*    $(".ui-corner-left").mouseout(function()
     {
     	$(this).children().animate({backgroundColor: jQuery.Color({alpha: 0}), color: "#white"}, 250);
     });
-
-	$(".ui-corner-left").click(function()
+*/
+/*    $(".ui-corner-left").children().mouseout(function()
+    {
+    	$(this).children().animate({backgroundColor: jQuery.Color({alpha: 0}), color: "#white"}, 250);
+    });
+*/
+/*	$(".ui-corner-left").click(function()
 	{
 		$(this).children().css('background', 'green');
 		$(this).children().css('color', 'black');
 		$(this).children().animate({backgroundColor: jQuery.Color({alpha: 0}), color: "#white"}, 750);
 	});
-
+*/
 }
 
 document.addEventListener("DOMContentLoaded", init, false);
