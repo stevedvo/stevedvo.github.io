@@ -1,3 +1,73 @@
+<nav class="hidden-lg hidden-md hidden-sm col-xs-12">
+	<form action="#" id="sepsisform">
+		 <fieldset>
+		 	<label for="sepsissections"></label>
+		 	<select name="sepsissections" id="sepsissections">
+		 		<option value="About_menu" selected>What is Sepsis?</option>
+		 		<option value="Diagnosis_menu">Diagnosis</option>
+		 		<option value="Treatment_menu">Treatment</option>
+		 		<option value="Goals_menu">Goals</option>
+		 		<option value="Links_menu">Links/Social</option>
+		 	</select>
+		 </fieldset>
+	 </form>
+</nav>
+
+<section id="About_menu" class="sepsissection hidden-lg hidden-md hidden-sm col-xs-12">
+	<?php include('sepsis_1.html'); ?>
+</section>
+
+<section id="Diagnosis_menu" class="sepsissection hidden-lg hidden-md hidden-sm col-xs-12" style="display: none">
+	<?php include('sepsis_2.html'); ?>
+</section>
+
+<section id="Treatment_menu" class="sepsissection hidden-lg hidden-md hidden-sm col-xs-12" style="display: none">
+	<?php include('sepsis_3.html'); ?>
+</section>
+
+<section id="Goals_menu" class="sepsissection hidden-lg hidden-md hidden-sm col-xs-12" style="display: none">
+	<?php include('sepsis_4.html'); ?>
+</section>
+
+<section id="Links_menu" class="sepsissection hidden-lg hidden-md hidden-sm col-xs-12" style="display: none">
+	<?php include('sepsis_6.html'); ?>
+</section>
+
+
+<section class="vert_tabs col-lg-12 col-md-12 col-sm-12 hidden-xs">
+	<ul>
+ 		<li><a href="#About_tab">What is Sepsis?</a></li>
+ 		<li><a href="#Diagnosis_tab">Diagnosis</a></li>
+ 		<li><a href="#Treatment_tab">Treatment</a></li>
+ 		<li><a href="#Goals_tab">Goals</a></li>
+ 		<li><a href="#Links_tab">Links/Social</a></li>
+	</ul>
+
+	<section id="About_tab">
+		<?php include('sepsis_1.html'); ?>
+	</section>
+
+	<section id="Diagnosis_tab">
+		<?php include('sepsis_2.html'); ?>
+	</section>
+
+	<section id="Treatment_tab">
+		<?php include('sepsis_3.html'); ?>
+	</section>
+
+	<section id="Goals_tab">
+		<?php include('sepsis_4.html'); ?>
+	</section>
+
+	<section id="Links_tab">
+		<?php include('sepsis_6.html'); ?>
+	</section>
+
+</section>
+
+<!-- 
+
+//////////////////////////
 <div id="sidebar-wrapper" class="col-lg-2 col-md-2 col-sm-2">
 	<ul class="list-unstyled">
 		<li class="navitem left btn hidden-lg hidden-md hidden-sm col-xs-1 col-xs-offset-11">
@@ -7,7 +77,6 @@
 				<li class="navitem left btn col-xs-12 li_2">Diagnosis</li>
 				<li class="navitem left btn col-xs-12 li_3 lrg">Treatment</li>
 				<li class="navitem left btn col-xs-12 li_4">Goals</li>
-				<!-- <li class="navitem left btn col-xs-12 li_5">Case Study</li> -->
 				<li class="navitem left btn col-xs-12 li_6">Links/Social</li>
 			</ul>
 		</li>							
@@ -15,7 +84,6 @@
 		<li class="navitem left btn col-lg-12 col-md-12 col-sm-12 hidden-xs li_2">Diagnosis</li>
 		<li class="navitem left btn col-lg-12 col-md-12 col-sm-12 hidden-xs li_3 lrg">Treatment</li>
 		<li class="navitem left btn col-lg-12 col-md-12 col-sm-12 hidden-xs li_4">Goals</li>
-		<!-- <li class="navitem left btn col-lg-12 col-md-12 col-sm-12 hidden-xs li_5">Case Study</li> -->
 		<li class="navitem left btn col-lg-12 col-md-12 col-sm-12 hidden-xs li_6">Links/Social</li>
 	</ul>
 </div>
@@ -29,4 +97,4 @@
 		// include ("includes/sepsis_5.html");
 		include ("includes/sepsis_6.html");
 	?>
-</div>
+</div> -->

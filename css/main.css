@@ -111,23 +111,6 @@
 	color: #337ab7;
 }
 
-#burger_2y
-{
-	top: -8px;
-}
-
-#burger_2y, #filling_2y
-{
-	position: relative;
-	float: right;
-	z-index: 2;	
-}
-
-#filling_2y
-{
-	padding-bottom: 30px;
-}
-
 .btn
 {
 	margin: auto;
@@ -153,13 +136,6 @@
 	}
 }
 
-.left
-{
-	margin-top: 1px;
-	margin-bottom: 1px;
-	text-align: right !important;
-}
-
 #page-content-wrapper
 {
 	top: -55px;
@@ -171,28 +147,6 @@
 	{
 		top: -15px;
 	}
-}
-
-#sidebar-wrapper
-{
-	padding: 0px;
-}
-
-.temphdr
-{
-	height: 15px;
-}
-
-.sections
-{
-	position: absolute;
-	top: 0px;
-	width: 100%;
-}
-
-.largest
-{
-	position: static;
 }
 
 .screenshot-container, .astropic-container
@@ -268,32 +222,13 @@
 .ui-selectmenu-button
 {
 	background: transparent !important;
-}
-
-#viewinterest-button
-{
 	float: left;
-	width: 150px !important;	
+	width: 220px !important;
 }
 
 #viewperiod-button
 {
-	float: left;
-	width: 135px !important;	
-}
-
-/*@media only screen and (min-width: 768px)
-{
-	#viewperiod-button
-	{
-		float: right;
-	}
-}
-*/
-#boincsections-button, #aboutsections-button, #astrosections-button
-{
-	float: left;
-	width: 240px !important;
+	margin-top: 10px;
 }
 
 .ui-menu-item
