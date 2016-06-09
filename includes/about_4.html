@@ -1,64 +1,92 @@
-<section id="section_4" class="sections">
-	<article class="temphdr"></article>
-	<h3 class="head3">Hobbies & Interests</h3>
-	<p>Besides getting my head into web development and technology, I have several other hobbies & interests:</p>	
-	
+<header class="hidden-xs">
+	<h3 style="margin-top: 0px;">Hobbies & Interests</h3>	
+</header class="hidden-xs">
+<p style="margin-top: 10px;">Besides getting my head into web development and technology, I have several other hobbies & interests:</p>	
+
+<nav class="hidden-lg hidden-md hidden-sm">
 	<form action="#" id="interestform">
 		 <fieldset>
 		 	<label for="viewinterest"></label>
 		 	<select name="viewinterest" id="viewinterest">
-		 		<option value="Astronomy" selected>Astronomy</option>
-		 		<option value="Baking">Baking</option>
-		 		<option value="Cinema">Cinema</option>
-		 		<option value="Formula_1">Formula 1</option>
-		 		<option value="Music">Music</option>
-		 		<option value="Photography">Photography</option>
-		 		<option value="PubQuizzes">Pub Quizzes</option>
-		 		<option value="Sci-fi">Sci-fi</option>
-		 		<option value="Snooker">Snooker</option>
-		 		<option value="StandUp">Stand Up</option>
-		 		<option value="Tom_Clancy">Tom Clancy</option>
-		 		<option value="Walking">Walking</option>
+		 		<option value="Astronomy_menu" selected>Astronomy</option>
+		 		<option value="Baking_menu">Baking</option>
+		 		<option value="Cinema_menu">Cinema</option>
+		 		<option value="Formula_1_menu">Formula 1</option>
+		 		<option value="Music_menu">Music</option>
+		 		<option value="Photography_menu">Photography</option>
+		 		<option value="PubQuizzes_menu">Pub Quizzes</option>
+		 		<option value="Sci-fi_menu">Sci-fi</option>
+		 		<option value="Snooker_menu">Snooker</option>
+		 		<option value="StandUp_menu">Stand Up</option>
+		 		<option value="Tom_Clancy_menu">Tom Clancy</option>
+		 		<option value="Walking_menu">Walking</option>
 		 	</select>
 		 </fieldset>
 	 </form>
+</nav>
 
-	<hr class="col-lg-11 col-md-11 col-sm-11 col-xs-11"/>
-	
-	<section id="Astronomy" class="interest col-lg-12 col-md-12 col-sm-12 col-xs-12">
-		<?php include ("includes/about_4_astronomy.html"); ?>
-	</section>
-	<section id="Baking" class="interest col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display: none">
-		<?php include ("includes/about_4_baking.html"); ?>
-	</section>
-	<section id="Cinema" class="interest col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display: none">
-		<?php include ("includes/about_4_cinema.html"); ?>
-	</section>
-	<section id="Formula_1" class="interest col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display: none">
-		<?php include ("includes/about_4_formula1.html"); ?>
-	</section>
-	<section id="Music" class="interest col-lg-11 col-md-11 col-sm-11 col-xs-11" style="display: none">
-		<?php include ("includes/about_4_music.html"); ?>
-	</section>
-	<section id="Photography" class="interest col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display: none">
-		<?php include ("includes/about_4_photography.html"); ?>
-	</section>
-	<section id="PubQuizzes" class="interest col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display: none">
-		<?php include ("includes/about_4_pubquizzes.html"); ?>
-	</section>
-	<section id="Sci-fi" class="interest col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display: none">
-		<?php include ("includes/about_4_scifi.html"); ?>
-	</section>
-	<section id="Snooker" class="interest col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display: none">
-		<?php include ("includes/about_4_snooker.html"); ?>
-	</section>
-	<section id="StandUp" class="interest col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display: none">
-		<?php include ("includes/about_4_standup.html"); ?>
-	</section>
-	<section id="Tom_Clancy" class="interest col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display: none">
-		<?php include ("includes/about_4_tomclancy.html"); ?>
-	</section>
-	<section id="Walking" class="interest col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display: none">
-		<?php include ("includes/about_4_walking.html"); ?>
-	</section>
+<hr/>
+
+<section id="Astronomy_menu" class="interest hidden-lg hidden-md hidden-sm">
+	<?php include ("includes/about_4_astronomy.html"); ?>
+</section>
+<section id="Baking_menu" class="interest" style="display: none">
+	<?php include ("includes/about_4_baking.html"); ?>
+</section>
+<section id="Cinema_menu" class="interest" style="display: none">
+	<?php include ("includes/about_4_cinema.html"); ?>
+</section>
+<section id="Formula_1_menu" class="interest" style="display: none">
+	<?php include ("includes/about_4_formula1.html"); ?>
+</section>
+<section id="Music_menu" class="interest" style="display: none">
+	<?php include ("includes/about_4_music.html"); ?>
+</section>
+<section id="Photography_menu" class="interest" style="display: none">
+	<?php include ("includes/about_4_photography.html"); ?>
+</section>
+<section id="PubQuizzes_menu" class="interest" style="display: none">
+	<?php include ("includes/about_4_pubquizzes.html"); ?>
+</section>
+<section id="Sci-fi_menu" class="interest" style="display: none">
+	<?php include ("includes/about_4_scifi.html"); ?>
+</section>
+<section id="Snooker_menu" class="interest" style="display: none">
+	<?php include ("includes/about_4_snooker.html"); ?>
+</section>
+<section id="StandUp_menu" class="interest" style="display: none">
+	<?php include ("includes/about_4_standup.html"); ?>
+</section>
+<section id="Tom_Clancy_menu" class="interest" style="display: none">
+	<?php include ("includes/about_4_tomclancy.html"); ?>
+</section>
+<section id="Walking_menu" class="interest" style="display: none">
+	<?php include ("includes/about_4_walking.html"); ?>
+</section>
+
+<section class="interests_acc">
+	<h3>Astronomy</h3>
+	<div><?php include ("includes/about_4_astronomy.html"); ?></div>
+	<h3>Baking</h3>
+	<div><?php include ("includes/about_4_baking.html"); ?></div>
+	<h3>Cinema</h3>
+	<div><?php include ("includes/about_4_cinema.html"); ?></div>
+	<h3>Formula 1</h3>
+	<div><?php include ("includes/about_4_formula1.html"); ?></div>
+	<h3>Music</h3>
+	<div><?php include ("includes/about_4_music.html"); ?></div>
+	<h3>Photography</h3>
+	<div><?php include ("includes/about_4_photography.html"); ?></div>
+	<h3>Pub Quizzes</h3>
+	<div><?php include ("includes/about_4_pubquizzes.html"); ?></div>
+	<h3>Sci-fi</h3>
+	<div><?php include ("includes/about_4_scifi.html"); ?></div>
+	<h3>Snooker</h3>
+	<div><?php include ("includes/about_4_snooker.html"); ?></div>
+	<h3>Stand-Up</h3>
+	<div><?php include ("includes/about_4_standup.html"); ?></div>
+	<h3>Tom Clancy</h3>
+	<div><?php include ("includes/about_4_tomclancy.html"); ?></div>
+	<h3>Walking</h3>
+	<div><?php include ("includes/about_4_walking.html"); ?></div>
 </section>

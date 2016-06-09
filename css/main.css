@@ -90,7 +90,6 @@
 	}
 }
 
-
 .head2, .head3
 {
 	margin: auto;
@@ -101,21 +100,15 @@
 	margin: 0px 10px 0px 10px;
 }
 
-#burger_2y
+#social_std a:hover
 {
-	top: -8px;
+	text-decoration: underline;
+	color: #337ab7;
 }
 
-#burger_2y, #filling_2y
+.top
 {
-	position: relative;
-	float: right;
-	z-index: 2;	
-}
-
-#filling_2y
-{
-	padding-bottom: 30px;
+	color: #337ab7;
 }
 
 .btn
@@ -143,13 +136,6 @@
 	}
 }
 
-.left
-{
-	margin-top: 1px;
-	margin-bottom: 1px;
-	text-align: right !important;
-}
-
 #page-content-wrapper
 {
 	top: -55px;
@@ -163,32 +149,15 @@
 	}
 }
 
-#sidebar-wrapper
-{
-	padding: 0px;
-}
-
-.temphdr
-{
-	height: 15px;
-}
-
-.sections
-{
-	position: absolute;
-	top: 0px;
-	width: 100%;
-}
-
-.largest
-{
-	position: static;
-}
-
 .screenshot-container, .astropic-container
 {
 	padding-bottom: 30px;
 	width: 100%;
+}
+
+.astropic-container
+{
+	margin-top: 10px;
 }
 
 .screenshot, .thumb, .astropic
@@ -245,27 +214,21 @@
 	}
 }
 
+.comicItem:hover, .musicItem:hover
+{
+	background: #55acee;
+}
+
 .ui-selectmenu-button
 {
 	background: transparent !important;
-}
-
-#viewinterest-button
-{
 	float: left;
-	width: 150px !important;	
+	width: 220px !important;
 }
 
 #viewperiod-button
 {
-	float: right;
-	width: 135px !important;	
-}
-
-#viewperiod-menu, #viewinterest-menu
-{
-	background: transparent;
-	color: #1c94c4;
+	margin-top: 10px;
 }
 
 .ui-menu-item
@@ -280,12 +243,108 @@
 	color: black !important;
 }
 
-.musicItem a, .comicItem a
+.ui-tabs-vertical
 {
-	color: yellow;
+	width: 55em;
 }
 
-.musicItem:hover, .comicItem:hover
+.ui-tabs-vertical .ui-tabs-nav
 {
-	background: #55acee;
+	float: left;
+}
+
+.ui-tabs-vertical .ui-tabs-nav li
+{
+	clear: left;
+	width: 100%;
+	padding: 0px !important;
+	border: 0px !important;
+	margin: 0px !important;
+}
+
+.ui-tabs-vertical .ui-tabs-nav li a
+{
+	display: block;
+}
+
+.ui-tabs-vertical .ui-tabs-panel
+{
+	float: left;
+}
+
+.ui-accordion-content
+{
+	background: transparent !important;
+}
+
+.vert_tabs
+{
+	background: transparent !important;
+}
+
+.ui-widget-content
+{
+	border:	0px !important;
+}
+
+.ui-widget-header
+{
+	border: 0px !important;
+	background: transparent !important;
+}
+
+.ui-state-default
+{
+	background: transparent !important;
+}
+
+.ui-corner-left a
+{
+	width: 100%;
+	text-align: right;
+	border-radius: 4px;
+}
+
+@media only screen and (min-width: 768px)
+{
+	.ui-tabs-nav
+	{
+		width: 27.5% !important;
+	}
+	.ui-tabs-panel
+	{
+		width: 72.5% !important;
+	}
+}
+
+@media only screen and (min-width: 992px)
+{
+	.ui-tabs-nav
+	{
+		width: 22.5% !important;
+	}
+	.ui-tabs-panel
+	{
+		width: 77.5% !important;
+	}
+}
+
+@media only screen and (min-width: 1200px)
+{
+	.ui-tabs-nav
+	{
+		width: 16.66666666% !important;
+	}
+	.ui-tabs-panel
+	{
+		width: 83.33333333% !important;
+	}
+}
+
+#boinc_acronym
+{
+	border: thin yellow solid;
+	float: left;
+	margin: 0px 10px 10px 0px;
+	padding: 5px 5px 0px 5px;
 }
