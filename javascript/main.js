@@ -190,6 +190,15 @@ function init ()
 		}
 	});
 
+	$("#astrosections").selectmenu(
+	{
+		change: function(event, data)
+		{
+			$(".astrosection").css('display', 'none');
+			$("#"+$("#astrosections option:selected").val()).css('display', 'block');			
+		}
+	});
+
 	$("#boincsections").selectmenu(
 	{
 		change: function(event, data)
@@ -201,7 +210,7 @@ function init ()
 
     $(".vert_tabs").tabs(
     {
-    	heightStyle: "auto"
+    	heightStyle: "fill"
     });
 	$(".vert_tabs").tabs().addClass("ui-tabs-vertical ui-helper-clearfix");
     $(".vert_tabs li").removeClass("ui-corner-top").addClass("ui-corner-left");

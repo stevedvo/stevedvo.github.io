@@ -201,6 +201,11 @@
 	width: 100%;
 }
 
+.astropic-container
+{
+	margin-top: 10px;
+}
+
 .screenshot, .thumb, .astropic
 {
 	width: 100%;
@@ -277,15 +282,15 @@
 	width: 135px !important;	
 }
 
-@media only screen and (min-width: 768px)
+/*@media only screen and (min-width: 768px)
 {
 	#viewperiod-button
 	{
 		float: right;
 	}
 }
-
-#boincsections-button, #aboutsections-button
+*/
+#boincsections-button, #aboutsections-button, #astrosections-button
 {
 	float: left;
 	width: 240px !important;
