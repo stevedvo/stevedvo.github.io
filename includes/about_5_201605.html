@@ -1,0 +1,147 @@
+<article id="20160527">
+	<h4>27 May 2016</h4>
+	<p>> Between baking scones and apple & rhubarb crumble, packing bags, and sorting various other things for a long weekend away, I've not had a lot of time on the website today :(. Did make a little progress with continuing to figuring out how to hook into various aspects of the CSS default & hover effects to change the appearance of the jQuery vertical tabs to my liking.</p>
+</article>
+<hr/>
+<article id="20160526">
+	<h4>26 May 2016</h4>
+	<p>> Added a new page today: <a href="boinc.php">BOINC</a>. Easy enough to add the navigation to the header and put together the basic page structure. Decided on this occasion I'd like to have a go at using jQuery vertical tabs to navigate between sections of the page. Realised this would be no good for mobile users so implemented a selectmenu for small screens which is replaced by the vertical tabs on larger displays. The whole default colour scheme for the jQuery tabs is so far from my website I need to sort out a load of extra CSS to override the default behaviour. Made a start on this, to be continued tomorrow.</p>
+</article>
+<hr/>
+<article id="20160525">
+	<h4>25 May 2016</h4>
+	<p>> Decided that the html file that contained all of the "Hobbies & Interests" was now getting waaaaaaaaaay too big and unwieldy to navigate around from one section to the next, so chopped each of the sub-sections up into separate files and used PHP include to incorporate them into the flow of the main document.</p>
+	<p>> Did some further work on the 'Stand Up' sub-section: similarly to the 'Music' sub-section I wanted to provide links to Facebook, Twitter, Wikipedia, and their own website for each comedian of interest. With what I'd learned from the "Music" section I implemented this slightly differently and hopefully more efficiently by coding a PHP array, accessing each record over a foreach loop, and using spaghetti code to incoporate the PHP variables with the HTML code that goes around it.</p>
+	<p>> It does seem a better way of doing it - and halfway between straight linear code and having these records stored in a SQL database which will be the ultimate endgoal.</p>
+	<p>> WOOP WOOP!!  With the latest updates to my master branch I have now surpassed 100 commits to my GitHub repo #winning :D</p>
+</article>
+<hr/>
+<article id="20160524">
+	<h4>24 May 2016</h4>
+	<p>> Added loads of new content to the "Hobbies & Interests" section today:</p>
+	<ul>
+		<li>Cinema</li>
+		<li>Formula 1</li>
+		<li>Photography</li>
+		<li>Pub Quizzes</li>
+		<li>Sci-fi</li>
+		<li>Snooker</li>
+		<li>Stand Up</li>
+		<li>Tom Clancy</li>
+		<li>Walking</li>
+	</ul>
+</article>
+<hr/>
+<article id="20160523">
+	<h4>23 May 2016</h4>
+	<p>> Understanding a little about using a .htaccess file and basic routing. Updated the way that the info in the &lt;head&gt; sections is pulled in for each page so that ALL the &lt;script&gt;s and &lt;link&gt;s are loaded for every page, not just the common ones for jQuery, Bootstrap, etc. - and the pages that had additional JS & CSS (e.g. <a href="tictactoe.php">Tic Tac Toe</a> and <a href="animation.php">Animation</a>) no longer need their own extra lines in their &lt;head&gt; sections.</p>
+	<p>> Added links to astronomy.com and Scientific American on the <a href="links.php">Links</a> page.</p>
+	<p>> Discovered that I'm now getting console errors relating to the Animation and Tic Tac Toe JavaScript files. The JS is trying to access elements on the page that don't exist because the appropriate page hasn't been loaded. Will undo some of the changes I made to the &lt;head&gt; sections to unbreak this!</p>
+</article>
+<hr/>
+<article id="20160520">
+	<h4>20 May 2016</h4>
+	<p>> Using my new 'Music' sub-section this morning to navigate to the Wikipedia pages for a couple of bands whose CDs I received in the post, realised that several of the links are not working correctly. Had not taken into account that the Wikipedia URLs are all case-sensitive past the first character! Had tested a couple of them yesterday and it seemed to be fine but I must have only clicked on single-word names. So I proceeded to work my way through all of those links, replacing all the lowercase characters with uppercase where required, then doing proper testing that all of the links work - and work directly i.e. no re-directs.</p>
+	<p>> Added the 'Astronomy' sub-section to the "Hobbies & Interests" section.</p>
+	<p>> Un-commented the additional options in the "Hobbies & Interests" section. Decided that with the menu items having a transparent background it made it difficult to read where there was other text behind it, so set the background to a solid black colour instead which raises a wry smile considering my earlier work on the <a href="#20160513">13th</a> & <a href="#20160516">16th!</a></p>
+	<p>> Added content to the 'Baking' sub-section.</p>
+</article>
+<hr/>
+<article id="20160519">
+	<h4>19 May 2016</h4>
+	<p>> After a long long long l-o-n-g time I completed adding in all of the Facebook, Twitter and Wikipedia links for all of the bands/artists listed in the music section.</p>
+	<p>> Checked how it all looks on various screen types, and made all the necessary Bootstrap & CSS adjustments to ensure good readability and clickability.</p>
+	<p>> Fixed a couple of other little Bootstrap/CSS bugs I noticed right on the border between the "xs", iPad, and "sm" screen sizes.</p>
+	<p>> Pretty happy with the Music section now. A much larger task than I envisioned after typing up all the prose at the beginning and then painstakingly looking up every link and inserting the correct URL into each href.</p>
+	<p>> The only issue I've found now is that due to the way the number of columns change with the screen width, on mobile views the "Hobbies & Interests" section is now longer than the "Blog" section, but on wider screens the opposite is true. This is causing a slight display issue due to the way I've had to label which section is the largest to ensure that the background gradient & image is filled all the way down the page. If I nominate the "H&I" section as now being the largest it will mess up the bottom of the "Blog" unless I split the latter up into smaller sections with the selectmenu function... but a month of blog entries lumped together seems like the minimum sensible amount. So maybe I keep the blog as the largest section and just ensure that there is always plenty of content in each of the sub-sections i.e. not moving anything out of 'Latest' until it leaves the sub-section with plenty of content remaining, and not allowing any sub-section to contain too little. All this waffling should help haha!</p>
+	<p>> Alternatively I could try to figure out some better way of ensuring the background image & gradient fill the sections all the way down... but I spent a ridiculous amount of time trying to figure out how to get it working and I'm loathed to have to revisit it. It would make things easier if I ditched the fold-out animation that happens when you click on the navigation items [since it would allow the wrapper height to be looked-up], but I really like that feature.</p>
+</article>
+<hr/>
+<article id="20160518">
+	<h4>18 May 2016</h4>
+	<p>> Found a fantastic resource for astronomical information: <a href="http://in-the-sky.org" target="_blank">In-The-Sky</a> - has the observers calendar that I was initially looking for as well as a whole host of other tables, charts, news, advice. Definitely worth adding to the links page!</p>
+	<p>> Added a date/time section to the header, which auto-updates every second.</p>
+	<p>> Adding more content to the "Hobbies & Interests" section. Starting with "Music" - which may well end up being one of the largest sections. Made a list of all the bands/artists and gonig through the laborious process of adding in all of the links for each one: Facebook, Twitter, and a Wikipedia page.</p>
+</article>
+<hr/>
+<article id="20160517">
+	<h4>17 May 2016</h4>
+	<p>> Was just browsing the AstroPics page on my phone this morning, and was confused why tapping the link for "Other" kept taking me to "Special Events". Only took me a couple of seconds to find the appropriate piece of code and realise that the list item had the incorrect class so just needed to change a single character of code to fix it. This "bug" must have been there for aaaaaaaages - can't believe I'd not spotted it until now!</p>
+	<p>> Added a bunch more links & screenshots to cover numerous useful & interesting astronomy & science websites.</p>
+	<p>> Found a better profile pic to use in the header - the one I had been using was a poor quality one I'd pinched from my LinkedIn profile, which was only ever meant to be temporary but had stuck for a little while!</p>
+</article>
+<hr/>
+<article id="20160516">
+	<h4>16 May 2016</h4>
+	<p>> Continued the work I started on Friday with the Blog periods. Looked up how to implement the tabs in jQuery, and it seemed simple enough: just add a few extra lines of code to contain all of the sections within a "tabs" div, with an unordered list as an index that provides the tab names; then one line of JavaScript to initiate the tabs in jQuery. SimpleZ!</p>
+	<p>> I first of all commented-out all the code I'd previously done which related to the &lt;select&gt; menu to ensure there were no conflicts - just to check that the code for the tabs was working OK. Despite the simplicity, the appearance was not what I was expecting: the page was just displaying the unordered list, but the functionality was correct since clicking on the list items would show/hide the expected Blog sections.</p>
+	<p>> Upon investigation it didn't take me long to discover that the tabs depended on an additional jQuery-UI CSS stylesheet that I'd not inluded in the &lt;head&gt; section. And THEN the thought occurred that maybe this missing stylesheet was the reason that the jQuery "selectmenu" function was not displaying as intended on Friday!</p>
+	<p>> Including the missing stylesheet fixed the tabs and left them working nicely, although the colour-scheme doesn't match the rest of the site but that can be tweaked. Commented out all this code, then went back to re-coding the "selectmenu" function for the drop-down box method of choosing a Blog period. And you know what? When you include all the files you're supposed to the formatting works!! Just needed some slight adjustments to the colour-scheme and positioning, but in very short order I got the selection menu pretty much how I wanted... AND this jQuery menu has much more configurability and I was able to set more of it to being transparent against the background.</p>
+	<p>> So now: happy with the tabs functionality, and happy with the menu functionality and appearance when they are implemented separately. The trick now is to work out how to implement one for mobile and the other for larger displays...</p>
+	<p>> After some time showing this, hiding that, trying different things with Bootstrap, @media queries, and JavaScript 'if' statements, I've not quite been able to achieve what I set out to do. I can get the selectmenu to only appear on larger displays easily enough but the tabs are quite tricky and I've not gotten them to display correctly whilst that selectmenu code is active. Upon reflection, I've decided that now that I've got the jQuery selectmenu working I do actually prefer this way of choosing the Blog periods be it on mobile or larger devices. So I've scrapped all of the tabs code, but it was a good thing to learn about and I'll try to find a way to implement that elsewhere.</p>
+	<p>> Used the time that I might have spent [in attempting to get the tabs displaying nicely] to further refine the CSS that controls the select menu effects/appearance.</p>
+	<p>> Added an extra link for the offical <a href="http://www.formula1.com" target="_blank">Formula 1</a> homepage - I realised yesterday that this would be handy for accessing the Live Timings, etc.</p>
+</article>
+<hr/>
+<article id="20160513">
+	<h4>13 May 2016</h4>
+	<p>> Tackling a new issue today: splitting up this blog into different periods, so that one can jump straight to posts from different months without having to scroll a long way down the page. My idea is that for mobile devices I will enable this option through a drop-down selection box, and for larger screens I'll implement this as selectable tabs. So starting on the mobile option first of all.</p>
+	<p>> Thought I was making quite quick progress to begin with by using some examples given on the jQuery website - using the "selectmenu" function it does exactly what I want: shows/hides the relevant section depending which option is chosen from the list. Problem is though that this implementation adds an additional div at the bottom of the document, and tries to figure out the correct position, width, CSS styles, etc. It just wasn't displaying nicely no matter how much I tried to configure it - the main gripe being the width & position settings causing the div to overflow outside of the viewport! Tried tweaking this for a little while but could not get it looking right - which was a shame because the functionality was really good!</p>
+	<p>> So I gave up on this way of doing it and instead had a go at programming this myself. Took a fair chunk of time, mainly on trying to figure out how to access the values of, and initiate click events for, the &lt;option&gt; items within the &lt;select&gt; menu. Turns out that there is no click event handler for &lt;option&gt; elements but found a way around it, and then after a little trial & error dumping stuff to the <code>console.log</code> I figured out how to manipulate which sections should be shown/hidden (using display: block/none) at the expected times. Woop! One slight gripe is that although I can make the &lt;select&gt; background transparent, I can't find a way to make the drop-down &lt;option&gt; menu similarly transparent - I'm limited to solid colours so opted for black rather than the default white. Now to work on the tab version for the larger displays...</p>
+</article>
+<hr/>
+<article id="20160512">
+	<h4>12 May 2016</h4>
+	<p>> Added some more links & screenshots to the <a href="links.php" target="_blank">Links</a> page, and did some more re-organisation and Bootstrap-tweaking.</p>
+	<p>> Made the top navigation a little more responsive: since adding an extra button ["Links"] this meant that there was a narrow band of screen sizes in the "sm" Bootstrap category where the navigation bar was too long and wrapping around onto two lines. Fixed this with some media queries to set the buttons to the default size and remove some additional padding on "sm" screens, and for larger displays set the buttons to the larger size and re-instate the padding. Works well, but this is only a temporary measure... as the site grows and more buttons are added to the top navigation bar I will need to figure out a better solution.</p>
+	<p>> Made a couple of Bootstrap tweaks to the Astro Pics page. I DID have this working fine yesterday, but then some of the CSS tweaks I made this morning affected the AstroPics containers as well as the screenshots so just needed a couple of extra .clearfix divs to ensure tidyness on all screen types.</p>
+	<p>> Was getting a little peeved at the social links/widgets on the header when viewed on one of the standard (i.e. non-mobile) displays. The Twitter one in particular always seemed to slow things down as the code taken from their support page had all sorts going on with loading iframes and running scripts and stuff. Literally added at least 2 seconds to the page load each time. So I recreated it with a Bootstrap button, overriding the default styles to emulate the appearance of the Twitter widget. Both social links now much simpler, using local images, and loading much faster :D</p>
+</article>
+<hr/>
+<article id="20160511">
+	<h4>11 May 2016</h4>
+	<p>> Continued the work I started yesterday with adding numerous iframes into the <a href="links.php" target="_blank">Links</a> section. Got so far with it, and had 15 or so iframes loading into the page... but it didn't look great and didn't work great. As suspected, it took f-o-r-e-v-e-r [well, 60-90 seconds] to load the page and make all the requests [approx 1,000!!]. And then when all the iframes DID finally load, the parts of the pages that were visible were not what I wanted. Depending on how well the destination page could cope with narrow viewports the results varied. I COULD have spent a while playing with CSS & JS to set the scroll height & width upon loading... but considering how long it took to load everything in the first place I gave that idea up!</p>
+	<p>> So instead I changed the links page to just display a load of screenshots which link to the pages on a new tab. Visited each of the destination pages to take the screenshots and trim/resize to suitable dimensions. Once confirmed that all the images & links worked correctly I re-organised them into categories and then checked how it all looked on different screen sizes. Needed a few tweaks with the .clearfix div class.</p>
+	<p>> Removed some duplicate headings that were apparent on pages within my site that didn't have a secondary navigation.</p>
+	<p>> I liked the way I'd used Bootstrap to display the screenshots for the <a href="links.php" target="_blank">links</a> - much better than how I'd dealt with the thumbs/images on the <a href="astropics.php" target="_blank">Astro Pics</a> page. So I used the same logic to improve the look of the latter. Also made a few CSS / Bootstrap tweaks to improve the appearance of the secondary burger menu.</p>
+</article>
+<hr/>
+<article id="20160510">
+	<h4>10 May 2016</h4>
+	<p>> Continued the work with the CSS / Bootstrap / @media queries to improve the look of the site across a variety of screen types/sizes:</p>
+	<ul>
+		<li>Adjusted the widths of some of the images and Bootstrap grid columns to different %s to behave more reponsively.</li>
+		<li>Re-jigged the column widths and arrangement of the social links, and added different icons to appear when viewing on smaller screens.</li>
+		<li>Changed the h1 heading to h2 to allow a better fit on the smallest mobile screens.</li>
+		<li>Removed the "async" attribute from the script call that loads the main JS file - realised this was causing an issue with the burger menus not being initially hidden when viewing the site on my phone, although this was not apparent with the user-agent-spoofing.</li>
+	</ul>
+	<p>> Feeling quite happy with the look and functionality of the headers & menus on across all devices now :D</p>
+	<p>> Added meta descriptions to each of the pages to hopefully help with Google search results. Was going to add meta keywords too but reading up a little about it I see these are very old hat and no longer have any influence with site rankings!</p>
+	<p>> Had a response from the 123-Reg tech support team regarding the problem experienced with the web.config file contents - turns out they had omitted to include a particular opening & closing tag. Google still reckons I don't have GZIP compression enabled, however! #fml</p>
+	<p>> Generated a new sitemap and updated in Google webmaster tools. Google seems to have forgotten that I previously submitted one!? Also now getting a crawl error saying that /mobile and /m don't exist. WTF?? Why is Google even trying to find these non-existent pages that I've never even tried to access?</p>
+	<p>> Was getting a couple of errors on the live site [but not on test env] relating to the glyphicon-halflings woff and woff2 filetypes. Found a few lines of code to add to the web.config file to make that go away.</p>
+	<p>> Added a new section: <a href="links.php" target="_blank">Links & Resources</a>. The intention is to use a bunch of iframes and screenshots to display numerous useful links - kinda like a "favourites" menu but with some pages pre-loaded to see the latest info at a glance. May be quite slow to load the page, though, as it will likely require a lot of requests.</p>
+</article>
+<hr/>
+<article id="20160504">
+	<h4>04 May 2016</h4>
+	<p>> HAPPY STAR WARS DAY!</p>
+	<p>> Remembered that I can actually access my local webserver over the LAN - so I can point my iPhone Safari browser to my laptop's local IP address and view the dev version of the site on mobile without having to upload to live. Woop!</p>
+	<p>> The problem seems to be that the background image is NOT obeying the "fixed" and "cover" attributes that should be set - the image should not scroll.</p>
+	<p>> OK, so reading up about it this is a common problem! Attempted a few different ways of trying to get around this "bug". Thought I was onto a winner with a bit of JavaScript that adjusts the background position by the amount that the page has been scrolled by. This still did not work on the iPhone, and although it worked on the PC the repositioning of the background with REALLY clunky and was not the beautiful smooth scroll that you get when it's just set to "fixed" & "cover".</p>
+	<p>> Spent several hours trying to figure out some other solution but getting nowhere. I can at least test what the actual outcome is with my iPhone now, but I don't have an iPad to hand to test what happens there. Had to come to a compromise with some @media queries that displays the background as a repeating scrollable image on mobile/tablets. Not 100% happy but moving on now!</p>
+	<p>> Looking at improving SEO and performance:</p>
+	<ul>
+		<li>Added a config file to enable GZIP compression.</li>
+		<li>Changed the 2 pixel gradient image file format from jpg to png.</li>
+		<li>Changed the ordering of the main CSS.</li>
+		<li>Added an "async" attribute to the external script calls where possible i.e. not critical for initial page load.</li>
+	</ul>
+	<p>> Oh... the website now just shows an HTTP 500 error when I try to load it. Figured it must be something to do with the web.config file that has been added to the root directory for the GZIP compression, since taking this file out resolves the issue! Copied and pasted the file contents exactly as instructed on the 123-Reg support page so it seems a little strange that this would kill it. Removed the config file for now.</p>
+	<p>> Started doing some tweaking / fine-tuning with the CSS / Bootstrap / @media queries to get the margins, padding, spacing, widths, etc for various sections looking better throughout the site on each screen type.</p>
+</article>
+<hr/>
+<article id="20160503">
+	<h4>03 May 2016</h4>
+	<p>> Had just a very small amount of time to try to figure out why the background image isn't displaying correctly on iPhone. Read up a little more on the CSS @media queries and played about to change the CSS depending on orientation rather than display width. Looked like from the Chrome dev tools that this would work but found that it didn't after uploading to live and viewing on the iPhone for real. Only had half an hour or so so will look into this problem more tomorrow.</p>
+</article>

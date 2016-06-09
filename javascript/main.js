@@ -153,6 +153,16 @@ function init ()
 
 	$(".interests_acc").accordion().addClass("hidden-xs");
 
+	$(".periods_acc").accordion(
+	{
+		collapsible: true,
+		// active: false,
+		animate: false,
+		heightStyle: "content"
+	});
+
+	$(".periods_acc").accordion().addClass("hidden-xs");
+
 	$("#viewinterest").selectmenu(
 	{
 		change: function(event, data)
@@ -189,11 +199,12 @@ function init ()
 		}
 	});
 
-	$("#boinctabs").tabs().addClass("ui-tabs-vertical ui-helper-clearfix");
-    $("#boinctabs li").removeClass("ui-corner-top").addClass("ui-corner-left");
-
-	$("#abouttabs").tabs().addClass("ui-tabs-vertical ui-helper-clearfix");
-    $("#abouttabs li").removeClass("ui-corner-top").addClass("ui-corner-left");
+    $(".vert_tabs").tabs(
+    {
+    	heightStyle: "auto"
+    });
+	$(".vert_tabs").tabs().addClass("ui-tabs-vertical ui-helper-clearfix");
+    $(".vert_tabs li").removeClass("ui-corner-top").addClass("ui-corner-left");
 
     $(".ui-tabs-anchor").mouseover(function()
     {
@@ -211,49 +222,6 @@ function init ()
 		$(this).animate({backgroundColor: jQuery.Color({alpha: 0}), color: "#white"}, 750);
 	});
 
-
-/*	$("#interesttabs").tabs().addClass("ui-tabs-vertical ui-helper-clearfix");
-    $("#interesttabs li").removeClass("ui-corner-top").addClass("ui-corner-left");
-*/
-    // $(".ui-tabs-anchor").attr('style', 'color: white');
-
-/*    $(".ui-corner-left").mouseover(function()
-    {
-    	$(this).children().attr('style', {'color': 'black !important', 'background': 'yellow !important'});
-    });
-*/
-/*    $(".ui-corner-left").children().mouseover(function()
-    {
-    	$(this).children().css({'color': 'black', 'background': 'yellow'});
-    });*/
-
-/*    $(".ui-corner-left").children().mouseover(function()
-    {
-    	$(this).children().attr('style', 'color: black !important');
-    });
-*/
-/*    $(".ui-corner-left").children().children().mouseover(function()
-    {
-    	$(this).attr('style', 'color: black !important');
-    });
-*/
-/*    $(".ui-corner-left").mouseout(function()
-    {
-    	$(this).children().animate({backgroundColor: jQuery.Color({alpha: 0}), color: "#white"}, 250);
-    });
-*/
-/*    $(".ui-corner-left").children().mouseout(function()
-    {
-    	$(this).children().animate({backgroundColor: jQuery.Color({alpha: 0}), color: "#white"}, 250);
-    });
-*/
-/*	$(".ui-corner-left").click(function()
-	{
-		$(this).children().css('background', 'green');
-		$(this).children().css('color', 'black');
-		$(this).children().animate({backgroundColor: jQuery.Color({alpha: 0}), color: "#white"}, 750);
-	});
-*/
 }
 
 document.addEventListener("DOMContentLoaded", init, false);

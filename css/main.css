@@ -100,6 +100,17 @@
 	margin: 0px 10px 0px 10px;
 }
 
+#social_std a:hover
+{
+	text-decoration: underline;
+	color: #337ab7;
+}
+
+.top
+{
+	color: #337ab7;
+}
+
 #burger_2y
 {
 	top: -8px;
@@ -244,6 +255,11 @@
 	}
 }
 
+.comicItem:hover, .musicItem:hover
+{
+	background: #55acee;
+}
+
 .ui-selectmenu-button
 {
 	background: transparent !important;
@@ -295,7 +311,6 @@
 .ui-tabs-vertical .ui-tabs-nav
 {
 	float: left;
-	/*width: 12em;*/
 }
 
 .ui-tabs-vertical .ui-tabs-nav li
@@ -312,18 +327,8 @@
 	display: block;
 }
 
-.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active
-{
-	/*padding-bottom: 0;*/
-	/*padding-right: .1em;*/
-	/*border-right-width: 1px;*/
-}
-
 .ui-tabs-vertical .ui-tabs-panel
 {
-/*	padding: 1em;
-	float: right;
-	width: 40em;*/
 	float: left;
 }
 
@@ -332,7 +337,7 @@
 	background: transparent !important;
 }
 
-#boinctabs, #abouttabs
+.vert_tabs
 {
 	background: transparent !important;
 }
@@ -340,12 +345,6 @@
 .ui-widget-content
 {
 	border:	0px !important;
-	/*color: inherit !important;*/
-}
-
-.ui-tabs-panel a, .ui-accordion-content a
-{
-	/*color: yellow !important;*/
 }
 
 .ui-widget-header
@@ -357,13 +356,6 @@
 .ui-state-default
 {
 	background: transparent !important;
-	/*border: 0px !important;*/
-}
-
-.ui-state-hover
-{
-	/*background: yellow !important;*/
-	/*color: black !important;*/
 }
 
 .ui-corner-left a
@@ -371,7 +363,6 @@
 	width: 100%;
 	text-align: right;
 	border-radius: 4px;
-	/*color: white;*/
 }
 
 @media only screen and (min-width: 768px)
