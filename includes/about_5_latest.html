@@ -4,6 +4,22 @@
 </article>
 <hr/> -->
 
+<article id="20160610">
+	<h4>10 June 2016</h4>
+	<p>> Although happy at the moment with the general look & function of the website, I am a little dismayed at how long some of the pages take to load. The homepage for instance can take 6 or 7 seconds for the initial load, and still 4 or 5 seconds even with caching. So I've spent a little time today looking into what is taking too long.</p>
+	<p>> The first thing I noticed was that <em>index.php</em> was taking the bulk of the loading time and was over 1MB in size! Now I know there is a lot of content, but it's only really text and HTML and this seemed highly suspect - even considering that a lot of the content would be pulled through twice (once for the mobile version and once for the larger displays).</p>
+	<p>> Browsing through the HTML output, I realised that there were some large sections of commented-out content. I had an <code>include()</code> function within a &lt;?php ?&gt; section inside an HTML document, but this was commented-out with the &lt;!-- --&gt; symbols so I didn't think it would actually call the <code>include()</code> function. But obviously it still was, and keeping it from being displayed with the enclosing comment symbols. I still wanted the code in there as I may in the future want to display this content, so I commented-out the <code>include()</code> function itself.</p>
+	<p>> That cleared away some of the filesize that was loading, but it still seemed awfully large. After a little more searching I found that the content on the two largest sections ["Interests" and "Blog"] was being loaded not twice, but FOUR times! I figured out this was because both the 'mobile' versions of these sections and the 'desktop' versions were calling the same sub-section selection code, whether it was to be the 'selectmenu' or 'accordion' that was actually displayed to the user. So, for example, the 'Music' sub-section was getting called from:</p>
+	<ol>
+		<li>'selectmenu'-&gt;'selectmenu'</li>
+		<li>'selectmenu'-&gt;'accordion'</li>
+		<li>'verticalTab'-&gt;'selectmenu'</li>
+		<li>'verticalTab'-&gt;'accordion'</li>
+	</ol>
+	<p>> Now, calls 2 and 3 are totally pointless: the 'accordion' sub-sections [desktop-only] will never be displayed at the same time as the primary 'selectmenu' [mobile-only]; and vice-versa with 'selectmenu' and 'verticalTab'. And this was happening for every one of the "Interests" and "Blog" sub-sections - some of which are rather large!</p>
+	<p>> So I came up with a better way of calling these: splitting-out the secondary selection code into 'selectmenu' only and 'verticalTab' only versions. This has now removed all the unnecessary duplication - only calls 1 & 4 are now in effect. The good news is that this has roughly halved the filesize of <em>index.php</em> and likewise roughly halved the loading time of the homepage. YAY! However, at 2 to 3 seconds, it still seems to me that this is taking too long. I can still see a lot of the content for a good second or more before the CSS/jQuery functions kick-in and display the page as intended. Testing the mobile version on my iPhone is actually less annoying, since NONE of the page loads until it is fully ready to be displayed. I feel there is more I can do to improve on this, but I am out of time today and will pick up on this later!</p>
+</article>
+<hr/>
 <article id="20160609">
 	<h4>09 June 2016</h4>
 	<p>> Continued where I left off yesterday with adding the jQuery effects on the mouseover, mouseout and click events for the items within the accordion content.</p>
