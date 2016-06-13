@@ -49,26 +49,6 @@ function init ()
 		lrgImg = window.open(lrgStr, "PopUp", "top=0,left=0,width="+window.screen.availWidth+",height="+window.screen.availHeight+",location=no");
 	});
 
-	$(".interests_acc").accordion(
-	{
-		collapsible: true,
-		active: false,
-		animate: false,
-		heightStyle: "content"
-	});
-
-	$(".interests_acc").accordion().addClass("hidden-xs");
-
-	$(".periods_acc").accordion(
-	{
-		collapsible: true,
-		// active: false,
-		animate: false,
-		heightStyle: "content"
-	});
-
-	$(".periods_acc").accordion().addClass("hidden-xs");
-
 	$("#viewinterest").selectmenu(
 	{
 		change: function(event, data)
@@ -125,7 +105,7 @@ function init ()
 
     $(".vert_tabs").tabs(
     {
-    	heightStyle: "fill"
+    	heightStyle: "auto"
     });
 	$(".vert_tabs").tabs().addClass("ui-tabs-vertical ui-helper-clearfix");
     $(".vert_tabs li").removeClass("ui-corner-top").addClass("ui-corner-left");
@@ -146,6 +126,13 @@ function init ()
 		$(this).animate({backgroundColor: jQuery.Color({alpha: 0}), color: "#white"}, 750);
 	});
 
+    $(window).scroll(function()
+    {
+    	$(".vert_tabs").tabs(
+	    	{
+	    		heightStyle: "auto"
+	    	});	
+    });
 }
 
 document.addEventListener("DOMContentLoaded", init, false);
