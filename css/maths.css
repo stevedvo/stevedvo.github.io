@@ -1,0 +1,91 @@
+.numsentence
+{
+	font-size: 24px;
+}
+
+.userInput, .userSubmit
+{
+	color: black;
+}
+
+.userInput
+{
+	width: 90px;
+	text-align: right;
+}
+
+.mul
+{
+	width: 120px;
+}
+
+.goodAns
+{
+	font-size: 30px;
+	background: green;
+}
+
+.badAns
+{
+	font-size: 18px;
+	background: red;
+}
+
+@media only screen and (min-width: 480px)
+{
+	.btn-sm
+	{
+		padding: 10px 16px !important;
+		font-size: 18px !important;
+		line-height: 1.33333333 !important;
+		border-radius: 6px !important;		
+	}
+}
+
+@media only screen and (min-width: 1200px)
+{
+	.userSubmit
+	{
+		width: 10%;
+	}
+}
+
+@media only screen and (max-width: 479px)
+{
+	.numsentence
+	{
+		width: 100%;
+	}
+	.userSubmit
+	{
+		float: right;
+		width: 50%;
+	}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px)
+{
+	.numsentence
+	{
+		width: 75%;
+	}
+	.userSubmit
+	{
+		float: right;
+		width: 20%;		
+	}
+}
+
+@media only screen and (max-width: 767px)
+{
+	.numsentence
+	{
+		float: left;
+		padding: 0px;
+	}
+	.goodAns, .badAns
+	{
+		float: left;
+		width: 100%;		
+	}
+}

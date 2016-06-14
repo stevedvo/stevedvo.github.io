@@ -103,6 +103,15 @@ function init ()
 		}
 	});
 
+	$("#mathssections").selectmenu(
+	{
+		change: function(event, data)
+		{
+			$(".mathssection").css('display', 'none');
+			$("#"+$("#mathssections option:selected").val()).css('display', 'block');			
+		}
+	});
+
     $(".vert_tabs").tabs(
     {
     	heightStyle: "auto"
@@ -133,6 +142,7 @@ function init ()
 	    		heightStyle: "auto"
 	    	});	
     });
+
 }
 
 document.addEventListener("DOMContentLoaded", init, false);

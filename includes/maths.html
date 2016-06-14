@@ -1,0 +1,55 @@
+<nav class="hidden-lg hidden-md hidden-sm col-xs-12">
+	<form action="#" id="mathsform">
+		 <fieldset>
+		 	<label for="mathssections"></label>
+		 	<select name="mathssections" id="mathssections">
+		 		<option value="Add_menu" selected>Addition</option>
+		 		<option value="Sub_menu">Subtraction</option>
+		 		<option value="Mul_menu">Multiplication</option>
+		 		<option value="Div_menu">Division</option>
+		 	</select>
+		 </fieldset>
+	 </form>
+</nav>
+
+<section id="Add_menu" class="mathssection hidden-lg hidden-md hidden-sm col-xs-12">
+	<?php include('maths_add.php'); ?>
+</section>
+
+<section id="Sub_menu" class="mathssection hidden-lg hidden-md hidden-sm col-xs-12" style="display: none">
+	<?php include('maths_sub.php'); ?>
+</section>
+
+<section id="Mul_menu" class="mathssection hidden-lg hidden-md hidden-sm col-xs-12" style="display: none">
+	<?php include('maths_mul.php'); ?>
+</section>
+
+<section id="Div_menu" class="mathssection hidden-lg hidden-md hidden-sm col-xs-12" style="display: none">
+	<?php include('maths_div.php'); ?>
+</section>
+
+<section class="vert_tabs col-lg-12 col-md-12 col-sm-12 hidden-xs">
+	<ul>
+ 		<li><a href="#Add_tab">Addition</a></li>
+ 		<li><a href="#Sub_tab">Subtraction</a></li>
+ 		<li><a href="#Mul_tab">Multiplication</a></li>
+ 		<li><a href="#Div_tab">Division</a></li>
+	</ul>
+
+	<section id="Add_tab">
+		<?php include('maths_add.php'); ?>
+	</section>
+
+	<section id="Sub_tab">
+		<?php include('maths_sub.php'); ?>
+	</section>
+
+	<section id="Mul_tab">
+		<?php include('maths_mul.php'); ?>
+	</section>
+
+	<section id="Div_tab">
+		<?php include('maths_div.php'); ?>
+	</section>
+
+</section>
