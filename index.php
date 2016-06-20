@@ -25,10 +25,10 @@ switch ($page) {
 <html lang="en">
 
 	<head>
+		<meta name="description" content="About Steve DeVeaux: graduate of Sheffield University; Product Owner in Agile Scrum; Web Developer in HTML5, CSS3, JavaScript, jQuery, Bootstrap, PHP."/>
 		<?php
 			include ("includes/headinfo.html");
 		?>
-		<meta name="description" content="About Steve DeVeaux: graduate of Sheffield University; Product Owner in Agile Scrum; Web Developer in HTML5, CSS3, JavaScript, jQuery, Bootstrap, PHP."/>
 	</head>
 
 	<body>

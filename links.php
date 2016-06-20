@@ -3,10 +3,10 @@
 <html lang="en">
 
 	<head>
+		<meta name="description" content="Useful links and resources for information and updates on current events."/>
 		<?php
 			include ("includes/headinfo.html");
 		?>
-		<meta name="description" content="Useful links and resources for information and updates on current events."/>
 	</head>
 
 	<body>

@@ -3,11 +3,11 @@
 <html lang="en">
 
 	<head>
+		<meta name="description" content="Animation using the HTML5 Canvas and JavaScript."/>
+		<script type="text/javascript" src="javascript/animation.js"></script>
 		<?php
 			include ("includes/headinfo.html");
 		?>
-		<meta name="description" content="Animation using the HTML5 Canvas and JavaScript."/>
-		<script type="text/javascript" src="javascript/animation.js"></script>
 	</head>
 
 	<body>

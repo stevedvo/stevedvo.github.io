@@ -3,12 +3,12 @@
 <html lang="en">
 
 	<head>
-		<?php
-			include ("includes/headinfo.html");
-		?>
 		<meta name="description" content="Tic Tac Toe / Noughts & Crosses game made using JavaScript."/>
 		<script type="text/javascript" src="javascript/tictactoe.js"></script>
 		<link type="text/css" rel="stylesheet" href="css/tictactoe.css"/>
+		<?php
+			include ("includes/headinfo.html");
+		?>
 	</head>
 
 	<body>

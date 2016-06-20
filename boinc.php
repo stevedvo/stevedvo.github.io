@@ -3,10 +3,10 @@
 <html lang="en">
 
 	<head>
+		<meta name="description" content="My interest and history with participation in distributed computing projects."/>
 		<?php
 			include ("includes/headinfo.html");
 		?>
-		<meta name="description" content="My interest and history with participation in distributed computing projects."/>
 	</head>
 
 	<body>

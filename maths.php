@@ -3,12 +3,12 @@
 <html lang="en">
 
 	<head>
-		<?php
-			include ("includes/headinfo.html");
-		?>
 		<meta name="description" content="Puzzles to test the brain."/>
 		<script type="text/javascript" src="javascript/maths.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/maths.css"/>
+		<?php
+			include ("includes/headinfo.html");
+		?>
 	</head>
 
 	<body>
