@@ -138,9 +138,9 @@ function init ()
     $(window).scroll(function()
     {
     	$(".vert_tabs").tabs(
-	    	{
-	    		heightStyle: "auto"
-	    	});	
+    	{
+    		heightStyle: "auto"
+    	});	
     });
 
 }

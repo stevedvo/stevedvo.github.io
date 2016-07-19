@@ -27,8 +27,10 @@ switch ($page) {
 	<head>
 		<meta name="description" content="About Steve DeVeaux: graduate of Sheffield University; Product Owner in Agile Scrum; Web Developer in HTML5, CSS3, JavaScript, jQuery, Bootstrap, PHP."/>
 		<?php
+			$page_title = "stevedeveaux.com";
 			include ("includes/headinfo.html");
 		?>
+		<title><?php echo $page_title; ?></title>
 	</head>
 
 	<body>
@@ -36,7 +38,6 @@ switch ($page) {
 			<div id="wrapper" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<img id="gradfill" src="images/gradfill.png" alt="gradfill"/>
 				<?php
-					$page_title = "stevedeveaux.com";
 					include ("includes/header.html");
 					include ("includes/about.html");
 					// include ("includes/" . $load);
