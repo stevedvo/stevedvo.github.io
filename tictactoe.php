@@ -11,9 +11,24 @@
 			include ("includes/headinfo.html");
 		?>
 		<title><?php echo $page_title; ?></title>
+		<script defer type="text/javascript">
+			function preRender ()
+			{
+				var pages = ["astropics", "animation", "boinc", "index", "links", "maths", "sepsis"];
+				
+				for (i=0 ; i<pages.length ; i++)
+				{
+					var pre = document.createElement ("link");
+					pre.rel = "prerender prefetch";
+
+					pre.href = pages[i]+".php";
+					document.getElementsByTagName("head")[0].appendChild(pre);					
+				}
+			}
+		</script>
 	</head>
 
-	<body>
+	<body onload = preRender()>
 		<div class="container-fluid">
 			<div id="wrapper" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<img id="gradfill" src="images/gradfill.png" alt="gradfill"/>

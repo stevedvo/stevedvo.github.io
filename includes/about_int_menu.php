@@ -25,38 +25,38 @@
 <hr/>
 
 <section id="Astronomy_menu" class="interest hidden-lg hidden-md hidden-sm">
-	<?php include ("includes/about_4_astronomy.html"); ?>
+	<?php include ("about_4_astronomy.html"); ?>
 </section>
 <section id="Baking_menu" class="interest" style="display: none">
-	<?php include ("includes/about_4_baking.html"); ?>
+	<?php include ("about_4_baking.html"); ?>
 </section>
 <section id="Cinema_menu" class="interest" style="display: none">
-	<?php include ("includes/about_4_cinema.html"); ?>
+	<?php include ("about_4_cinema.html"); ?>
 </section>
 <section id="Formula_1_menu" class="interest" style="display: none">
-	<?php include ("includes/about_4_formula1.html"); ?>
+	<?php include ("about_4_formula1.html"); ?>
 </section>
 <section id="Music_menu" class="interest" style="display: none">
-	<?php include ("includes/about_4_music.html"); ?>
+	<?php include ("about_4_music.html"); ?>
 </section>
 <section id="Photography_menu" class="interest" style="display: none">
-	<?php include ("includes/about_4_photography.html"); ?>
+	<?php include ("about_4_photography.html"); ?>
 </section>
 <section id="PubQuizzes_menu" class="interest" style="display: none">
-	<?php include ("includes/about_4_pubquizzes.html"); ?>
+	<?php include ("about_4_pubquizzes.html"); ?>
 </section>
 <section id="Sci-fi_menu" class="interest" style="display: none">
-	<?php include ("includes/about_4_scifi.html"); ?>
+	<?php include ("about_4_scifi.html"); ?>
 </section>
 <section id="Snooker_menu" class="interest" style="display: none">
-	<?php include ("includes/about_4_snooker.html"); ?>
+	<?php include ("about_4_snooker.html"); ?>
 </section>
 <section id="StandUp_menu" class="interest" style="display: none">
-	<?php include ("includes/about_4_standup.html"); ?>
+	<?php include ("about_4_standup.html"); ?>
 </section>
 <section id="Tom_Clancy_menu" class="interest" style="display: none">
-	<?php include ("includes/about_4_tomclancy.html"); ?>
+	<?php include ("about_4_tomclancy.html"); ?>
 </section>
 <section id="Walking_menu" class="interest" style="display: none">
-	<?php include ("includes/about_4_walking.html"); ?>
+	<?php include ("about_4_walking.html"); ?>
 </section>

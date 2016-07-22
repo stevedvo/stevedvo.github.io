@@ -10,7 +10,6 @@ function init ()
 	getTime();
 
 	$("#burger").css('color', '#337ab7');
-	$("#filling").hide();
 	
 	$(".navitem").mouseover(function()
 	{
@@ -47,24 +46,6 @@ function init ()
 	{
 		lrgStr = $(this).attr('src').replace("thb", "lrg");
 		lrgImg = window.open(lrgStr, "PopUp", "top=0,left=0,width="+window.screen.availWidth+",height="+window.screen.availHeight+",location=no");
-	});
-
-	$("#viewinterest").selectmenu(
-	{
-		change: function(event, data)
-		{
-			$(".interest").css('display', 'none');
-			$("#"+$("#viewinterest option:selected").val()).css('display', 'block');			
-		}
-	});
-
-	$("#viewperiod").selectmenu(
-	{
-		change: function(event, data)
-		{
-			$(".period").css('display', 'none');
-			$("#"+$("#viewperiod option:selected").val()).css('display', 'block');			
-		}
 	});
 
 	$("#aboutsections").selectmenu(
