@@ -4,6 +4,16 @@
 </article>
 <hr/> -->
 
+<article id="20160726">
+	<h4>26 July 2016</h4>
+	<p>> Made a good start on further improving the page-load times. Mainly worked today on the homepage. Using the Network analysis on Chrome Dev Tools, I identified the external JavaScript and CSS files that were taking the longest load time: the top two were jQuery-UI JavaScript and Bootstrap CSS. Removed the &lt;link&gt;s and &lt;script&gt;s references for these resources in the common &lt;head&gt; file, and set about picking my way through both of these resources to only load the segments of code that I actually need for the header and the index page.</p>
+	<p>> Quite an easy job with the jQuery - I could go back to the website and download a custom version of the package that only includes the bits that I want. Slightly skeptical that this might still be a bit bloaty but it will do. I copy & pasted a minified version of this directly into a &lt;script&gt; element of the &lt;head&gt; portion of <em>index.php</em> which will [hopefully] load faster than having to pull an external file.</p>
+	<p>> Did the same with the Bootstrap CSS resource, only this time I painstakingly made my through the CSS file and manually deleted all the "junk" that I didn't need. Not really junk of course, just the 90% of the fantastic tool which I am not using [yet!]. A quick Google search pointed me to <a href="https://cssminifier.com/" target="_blank">a handy website</a> which allowed me to minify my chopped-up version of the CSS. Similar to the JavaScript above, I then plonked this minified code into a &lt;script&gt; element of the &lt;head&gt;.</p>
+	<p>> The results are encouraging but inconsistent... on my laptop the homepage will sometimes now load around 10-15% quicker, but then sometimes will take a little longer than it was before! There are more efficiencies to be made: further jQuery & Bootstrap resources, plus my own JS & CSS code, to trim down and add [minified] to the &lt;head&gt;. And then once I have fully integrated blocks of JavaScript and CSS in my &lt;head&gt; without pulling in external files, I can copy these chunks of code into the other pages with additional page-specific tweaks if need be.</p>
+	<p>> For the time being, to ensure that the other pages still function I have moved the references to the external resources into each page's &lt;head&gt; section rather than looking these up in the common 'headinfo' file.</p>
+	<p>> One thing that bothers me is that if I need to make any changes to the JS and/or CSS, or if I need to upgrade to a newer version of jQuery/Bootstrap, I will need to make the changes to each of the pages rather than being able to quickly and simply point to a new file reference. I suppose this is the trade-off between getting the page to load quickly, and having it more easily maintainable.</p>
+</article>
+<hr/>
 <article id="20160722">
 	<h4>22 July 2016</h4>
 	<p>> Spent a few hours today continuing my quest for speed! Using the AJAX ideas on the index page as a template, I implemented the delayed loading of the below-the-fold content on the rest of my main pages. Mainly a copy & paste job with a number of page-specific adjustments in each case. Realised early on that some of the inline JavaScript was getting a bit repetitive so figured out a way to loop through some things for more efficient code.</p>
