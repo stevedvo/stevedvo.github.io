@@ -9,6 +9,10 @@
 			include ("includes/headinfo.html");
 		?>
 		<title><?php echo $page_title; ?></title>
+		<img src="images/bbc_news.png" style="display:none;"/>
+		<img src="images/bbc_weather.png" style="display:none;"/>
+		<img src="images/wikipedia.png" style="display:none;"/>
+		<img src="images/wiktionary.png" style="display:none;"/>
 		<script defer type="text/javascript">
 			var AJAXResp;
 
@@ -71,7 +75,7 @@
 				for (i=0 ; i<pages.length ; i++)
 				{
 					var pre = document.createElement ("link");
-					pre.rel = "prerender prefetch";
+					pre.rel = "prerender prefetch dns-prefetch";
 
 					pre.href = pages[i]+".php";
 					document.getElementsByTagName("head")[0].appendChild(pre);					

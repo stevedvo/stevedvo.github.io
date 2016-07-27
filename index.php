@@ -140,7 +140,7 @@ switch ($page) {
 				for (i=0 ; i<pages.length ; i++)
 				{
 					var pre = document.createElement ("link");
-					pre.rel = "prerender prefetch";
+					pre.rel = "prerender prefetch dns-prefetch";
 
 					pre.href = pages[i]+".php";
 					document.getElementsByTagName("head")[0].appendChild(pre);					
@@ -560,7 +560,7 @@ switch ($page) {
 				}
 			}
 
-			.Img_20160629, .Img_20160719
+			.Img_20160629, .Img_20160719, .Img_20160727
 			{
 				float: left;
 				width: 100%;

@@ -143,7 +143,7 @@
 				for (i=0 ; i<pages.length ; i++)
 				{
 					var pre = document.createElement ("link");
-					pre.rel = "prerender prefetch";
+					pre.rel = "prerender prefetch dns-prefetch";
 
 					pre.href = pages[i]+".php";
 					document.getElementsByTagName("head")[0].appendChild(pre);					

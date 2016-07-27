@@ -8,6 +8,7 @@
 			$page_title = "stevedeveaux.com";
 			include ("includes/headinfo.html");
 		?>
+		<img src="http://boincstats.com/signature/-1/user/2736906/sig.png" style="display:none;"/>
 		<title><?php echo $page_title; ?></title>
 		<script defer type="text/javascript">
 			var AJAXResp;
@@ -118,7 +119,7 @@
 				for (i=0 ; i<pages.length ; i++)
 				{
 					var pre = document.createElement ("link");
-					pre.rel = "prerender prefetch";
+					pre.rel = "prerender prefetch dns-prefetch";
 
 					pre.href = pages[i]+".php";
 					document.getElementsByTagName("head")[0].appendChild(pre);					
