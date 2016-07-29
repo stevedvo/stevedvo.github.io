@@ -4,6 +4,28 @@
 </article>
 <hr/> -->
 
+<article id="20160729">
+	<h4>29 July 2016</h4>
+	<p>> Added review of Star Trek Beyond to the Cinema section.</p>
+	<p>> Following on from yesterdays work, I removed all the chunks of code on each of the main PHP page files that were either "global" or "menu/tab" related - replacing this with PHP <code>include()</code> functions to pull the code in on page-build, and leaving only page-specific code in the header.</p>
+	<p>> Ran and tested every page on desktop and mobile modes and the page load times were good - no significant delays by pulling the code in this way. Didn't have a lot of time to work on this today so only got as far as coding & testing. Will upload these changes to live later.</p>
+</article>
+<hr/>
+<article id="20160728">
+	<h4>28 July 2016</h4>
+	<p>> Had a nice day out in Bath today. Main reason was to take Leona to Halfords Autos for a Major Service + cambelt change, as well as a couple of other things, and whilst she was being worked on I spent several hours in the Starbucks near the Abbey keeping myself occupied. Watched a couple of episodes of Brian Cox's new series ["Forces of Nature"] on iPlayer - ever so good. Also managed to do a little more website coding. It was bugging me a little the way that I'd squeezed down the page load times: as quick as it is it did still seem awfully inefficient to just be copy & pasting so much code and no re-using any in an intelligent way. It may still be the very quickest, but I was interested to explore other options that would help to make it easier to maintain and reduce the amount of duplication.</p>
+	<p>> For each small change that I made I ran the same tests a few times and recorded the page load times, calculating the mean and the standard deviation, and comparing with other versions to decide if the difference is actually statistically significant.</p>
+	<p>> As I understand it, when loading a page [over HTTP 1.1] there are only 6 "channels" available to be used at any one time i.e. you can only download 6 resources in parallel - any more resources have to wait until one of the channels is freed up again. The problem with loading the external JS and CSS in the normal way as I was doing before is that each external .css and .js file referenced in the &lt;link&gt; or &lt;script&gt; sections takes up one of the 6 "channels" that are available - which means that the images [which are usually low priority] have to wait. And this does indeed seem to be evident when analysing the Network tab in Dev Tools. The idea that I had was basically to load the JavaScript and CSS code in through PHP <code>include()</code> functions rather than the "proper" way. I split out all of the styles and scripts into distinct chunks:
+	<ul>
+		<li>Global - used on every page e.g. related to the header</li>
+		<li>Specific to pages that use jQuery-UI functions such as selectmenus / tabs / accordion</li>
+		<li>Specific to single pages only</li>
+	</ul>
+	<p>>In this way I can use PHP to insert the Global modules on each page, plus my supplementary code to configure the jQuery-UI widgets if the page uses them, and then have page-specific scripts & styles listed directly in the &lt;head&gt; if need be. Minimises the code duplication whilst ensuring that only the code required for each page is actually loaded.</p>
+	<p>> Makes logical sense to break things down this way, but the real test is in what effect this has on the loading time. And I have to say that it seems to have only a negligible effect, if any! By including these chunks of code as PHP files, with the JavaScript/CSS wrapped in either &lt;script&gt; or &lt;style&gt; elements it appears to be just as fast as if the code was written inline - and because the PHP files are built up from these <code>include()</code> functions it doesn't take up any extra channels that the images need to load in parallel. So it kinda feels like I could get the best of both worlds doing it this way. Nice :D</p>
+	<p>> Did all this testing just on one page as a proof of concept whilst I was in Starbucks. But I'd planned to pootle over to the Odeon to watch the new Star Trek film in the afternoon so will continue this train of thought tomorrow.</p>
+</article>
+<hr/>
 <article id="20160727">
 	<h4>27 July 2016</h4>
 	<p>> Another good day working on speed improvements. Stripped out as much of the code for the remaining Bootstrap and jQuery resources as I could get away with, and inserted these blocks into the &lt;script&gt; and &lt;style&gt; elements of the &lt;head&gt; section of <em>index.php</em>. Likewise, I also inserted any of my own JS & CSS code into the relevant sections, so that now when the homepage is accessed the only external resources that are called to complete the page load are image files - and then post-load all the below-the-fold content is pulled in through AJAX.</p>
@@ -35,7 +57,7 @@
 	<div class="clearfix visible-xs-block"></div>
 	<p>> So this is a nice little win :). Since many of these images are part of the header and hence needed on every page, I have added these to the common header file that is pulled in through the PHP <code>include()</code> function. A couple of pages had additional critical images so I added these &lt;img&gt; tags in the &lt;head&gt; sections of the pages that specifically need them.</p>
 	<div class="clearfix visible-md-block"></div>
-	<p>> As neat as this is, unfortunately it does not have a tremendous effect on the Load time due to the bottom item - which is loading the glyphicons font set that I need to be able to display the 'Home' icon on the main nav and the 'Burger' menu icon on the mobile version. Have tried various things to get this to preload at the same time as the images but to no avail. The 'subresource' relation does work, but as with when using this for the images it is called for 2nd time in the usual place. Such a pesky little thing but it's causing me so much trouble - I want that extra 200ms!!!</p>
+	<p>> As neat as this is, unfortunately it does not have a tremendous effect on the Load time due to the bottom item - which is loading the glyphicons font set that I need to be able to display the 'Home' icon on the main nav and the 'Burger' menu icon on the mobile version. Have tried various things to get this to preload at the same time as the images but to no avail. The 'preload' relation does work, but as with when using this for the images it is called for 2nd time in the usual place. Such a pesky little thing but it's causing me so much trouble - I want that extra 200ms!!!</p>
 	<div class="clearfix visible-lg-block"></div>
 	<p>> I'll keep researching this for a bit and see if I can find a way of preloading... otherwise I may take this out of the initial page load altogether and request it over AJAX - at the risk of potentially causing a noticeable 'blip' to the user.</p>
 	<p>> On another note, I remembered that a new version of Chrome was due to be released this week which should resolve the console error messages that have been coming up due to a Chrome Cast 'bug' with embedded YouTube clips. Downloaded the latest v52 and sure enough the messages have now gone - woohoo!</p>
