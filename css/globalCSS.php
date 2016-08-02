@@ -10,6 +10,7 @@
 		position: absolute;
 		width: 100%;
 		height: 100%;
+		left: 0px;
 	}
 
 	@media only screen and (orientation: portrait)
