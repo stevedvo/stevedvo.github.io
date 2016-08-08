@@ -8,10 +8,10 @@
 			$page_title = "stevedeveaux.com";
 			include ("includes/headinfo.html");
 		?>
-		<img src="images/bbc_news.png" style="display:none;"/>
-		<img src="images/bbc_weather.png" style="display:none;"/>
-		<img src="images/wikipedia.png" style="display:none;"/>
-		<img src="images/wiktionary.png" style="display:none;"/>
+		<img src="images/bbc_news.jpg" style="display:none;"/>
+		<img src="images/bbc_weather.jpg" style="display:none;"/>
+		<img src="images/wikipedia.jpg" style="display:none;"/>
+		<img src="images/wiktionary.jpg" style="display:none;"/>
 		<title><?php echo $page_title; ?></title>
 		<?php
 			include ("javascript/globalJS.php");

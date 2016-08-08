@@ -6,7 +6,7 @@
 	<article style="margin-top: 10px;">
 		<p>Much of the information for this section has been gleaned from the website of the <a href="http://sepsistrust.org/" target="_blank">UK Sepsis Trust</a> charity which was founded by clinical professionals with the aim of significantly improving the outcome of Sepsis patients. Please do visit their website for more information about the Trust, along with numerous patient stories and a whole host of other resources.</p>
 		<p>Donate to the cause!</p>
-		<p><a href="http://sepsistrust.org/donate/" target="_blank"><img src="images/sepsis_donate.png" alt="donate"/></a></p>
+		<p><a href="http://sepsistrust.org/donate/" target="_blank"><img src="images/sepsis_donate.jpg" alt="donate"/></a></p>
 	</article>
 	<article id="twitters">
 		<p>See the latest Tweets from:</p>
