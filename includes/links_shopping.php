@@ -1,13 +1,13 @@
 <header><h3 class="head3">Shopping</h3></header>
 <article class="screenshot-container col-lg-4 col-md-3 col-sm-3">
 	<p>Amazon</p>
-	<a href="https://www.amazon.co.uk" target="_blank"><img class="screenshot" src="images/amazon.tif" alt="Amazon"/></a>
+	<a href="https://www.amazon.co.uk" target="_blank"><img class="screenshot" src="images/amazon.jpg" alt="Amazon"/></a>
 </article>
 <article class="screenshot-container col-lg-4 col-md-3 col-sm-3">
 	<p>SCS Astro</p>
-	<a href="http://www.scsastro.co.uk" target="_blank"><img class="screenshot" src="images/scsastro.tif" alt="SCS Astro"/></a>
+	<a href="http://www.scsastro.co.uk" target="_blank"><img class="screenshot" src="images/scsastro.jpg" alt="SCS Astro"/></a>
 </article>
 <article class="screenshot-container col-lg-4 col-md-3 col-sm-3">
 	<p>Tesco</p>
-	<a href="http://www.tesco.com" target="_blank"><img class="screenshot" src="images/tesco.tif" alt="Tesco"/></a>
+	<a href="http://www.tesco.com" target="_blank"><img class="screenshot" src="images/tesco.jpg" alt="Tesco"/></a>
 </article>
