@@ -1,23 +1,23 @@
 <header><h3 class="head3">Movies</h3></header>
 <article class="screenshot-container col-lg-4 col-md-3 col-sm-3">
 	<p>Cineworld Cinemas</p>
-	<a href="http://www.cineworld.co.uk" target="_blank"><img class="screenshot" src="images/cineworld.jpg" alt="Cineworld Cinemas"/></a>
+	<a href="http://www.cineworld.co.uk" target="_blank"><img class="screenshot" src="images/cineworld.tif" alt="Cineworld Cinemas"/></a>
 </article>
 <article class="screenshot-container col-lg-4 col-md-3 col-sm-3">
 	<p>Empire Cinemas</p>
-	<a href="http://www.empirecinemas.co.uk" target="_blank"><img class="screenshot" src="images/empire.jpg" alt="Empire Cinemas"/></a>
+	<a href="http://www.empirecinemas.co.uk" target="_blank"><img class="screenshot" src="images/empire.tif" alt="Empire Cinemas"/></a>
 </article>
 
 <div class="clearfix visible-xs-block"></div>
 
 <article class="screenshot-container col-lg-4 col-md-3 col-sm-3">
 	<p>Odeon Cinemas</p>
-	<a href="http://www.odeon.co.uk" target="_blank"><img class="screenshot" src="images/odeon.jpg" alt="Odeon Cinemas"/></a>
+	<a href="http://www.odeon.co.uk" target="_blank"><img class="screenshot" src="images/odeon.tif" alt="Odeon Cinemas"/></a>
 </article>
 
 <div class="clearfix visible-lg-block"></div>
 
 <article class="screenshot-container col-lg-4 col-md-3 col-sm-3">
 	<p>Rotten Tomatoes</p>
-	<a href="http://www.rottentomatoes.com" target="_blank"><img class="screenshot" src="images/rotten_tomatoes.jpg" alt="Rotten Tomatoes"/></a>
+	<a href="http://www.rottentomatoes.com" target="_blank"><img class="screenshot" src="images/rotten_tomatoes.tif" alt="Rotten Tomatoes"/></a>
 </article>
