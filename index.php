@@ -62,7 +62,7 @@ switch ($page) {
 					pre.rel = "prerender prefetch dns-prefetch";
 
 					pre.href = pages[i]+".php";
-					document.getElementsByTagName("head")[0].appendChild(pre);					
+					document.getElementsByTagName("head")[0].appendChild(pre);
 				}
 			}
 

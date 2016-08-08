@@ -4,6 +4,16 @@
 </article>
 <hr/> -->
 
+<article id="20160808">
+	<h4>08 August 2016</h4>
+	<p>> Having a look through Google's PageSpeed Insights on the WebMaster tools today to see how I can try to speed up my website loading time.</p>
+	<p>> Been investigating the "Leverage Browser Caching" suggestion, and looking up how to modify the web.config and .htaccess files to put this into effect. After some minor changes the PageSpeed Insights are showing slightly improved speed and this item is now checked off the list.</p>
+	<p>> The next item that PageSpeed is advising about is enabling compression. I thought a few months ago that this had been resolved by adding a bunch of &lt;httpCompression&gt; code to the web.config file but obviously not! Spent several hours researching this trying to figure out what else I need to do to get this working. It wasn't compressing the pages on the localserver either. The actual localhost fix was quite simple once I'd spent time trying to find the solution - since I am running an Apache server I found an option to enable zlib output compression in the PHP settings.</p>
+	<p>> But no matter what I tried with the web.config file, I could not get the remote IIS server to give me the compressed version - as evidenced on the Dev Tools: the size/content values are the same, and there is no "Content-Encoding: gzip" line in the response headers.</p>
+	<p>> Had a brief online chat with 123-Reg support to explain the problem, but due to the technical nature of it they have raised a support ticket rather than being able to look into straight away. I did find after that that when I request an .html file, the response DOES come back with gzip encoding. Perhaps there is some issue with the Dynamic configuration that is not apparent for Static content? Shall await a response from 123-Reg before spending any more time on this!</p>
+	<p>> Next issue: Optimise images.</p>
+</article>
+<hr/>
 <article id="20160805">
 	<h4>05 August 2016</h4>
 	<p>> Completed my assessment for WebDev Unit 2 today... well, almost. Continuing with the communication theme, the topics studied today included:</p>
