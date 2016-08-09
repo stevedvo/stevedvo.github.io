@@ -3,53 +3,47 @@
 		 <fieldset>
 		 	<label for="mathssections"></label>
 		 	<select name="mathssections" id="mathssections">
-		 		<option value="Add_menu" selected>Addition</option>
-		 		<option value="Sub_menu">Subtraction</option>
-		 		<option value="Mul_menu">Multiplication</option>
-		 		<option value="Div_menu">Division</option>
+		 		<option value="add_menu" selected>Addition</option>
+		 		<option value="sub_menu">Subtraction</option>
+		 		<option value="mul_menu">Multiplication</option>
+		 		<option value="div_menu">Division</option>
 		 	</select>
 		 </fieldset>
 	 </form>
 </nav>
 
-<section id="Add_menu" class="mathssection hidden-lg hidden-md hidden-sm col-xs-12">
+<section id="add_menu" class="mathssection hidden-lg hidden-md hidden-sm col-xs-12">
 	<?php include('maths_add.php'); ?>
 </section>
 
-<section id="Sub_menu" class="mathssection hidden-lg hidden-md hidden-sm col-xs-12" style="display: none">
-	<?php include('maths_sub.php'); ?>
+<section id="sub_menu" class="mathssection hidden-lg hidden-md hidden-sm col-xs-12" style="display: none">
 </section>
 
-<section id="Mul_menu" class="mathssection hidden-lg hidden-md hidden-sm col-xs-12" style="display: none">
-	<?php include('maths_mul.php'); ?>
+<section id="mul_menu" class="mathssection hidden-lg hidden-md hidden-sm col-xs-12" style="display: none">
 </section>
 
-<section id="Div_menu" class="mathssection hidden-lg hidden-md hidden-sm col-xs-12" style="display: none">
-	<?php include('maths_div.php'); ?>
+<section id="div_menu" class="mathssection hidden-lg hidden-md hidden-sm col-xs-12" style="display: none">
 </section>
 
 <section class="vert_tabs col-lg-12 col-md-12 col-sm-12 hidden-xs">
 	<ul>
- 		<li><a href="#Add_tab">Addition</a></li>
- 		<li><a href="#Sub_tab">Subtraction</a></li>
- 		<li><a href="#Mul_tab">Multiplication</a></li>
- 		<li><a href="#Div_tab">Division</a></li>
+ 		<li><a href="#add_tab">Addition</a></li>
+ 		<li><a href="#sub_tab">Subtraction</a></li>
+ 		<li><a href="#mul_tab">Multiplication</a></li>
+ 		<li><a href="#div_tab">Division</a></li>
 	</ul>
 
-	<section id="Add_tab">
+	<section id="add_tab">
 		<?php include('maths_add.php'); ?>
 	</section>
 
-	<section id="Sub_tab">
-		<?php include('maths_sub.php'); ?>
+	<section id="sub_tab">
 	</section>
 
-	<section id="Mul_tab">
-		<?php include('maths_mul.php'); ?>
+	<section id="mul_tab">
 	</section>
 
-	<section id="Div_tab">
-		<?php include('maths_div.php'); ?>
+	<section id="div_tab">
 	</section>
 
 </section>
