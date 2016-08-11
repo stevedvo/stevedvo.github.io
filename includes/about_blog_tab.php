@@ -9,6 +9,10 @@
 	<div>
 		<?php include("about_5_latest.html"); ?>
 	</div>
+ 	<h3>July 2016</h3>
+	<div>
+		<?php include("about_5_201607.html"); ?>
+	</div>
  	<h3>June 2016</h3>
 	<div>
 		<?php include("about_5_201606.html"); ?>

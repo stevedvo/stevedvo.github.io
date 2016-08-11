@@ -4,12 +4,21 @@
 </article>
 <hr/> -->
 
+<article id="20160811">
+	<h4>11 August 2016</h4>
+	<p>> Not had a lot of time for either website fettling or WebDev course today, but I did read through and complete one assessment question on:</p>
+	<ul>
+		<li>Weighing up the benefits & drawbacks of cloud computing</li>
+	</ul>
+	<p>> That is all. Oh, and moved the July blog posts out of the "latest" category.</p>
+</article>
+<hr/>
 <article id="20160810">
 	<h4>10 August 2016</h4>
 	<p>> Spent some more time today on my WebDev course, completing the last couple of Unit 3 assessment questions before moving on to Unit 4. The final questions on Unit 3 covered:</p>
 	<ul>
 		<li>Concerns/issues with using Web-based or IMAP-based e-mail setups</li>
-		<li>Comparing the pros & cons using e-mails Vs text messaging in a business context</li>
+		<li>Comparing the pros & cons of using e-mails Vs text messaging in a business context</li>
 	</ul>
 	<p>> Unit 4 focuses on "Understanding Internet Architecture". First impressions from the topics covered today are that this unit is very wordy - a lot of information to take in, rather than demonstrating practical skills. But it's an interesting topic and helping to fill in several gaps so I'm quite enjoying this one so far. The topics I've looked at today are:</p>
 	<ul>
@@ -94,116 +103,4 @@
 	<p>> The first few modules of the course that I have looked at so far have mainly been in establishing "soft skills" that are required in general for any sort of employment; establishing my level of maths, English, logical reasoning; psychometric testing; advice on how to apply for jobs, and interview tips.</p>
 	<p>> Also made a start on some of the meatier stuff of the course. Aimed at beginners, it begins with a lot of introductory stuff about various types of networks, explaining some simple terms and ideas, and delves a little into security aspects. Much of this I already knew about, but it was good to actually do some proper reading and formal learning on the subject to cover areas about which I wasn't quite so knowledgeable.</p>
 	<p>> There are a few more modules which cover all the basics before the modules that cover the actual coding, but once I get to the coding my intention is to use this site to upload all the assignments that the course covers and have a copy of my online portfolio here for easy viewing.</p>
-</article>
-<hr/>
-<article id="20160731">
-	<h4>31 July 2016</h4>
-	<p>> Uploaded the most recent changes to my live site over FTP. The remote servers seemed even s-l-o-w-e-r than usual this evening: just trying to navigate the directory structure over FileZilla was taking ages, and the file transfers were 10x longer! Unsurprisingly, trying to view the live site was also incredibly slow and frustrating. As before, once the site loads and with caching enabled, the rest of the pages usually load nice and quickly.</p>
-	<p>> Tried accessing the site again after a little Blog update and it just would not load at all. Confirmed with sites such as isitdown.com that it wasn't just me having issues. Even the 123-reg website seemed extraordinarily slow this evening, but then a lot of everything seemed slow - I think perhaps we were having local issues with our TalkTalk connexion too which was compounding matters. Grrrr!!!</p>
-</article>
-<hr/>
-<article id="20160729">
-	<h4>29 July 2016</h4>
-	<p>> Added review of Star Trek Beyond to the Cinema section.</p>
-	<p>> Following on from yesterdays work, I removed all the chunks of code on each of the main PHP page files that were either "global" or "menu/tab" related - replacing this with PHP <code>include()</code> functions to pull the code in on page-build, and leaving only page-specific code in the header.</p>
-	<p>> Ran and tested every page on desktop and mobile modes and the page load times were good - no significant delays by pulling the code in this way. Didn't have a lot of time to work on this today so only got as far as coding & testing. Will upload these changes to live later.</p>
-</article>
-<hr/>
-<article id="20160728">
-	<h4>28 July 2016</h4>
-	<p>> Had a nice day out in Bath today. Main reason was to take Leona to Halfords Autos for a Major Service + cambelt change, as well as a couple of other things, and whilst she was being worked on I spent several hours in the Starbucks near the Abbey keeping myself occupied. Watched a couple of episodes of Brian Cox's new series ["Forces of Nature"] on iPlayer - ever so good. Also managed to do a little more website coding. It was bugging me a little the way that I'd squeezed down the page load times: as quick as it is it did still seem awfully inefficient to just be copy & pasting so much code and no re-using any in an intelligent way. It may still be the very quickest, but I was interested to explore other options that would help to make it easier to maintain and reduce the amount of duplication.</p>
-	<p>> For each small change that I made I ran the same tests a few times and recorded the page load times, calculating the mean and the standard deviation, and comparing with other versions to decide if the difference is actually statistically significant.</p>
-	<p>> As I understand it, when loading a page [over HTTP 1.1] there are only 6 "channels" available to be used at any one time i.e. you can only download 6 resources in parallel - any more resources have to wait until one of the channels is freed up again. The problem with loading the external JS and CSS in the normal way as I was doing before is that each external .css and .js file referenced in the &lt;link&gt; or &lt;script&gt; sections takes up one of the 6 "channels" that are available - which means that the images [which are usually low priority] have to wait. And this does indeed seem to be evident when analysing the Network tab in Dev Tools. The idea that I had was basically to load the JavaScript and CSS code in through PHP <code>include()</code> functions rather than the "proper" way. I split out all of the styles and scripts into distinct chunks:
-	<ul>
-		<li>Global - used on every page e.g. related to the header</li>
-		<li>Specific to pages that use jQuery-UI functions such as selectmenus / tabs / accordion</li>
-		<li>Specific to single pages only</li>
-	</ul>
-	<p>>In this way I can use PHP to insert the Global modules on each page, plus my supplementary code to configure the jQuery-UI widgets if the page uses them, and then have page-specific scripts & styles listed directly in the &lt;head&gt; if need be. Minimises the code duplication whilst ensuring that only the code required for each page is actually loaded.</p>
-	<p>> Makes logical sense to break things down this way, but the real test is in what effect this has on the loading time. And I have to say that it seems to have only a negligible effect, if any! By including these chunks of code as PHP files, with the JavaScript/CSS wrapped in either &lt;script&gt; or &lt;style&gt; elements it appears to be just as fast as if the code was written inline - and because the PHP files are built up from these <code>include()</code> functions it doesn't take up any extra channels that the images need to load in parallel. So it kinda feels like I could get the best of both worlds doing it this way. Nice :D</p>
-	<p>> Did all this testing just on one page as a proof of concept whilst I was in Starbucks. But I'd planned to pootle over to the Odeon to watch the new Star Trek film in the afternoon so will continue this train of thought tomorrow.</p>
-</article>
-<hr/>
-<article id="20160727">
-	<h4>27 July 2016</h4>
-	<p>> Another good day working on speed improvements. Stripped out as much of the code for the remaining Bootstrap and jQuery resources as I could get away with, and inserted these blocks into the &lt;script&gt; and &lt;style&gt; elements of the &lt;head&gt; section of <em>index.php</em>. Likewise, I also inserted any of my own JS & CSS code into the relevant sections, so that now when the homepage is accessed the only external resources that are called to complete the page load are image files - and then post-load all the below-the-fold content is pulled in through AJAX.</p>
-	<p>> Once this was complete, I did similar things with the rest of the pages. Some of the &lt;script&gt; and &lt;style&gt; blocks could be copy & pasted, but each page has it's own specific requirements - sometimes extra JS & CSS, sometimes large chunks of jQuery can be omitted since not all pages use everything.</p>
-	<p>> To give me a better idea of what sort of speed difference I would see, I loaded each page in turn 3 times [always with cache disabled] and recorded the timings for "DOMContentLoaded" and "Load", as reported by Chrome Dev Tools.</p>
-	<p>> The timings before averaged out for each page to be:</p>
-	<ul>
-		<li>DOMContentLoaded: 942ms</li>
-		<li>Load: 1,080ms</li>
-	</ul>
-	<p>> And after:</p>
-	<ul>
-		<li>DOMContentLoaded: 607ms</li>
-		<li>Load: 712ms</li>
-	</ul>
-	<p>> That's an impressive ~35% reduction!!! - VERY happy with this result :D</p>
-	<p>> These tests were run with BOINC suspended, and on my laptop which is also the WAMP server. When I access these pages on my desktop PC over the wifi it is noticeably slower - adding a good 600-700ms to the DOMContentLoaded time - even with BOINC suspended on both computers. Accessing the local server using my iPhone does seem to be pretty slick.</p>
-	<p>> My main aim throughout all of this is to get to the point of being able to load stuff as quickly as AMP. I'm not quite there yet, I know. I've satisfied one criteria now by not having any external JS or CSS, but the code for this that I have in-line is still far too large due to the jQuery and Bootstrap stuff. The AMP limit is 50kB and I am way over that.</p>
-	<p>> I will upload all of these changes now onto the live site and see how that performs. As mentioned previously, it's all well and good getting my pages to load quickly, but if the server that is hosting the site is pants it may still take an irritatingly long time just to get the first byte through. We shall see...</p>
-	<p>> Well, as suspected, the website takes a little while to get served due to the poor server performance - but the good news is that once <em>index.php</em> is returned the rest of the site is MUCH quicker to navigate around. This is due to me including all the other pages as 'prerender' links that are created with the AJAX calls. This seems to work well, but 'prerender' is a relation that only Google Chrome currently supports, so when I browse the site using Edge or Safari the subsequent page loads are a little slower since additional on-demand server calls are needed. I have added a 'dns-prefetch' link relation to see if that helps on these other browsers.</p>
-	<p>> Also, keen to try and eke out a little more performance, I noticed that for every page the main PHP file takes the bulk of the loading time [now that their &lt;head&gt;s are chock-full of JS & CSS], and only AFTER this has loaded do the above-the-fold critical images [mainly for the header] actually begin being requested. Figured this is due to the browser having to wade through all that &lt;head&gt; before getting to the &lt;body&gt; where the images are first called.</p>
-	<img class="Img_20160727" src="images/20160727_img1.jpg" alt="Img Load Before"/>
-	<div class="clearfix visible-sm-block"></div>
-	<div class="clearfix visible-xs-block"></div>
-	<p>> Tried a couple of things to get around this. By adding a 'preload' link relation in the &lt;head&gt; it does seem to request these images before they normally would... but with 'Disable Cache' checked in Dev Tools the browser makes repeat requests for the same images at the time that it did before. Perhaps that's an unfair criticism since one would not normally disable the cache under usual browsing circumstances, but I found a different method which only requests the images once: in the &lt;head&gt; section I have added an &lt;img&gt; element with a "style='display:none;'" attribute. If you compare the two Dev Tool screenshots you'll see that in the one below the images are being loaded at the same time as the main PHP file is being parsed rather than afterwards.</p>
-	<div class="clearfix visible-lg-block"></div>
-	<img class="Img_20160727" src="images/20160727_img2.jpg" alt="Img Load After"/>
-	<div class="clearfix visible-sm-block"></div>
-	<div class="clearfix visible-xs-block"></div>
-	<p>> So this is a nice little win :). Since many of these images are part of the header and hence needed on every page, I have added these to the common header file that is pulled in through the PHP <code>include()</code> function. A couple of pages had additional critical images so I added these &lt;img&gt; tags in the &lt;head&gt; sections of the pages that specifically need them.</p>
-	<div class="clearfix visible-md-block"></div>
-	<p>> As neat as this is, unfortunately it does not have a tremendous effect on the Load time due to the bottom item - which is loading the glyphicons font set that I need to be able to display the 'Home' icon on the main nav and the 'Burger' menu icon on the mobile version. Have tried various things to get this to preload at the same time as the images but to no avail. The 'preload' relation does work, but as with when using this for the images it is called for 2nd time in the usual place. Such a pesky little thing but it's causing me so much trouble - I want that extra 200ms!!!</p>
-	<div class="clearfix visible-lg-block"></div>
-	<p>> I'll keep researching this for a bit and see if I can find a way of preloading... otherwise I may take this out of the initial page load altogether and request it over AJAX - at the risk of potentially causing a noticeable 'blip' to the user.</p>
-	<p>> On another note, I remembered that a new version of Chrome was due to be released this week which should resolve the console error messages that have been coming up due to a Chrome Cast 'bug' with embedded YouTube clips. Downloaded the latest v52 and sure enough the messages have now gone - woohoo!</p>
-	<p>> Found a solution to the glyphicon issue, kind of. If I add a 'preload' relation in the header for the offending font file it does request the resource twice - as mentioned above. However, if I uncheck the 'Disable Cache' box the 2nd time it is requested does indeed come from the cache rather than another request to the server. It's not a perfect solution, though, since although the actual load-time of the cached request is a mere 1-2ms, just the act of making that additional request seems to cause a delay of a good 200ms or so of just 'dead time'. It may have to do for now.</p>
-	<p>> Since I am only using two of the glyphicons, another workaround would be to ditch these altogether and just use plain image files!</p>
-</article>
-<hr/>
-<article id="20160726">
-	<h4>26 July 2016</h4>
-	<p>> Made a good start on further improving the page-load times. Mainly worked today on the homepage. Using the Network analysis on Chrome Dev Tools, I identified the external JavaScript and CSS files that were taking the longest load time: the top two were jQuery-UI JavaScript and Bootstrap CSS. Removed the &lt;link&gt;s and &lt;script&gt;s references for these resources in the common &lt;head&gt; file, and set about picking my way through both of these resources to only load the segments of code that I actually need for the header and the index page.</p>
-	<p>> Quite an easy job with the jQuery - I could go back to the website and download a custom version of the package that only includes the bits that I want. Slightly skeptical that this might still be a bit bloaty but it will do. I copy & pasted a minified version of this directly into a &lt;script&gt; element of the &lt;head&gt; portion of <em>index.php</em> which will [hopefully] load faster than having to pull an external file.</p>
-	<p>> Did the same with the Bootstrap CSS resource, only this time I painstakingly made my through the CSS file and manually deleted all the "junk" that I didn't need. Not really junk of course, just the 90% of the fantastic tool which I am not using [yet!]. A quick Google search pointed me to <a href="https://cssminifier.com/" target="_blank">a handy website</a> which allowed me to minify my chopped-up version of the CSS. Similar to the JavaScript above, I then plonked this minified code into a &lt;style&gt; element of the &lt;head&gt;.</p>
-	<p>> The results are encouraging but inconsistent... on my laptop the homepage will sometimes now load around 10-15% quicker, but then sometimes will take a little longer than it was before! There are more efficiencies to be made: further jQuery & Bootstrap resources, plus my own JS & CSS code, to trim down and add [minified] to the &lt;head&gt;. And then once I have fully integrated blocks of JavaScript and CSS in my &lt;head&gt; without pulling in external files, I can copy these chunks of code into the other pages with additional page-specific tweaks if need be.</p>
-	<p>> For the time being, to ensure that the other pages still function I have moved the references to the external resources into each page's &lt;head&gt; section rather than looking these up in the common 'headinfo' file.</p>
-	<p>> One thing that bothers me is that if I need to make any changes to the JS and/or CSS, or if I need to upgrade to a newer version of jQuery/Bootstrap, I will need to make the changes to each of the pages rather than being able to quickly and simply point to a new file reference. I suppose this is the trade-off between getting the page to load quickly, and having it more easily maintainable.</p>
-</article>
-<hr/>
-<article id="20160722">
-	<h4>22 July 2016</h4>
-	<p>> Spent a few hours today continuing my quest for speed! Using the AJAX ideas on the index page as a template, I implemented the delayed loading of the below-the-fold content on the rest of my main pages. Mainly a copy & paste job with a number of page-specific adjustments in each case. Realised early on that some of the inline JavaScript was getting a bit repetitive so figured out a way to loop through some things for more efficient code.</p>
-	<p>> On the laptop, all of the pages are now loading critical content in around 1,000ms - and as mentioned yesterday the next piece of the puzzle will be to pick apart the generously-sized jQuery and Bootstrap libraries so I'm only loading stuff that I actually really need.</p>
-	<p>> The very high TTFB that I am getting when accessing the actual live site is quite a concern. It is very unpredictable: sometimes the TTFB can be 20s+, other times it can actually be fairly quick - with the index page-load time not far off my localhost server. I will still look further into is in the near future. I have to - there seems no point in trying to shave off an extra 200-300ms of load time through more efficient coding if the TTFB is 10x that!</p>
-</article>
-<hr/>
-<article id="20160721">
-	<h4>21 July 2016</h4>
-	<p>> Had a good day today working my way through everything on the homepage that is slowing down the page load time, studying and making sense of the network performance charts & info that Chrome provides. My homepage was taking the best part of 4 seconds to load [with cache disabled], even on my laptop which runs the localhost WAMP server!</p>
-	<p>> The problem I had was that I was loading an awful lot of content that isn't displayed to the user initially i.e. "below-the-fold", which was holding up the rendering of all the "above-the-fold" content that the user DOES want to see ASAP. Did a lot of reading on 'preload', 'prefetch', and 'prerender' link relations and asynchronous JavaScript calls.</p>
-	<p>> Since a lot of my pages are self-contained with the dynamic jQuery tabs & selectmenu structures I had to figure out a way of keeping everything on the same physical page without too large an overhead on the initial load. After a little playing I eventually reached a solution whereby all the below-the-fold content is pulled in by AJAX, and only AFTER the above-the-fold has already loaded. I have also implemented prerender to cache a number of other pages within my site for faster access - and again, only doing this once the above-the-fold content has already been loaded. And I inserted a bunch of JavaScript in the &lt;head&gt; section of the index page rather than linking to a external file, which goes against what I learned about HTML5 methodology but seems to be the way forward in terms of faster page-loading.</p>
-	<p>> The result: I have managed to trim a healthy 70% of the index page-load time. Very happy with this! Now loading in a little over a second on the local server. My next step is to implement these ideas into the other pages [although since they have less content the rewards will not be so great] and then look further at how I can get this trimmed down even more. The main bottlenecks now I believe are in loading the relatively large Bootstrap & jQuery libraries - of which I'm only actually using a very small fraction on each page. If I can take out just the parts that are relevant for each page and put this code in the &lt;head&gt; section I expect I will see some benefit.</p>
-	<p>> Another mahoosive bottleneck also seems to be the server response time. Seriously, sometimes I can open up my site and be waiting over 20 seconds for the Time To First Byte [TTFB]. Absolutely awful! But once the server bites, my page is now loading up quicker than before... and thanks to the 'prerender' code the rest of the pages get cached in the background for quicker access too [on Chrome, at least]. Maybe I need to get my head into server configurations to see what I can do about this frankly abysmal TTFB - perhaps I just need a better provider?</p>
-</article>
-<hr/>
-<article id="20160719">
-	<h4>19 July 2016</h4>
-	<p>> Not made many changes to the website in the last few weeks - busy with other stuff. Been thinking I really ought to get on with another Blog update - SO much stuff going on in the world: the Conservative leadership contest has already come to an end and we already have a new PM - wowzers!; terrorist attacks in Nice, France; more black citizens killed by police in the US, and backlashes/protests resulting in police officers being targeted & killed; the Trident nuclear defence system being given the thumbs-up for continuation. So much news, so little time! Perhaps in the future I'll come back to some of this and share my thoughts when I have a little more time!</p>
-	<p>> Have been reading recently about "Accelerated Mobile Pages" and I am keen to implement at least some of these ideas into my website to speed up the load times on all platforms. Made the first little tweak to the main PHP docs for each page to set the page title and pull through the other content a little better.</p>
-	<p>> Removed the "Euro 2016" link from the Links page, and replaced with "World Cup 2018".</p>
-	<img class="Img_20160719" src="images/20160719_img1.jpg" alt="Chrome Cast Error"/>
-	<div class="clearfix visible-sm-block"></div>
-	<div class="clearfix visible-xs-block"></div>
-	<p>> In the quest to chase down things which may be slowing down page loads, I have been investigating an issue whereby I keep getting console error messages when loading the homepage in Chrome, which has been happening ever since I embedded a couple of youTube videos in my Blog. Had a look-see if there was anything I could do to stop this from happening - naturally I assumed that it was something that I'd gotten wrong in my embed code somehow. But looking into it I found <a href="https://code.google.com/p/google-cast-sdk/issues/detail?id=538" target="_blank">this</a> article, which explains that this is actually an issue with Google ChromeCast, and the devs are working to Blacklist these sorts of errors from appearing in the console. Many of these have been blacklisted already, but the couple that I am seeing will be resolved with the release of Chrome v52 - estimated 26 July. So I'll re-check in a week!</p>
-	<p>> It's been a hot day - the temperature in the office has crept above 30 degrees! My laptop was feeling very hot this afternoon! Curious to see what the actual temperatures were, I installed <a href="http://www.piriform.com/speccy" target="_blank">Speccy</a>, a neat little tool from Piriform - the company that made CCleaner and Defraggler which are another two very useful apps for PC health. Anyhoo, the tool confirmed that the laptop temperatures were very hot indeed - especially the CPU which is running constantly at full tilt crunching BOINC workunits. The hard drive was registering in the red at 56 degrees!!</p>
-	<p>> Remembering a cool trick I saw on a recent Facebook post, I placed several stacks of copper coins on/under the really hot parts of the laptop - which helps to draw heat out of the laptop since copper is a better conductor of heat than air is. It did work - bringing the HD temp down to 52 degrees. But then rather than continuing to decrease it began to creep up again - the coins had gotten too hot themselves. So the next thing I tried was to put the laptop on a granite kitchen workboard, which worked very well - a lot more material to disperse the excess heat. Got the HD temp down to 46 degrees before even that started to warm up a little too much. The heat tends to be concentrated more to one side than the other, so I can keep rotating the board to maintain this extra heatsink effect!</p>
-</article>
-<div class="clearfix visible-lg-block"></div>
-<hr/>
-<article id="20160704">
-	<h4>04 July 2016</h4>
-	<p>> Went to the cinema at the weekend to see "Independence Day: Resurgence". Thought it would be a good idea to start a 'Movie Reviews' section on my site. Have posted a review under 'Interests'/'Cinema' for now, but I may create a new, more easily-accessible section for movie reviews as & when this grows. Enjoy.</p>
 </article>
