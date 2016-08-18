@@ -216,12 +216,21 @@ switch ($page) {
 				background: transparent !important;
 			}
 
-			.Img_20160629, .Img_20160719, .Img_20160727
+			.Img_20160629, .Img_20160719, .Img_20160727, .Img_20160818
 			{
 				float: left;
 				width: 100%;
-				max-width: 420px;
 				margin: 0px 20px 10px 0px;
+			}
+
+			.Img_20160629, .Img_20160719, .Img_20160727
+			{
+				max-width: 420px;
+			}
+
+			.Img_20160818
+			{
+				max-width: 840px;
 			}
 
 			.vidEmbed
