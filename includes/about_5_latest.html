@@ -4,6 +4,28 @@
 </article>
 <hr/> -->
 
+<article id="20160827">
+	<h4>27 August 2016</h4>
+	<p>> Continued the Task Planner code I was working on to update the MySQL database over AJAX.</p>
+	<p>> Took a little bit of research and playing around to get it to do exactly what I wanted but I eventually got this to work. Changing the status to either "Complete" or "Cancelled" are the simplest two cases since this requires a fairly simple SQL query to update one field in the table, but Postponing the event needed a bit of extra work to ensure that all the necessary data was passed to enable a new identical instance to be created on a different date. I'd been through similar logic when processing the older HTML radio-button version so was able to copy & paste some of it into the new POST-handler PHP file.</p>
+	<p>> Rather pleased to have gotten this all worked out - it's working very well indeed :) Now that the 'homepage' is done I can make similar alterations to the 'allinstances' page.</p>
+	<p>> Converted the status-change buttons to one-click updates. All tested and working well.</p>
+	<p>> Added a meta viewport tag to the &lt;head&gt; on each page to help with mobile displays. The whole layout needs restructuring to a responsive design, but it's a start.</p>
+	<p>> Added a new page where you can view all the events, and coded a way of looking up the "Last Completed" and "Next Due" dates for each one. Will also add more useful options and functionality to this page.</p>
+</article>
+<hr/>
+<article id="20160826">
+	<h4>26 August 2016</h4>
+	<p>> Done some more work on the Task Planner today.</p>
+	<p>> Firstly, working on the 'allinstances.php' file/view, added the code which applies a filter to the SQL query based on which checkboxes have been selected. Default is to show "To Do" only, but now user can select any number of boxes and apply the required filter. The checkbox information is passed as a query string / GET array, so I have included various lines of validation code to ensure that a user-input query string in the URI does not cause an error and mess things up. This builds the SQL query nicely and outputs the results as expected.</p>
+	<p>> Second job was to make the checkbox selection "sticky" - so that when the selection is updated and the page refreshed the appropriate boxes remain checked rather than returning back to the default "To Do" selection only. Thought of a couple of different ways I could do this, but figured the easiest way would be to do a string search on the SQL query that the rest of the page is based on. Works nicely :)</p>
+	<p>> Next little task I set for myself was to tweak the time-based information that was being displayed in the result table. Rather than just showing "Event Time", "Travel Time", and "Duration", I thought it would be better to calculate from these fields the required time that travel needs to commence, and the anticipated ending time of the event instance. So I had a little play with building PHP DateTime objects and manipulating the <code>date()</code> function and implemented this into the 'homepage' and 'allinstances' pages.</p>
+	<p>> Fixed a bug that I'd found regarding the travel time: when updating this for a particular instance, if reducing the number down to 0 or deleting the value completely then the update would not get added to the SQL query. The data being sent in the POST was correct, so I investigated what was going on with the setting of the PHP variable and how it decides if it is "NULL" or not. Little tweak to the logic and the building of the SQL query and the bug is fixed.</p>
+	<p>> Made a start on improving the UI with JavaScript, jQuery, and AJAX. One of the keys things I wanted to implement was an easy way of marking each task as Complete / Cancelled / Postponed. To make things easy to begin with I'd just set these options as radio buttons which had to be selected before then hitting the "Update" button. Two clicks = not easy enough! So my idea was to take the "Status" options out of the HTML form and deal with these changes using JS.</p>
+	<p>> There are two pages where these changes will need to be made - will just work on one page for now using the similar code in the 2nd page as a backup in case it all goes horribly wrong!</p>
+	<p>> The first part - updating what is displayed on the screen - was fairly easy, being careful with DOM traversal. So now this works nicely - you can press the "Mark As: Complete" button for example, and the whole row then given the expected background colour. The second [and more complicated] part of this "one-click" change is to find a way of accessing the database to put the required changes into effect. Getting late in the day, so will leave this for another time - but got a lot done today: happy!</p>
+</article>
+<hr/>
 <article id="20160825">
 	<h4>25 August 2016</h4>
 	<p>> What with various appointments & errands today I had even less time to move forward with anything, development-wise. Just managed to sneak an hour or two in in the evening to work on my Task Planner. Rather than adding anything new, I revisited some of the PHP code that I'd previously written. Regarding the "sticky" form for adding a new event, I wasn't happy with the number of lines of code I was using to ensure that if the form contained an error and returned to the user then the selected &lt;option&gt; was retained. It felt like I was repeating too much code in re-writing the &lt;select&gt;/&lt;option&gt; HTML for each of the switch/case possibilities. Figured out a much cleaner and less repetitive way of working through the logic, which takes only 50% of the lines of code and works just as well.</p>
