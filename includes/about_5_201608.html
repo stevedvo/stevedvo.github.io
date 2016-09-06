@@ -1,0 +1,314 @@
+<article id="20160831">
+	<h4>31 August 2016</h4>
+	<p>> Spent a little more time playing around with WordPress. Installed a couple more different themes to see how they worked and how easy it is to customise them. Was hoping to receive my WordPress In Easy Steps book today to begin the more structured learning but it still has not arrived. Checked the Yodel tracking number and it is now due for tomorrow.</p>
+	<p>> Whilst I was playing, I looked a little more into some of the available features of my 123-Reg hosting. Got myself a mailbox set up - and configured my Outlook and iPhone mail clients to synchronise with the imap server. Would be quite cool to use this as my primary e-mail address since the domain === my name :D.</p>
+	<p>> Also set up a MySQL database with 123-Reg and installed WordPress online - which will be good to use as a portfolio of sites created. As with all things relating to my 123-Reg hosting, it is chuffing slow, though!!</p>
+	<p>> Made a slight change to the gradient fill on my website. I decided that the bottom colour was a little too light and didn't offer sufficient contrast with the white content text. After trying a few different things I plumped for a nice blue-y colour to give the effect of a dawn/dusk sky which is black at the zenith and gradually brightens to a deep blue colour at the horizon.</p>
+</article>
+<hr/>
+<article id="20160830">
+	<h4>30 August 2016</h4>
+	<p>> My new objective for the next couple of weeks is to learn how to use WordPress. Installed the latest version on my local webserver machine and had a few hours playing. Put together a basic website, tried out the different themes to see how it changed the layout, and then got into the CSS to play around with changing various things to customise the look of it. Had a play with some of the different menu options and widgets but still plenty to have a look at.</p>
+	<p>> When I first got my head back into web development around 18 months ago, I found the <a href="http://ineasysteps.com" target="_blank">...In Easy Steps</a> range were really good at going through the main concepts. I used these books for HTML5, CSS3, PHP & MySQL, and for JavaScript - working my way through them and often referring back to them even now to remind me of certain things. So it was a natural choice to find an "Easy Steps" book on WordPress to help me get into it - expecting delivery tomorrow!</p>
+	<p>> I haven't touched my WebDev course for a little while - my DVO Planner PHP project was well worth the time spent to refresh me of some PHP & MySQL, and I DO need to learn how to use WordPress effectively. All I need to do is put aside maybe an hour or two each day to keep plodding on with it and it will soon be done. I say "soon" - but at that rate it will take several months. The point being that several months is considerably less than infinity, which is how long it will take if I spend zero hours on it.</p>
+</article>
+<hr/>
+<article id="20160829">
+	<h4>29 August 2016</h4>
+	<p>> Did some more work on the 'view1event' page today to tackle the 2nd & 3rd items on the list mentioned yesterday, as well as colour-coding the bottom section according to the instance status, and adding in some more useful links from/to other pages.</p>
+	<p>> After this last piece of work I'm quite happy that this system is in a very useful workable state. The UI still needs work to polish it and make responsive but it looks OK and it will do for now for my own purposes. Started adding in various tasks & appointments to make proper use of it. Hurrah!</p>
+</article>
+<hr/>
+<article id="20160828">
+	<h4>28 August 2016</h4>
+	<p>> Did a little more work on the 'viewevents' page for my Task Planner. Inserted anchors on each date in the "Last Completed" and "Next Due" fields for each event, which link to the 'homepage' with the correct offset calculated to view the date concerned.</p>
+	<p>> Created another new page to view a single event, with the purpose of:</p>
+	<ol>
+		<li>Allowing event-specific details to be viewed and/or amended</li>
+		<li>Allowing additional instances of the event to be added</li>
+		<li>Viewing / Amending existing instances for the event</li>
+	</ol>
+	<p>> Got as far as completing item 1 today, as well as adding additional useful anchors to help link other pages together in a sensible way.</p>
+</article>
+<hr/>
+<article id="20160827">
+	<h4>27 August 2016</h4>
+	<p>> Continued the Task Planner code I was working on to update the MySQL database over AJAX.</p>
+	<p>> Took a little bit of research and playing around to get it to do exactly what I wanted but I eventually got this to work. Changing the status to either "Complete" or "Cancelled" are the simplest two cases since this requires a fairly simple SQL query to update one field in the table, but Postponing the event needed a bit of extra work to ensure that all the necessary data was passed to enable a new identical instance to be created on a different date. I'd been through similar logic when processing the older HTML radio-button version so was able to copy & paste some of it into the new POST-handler PHP file.</p>
+	<p>> Rather pleased to have gotten this all worked out - it's working very well indeed :) Now that the 'homepage' is done I can make similar alterations to the 'allinstances' page.</p>
+	<p>> Converted the status-change buttons to one-click updates. All tested and working well.</p>
+	<p>> Added a meta viewport tag to the &lt;head&gt; on each page to help with mobile displays. The whole layout needs restructuring to a responsive design, but it's a start.</p>
+	<p>> Added a new page where you can view all the events, and coded a way of looking up the "Last Completed" and "Next Due" dates for each one. Will also add more useful options and functionality to this page.</p>
+</article>
+<hr/>
+<article id="20160826">
+	<h4>26 August 2016</h4>
+	<p>> Done some more work on the Task Planner today.</p>
+	<p>> Firstly, working on the 'allinstances.php' file/view, added the code which applies a filter to the SQL query based on which checkboxes have been selected. Default is to show "To Do" only, but now user can select any number of boxes and apply the required filter. The checkbox information is passed as a query string / GET array, so I have included various lines of validation code to ensure that a user-input query string in the URI does not cause an error and mess things up. This builds the SQL query nicely and outputs the results as expected.</p>
+	<p>> Second job was to make the checkbox selection "sticky" - so that when the selection is updated and the page refreshed the appropriate boxes remain checked rather than returning back to the default "To Do" selection only. Thought of a couple of different ways I could do this, but figured the easiest way would be to do a string search on the SQL query that the rest of the page is based on. Works nicely :)</p>
+	<p>> Next little task I set for myself was to tweak the time-based information that was being displayed in the result table. Rather than just showing "Event Time", "Travel Time", and "Duration", I thought it would be better to calculate from these fields the required time that travel needs to commence, and the anticipated ending time of the event instance. So I had a little play with building PHP DateTime objects and manipulating the <code>date()</code> function and implemented this into the 'homepage' and 'allinstances' pages.</p>
+	<p>> Fixed a bug that I'd found regarding the travel time: when updating this for a particular instance, if reducing the number down to 0 or deleting the value completely then the update would not get added to the SQL query. The data being sent in the POST was correct, so I investigated what was going on with the setting of the PHP variable and how it decides if it is "NULL" or not. Little tweak to the logic and the building of the SQL query and the bug is fixed.</p>
+	<p>> Made a start on improving the UI with JavaScript, jQuery, and AJAX. One of the keys things I wanted to implement was an easy way of marking each task as Complete / Cancelled / Postponed. To make things easy to begin with I'd just set these options as radio buttons which had to be selected before then hitting the "Update" button. Two clicks = not easy enough! So my idea was to take the "Status" options out of the HTML form and deal with these changes using JS.</p>
+	<p>> There are two pages where these changes will need to be made - will just work on one page for now using the similar code in the 2nd page as a backup in case it all goes horribly wrong!</p>
+	<p>> The first part - updating what is displayed on the screen - was fairly easy, being careful with DOM traversal. So now this works nicely - you can press the "Mark As: Complete" button for example, and the whole row then given the expected background colour. The second [and more complicated] part of this "one-click" change is to find a way of accessing the database to put the required changes into effect. Getting late in the day, so will leave this for another time - but got a lot done today: happy!</p>
+</article>
+<hr/>
+<article id="20160825">
+	<h4>25 August 2016</h4>
+	<p>> What with various appointments & errands today I had even less time to move forward with anything, development-wise. Just managed to sneak an hour or two in in the evening to work on my Task Planner. Rather than adding anything new, I revisited some of the PHP code that I'd previously written. Regarding the "sticky" form for adding a new event, I wasn't happy with the number of lines of code I was using to ensure that if the form contained an error and returned to the user then the selected &lt;option&gt; was retained. It felt like I was repeating too much code in re-writing the &lt;select&gt;/&lt;option&gt; HTML for each of the switch/case possibilities. Figured out a much cleaner and less repetitive way of working through the logic, which takes only 50% of the lines of code and works just as well.</p>
+	<p>> So I didn't achieve much today with so little time available, but I was happy with what I DID do.</p>
+</article>
+<hr/>
+<article id="20160824">
+	<h4>24 August 2016</h4>
+	<p>> Only had a few hours available this afternoon & evening to add more to my Task Planner app, but with that time I added some JavaScript to add a splash of colour to the returned SQL SELECT query. Figured out a way to check the status of each instance and colour-code the rows according to whether the instance is still To Do (red), Complete (green), Cancelled (grey), or Postponed (grey). Did some research on the jQuery selector to see how to select not just an element on it's own, but also it's descendants - so that I could also amend the background colour of the &lt;input&gt; elements. Aaah, much prettier - but still only a &lt;table&gt; at the mo.</p>
+	<p>> I also had a little time to add another page - which performs a similar function to the homepage but which shows all instances regardless of the date, and is sorted by date for an at-a-glance view of everything. This displays literally every record in the instances table, but I intend to change this so that the default view is to only show "To Do" items - with a number of checkbox options to include instances with other statuses if the user so wishes. Got as far as adding the checkboxes this evening and submitting the required data in the GET array, but not coded the necessary amendments to the SQL query as yet.</p>
+</article>
+<hr/>
+<article id="20160823">
+	<h4>23 August 2016</h4>
+	<p>> Added a review of "Finding Dory" that I saw at the cinema at the weekend.</p>
+	<p>> Had another day coding my Daily Planner app, after the usual catching up on e-mails and stuff first thing. Another pretty productive day. Completed the work on the sticky form for adding new events, which included a lot of faffing about with additional validation code - especially due to Firefox not recognising "date" and "time" input types, so I spent some time re-familiarising myself with regular expressions and coming up with regexes that satisfied the criteria.</p>
+	<p>> Then wrote the code to create SQL queries which insert the new events & instances from the validated POST data into the database tables, including all the testing along the way and rectifying any little bugs, making little tweaks as required.</p>
+	<p>> Reached a useful point at being able to enter data using the web form. Next job was to enhance the main page to display the returned results for a particular date whilst also making it easy to amend certain fields within the returned data. My goal is to make this process very easy and simple. At the moment it's not quite as fluid as I'd like, due to manually having to hit a "Submit" button to refresh the page - but it was important that I got the additional SQL queries and other logic (and more validation) correct before things got too complex.</p>
+	<p>> After all of today's work I now have a good working system. Plenty more to go at to create additional pages, additional functionality, and jazz up the UI, but I can now add new events, get them to repeat at the desired frequency (weekdays / every day / weekly / fortnightly / monthly), then for each instance mark them as Complete / Cancelled / Postponed as well as amending certain instance-specific values. Once again, could have coded for several more hours but it was getting late & dark again so had to call it a day.</p>
+</article>
+<hr/>
+<article id="20160822">
+	<h4>22 August 2016</h4>
+	<p>> Had a break from the WebDev course before I start the next Unit. Decided to make a start putting together my Daily Planner web app that has been on my mind for the last few weeks. Started out by sketching the database Entities on a bit of paper, figuring out the Relationships, Attributes, Primary Keys & Foreign Keys.</p>
+	<p>> Have been focusing on front-end and SEO for so long that it's been a little while since I last had my head in PHP and MySQL, but re-familiarised myself with the commands and everything quickly enough as & when I needed them by referring back to my books, online info, and my previous projects.</p>
+	<p>> Had a fairly productive day at it: created a site that allows a user to navigate from the current displayed date to any other +/- 1 or 7 days, and upon navigating to each date it performs an INNER JOIN SQL query to return all of the Tasks / Meetings / Appointments and their related info for that date. Have been adding test data via the MySQL CLI, but finished the day by creating a web form to add new data. Made it a "sticky" form that performs some basic validation on the fields that are required. Next job will be to add all the back-end SQL INSERT queries into the DB for valid data - but will have to leave that for another day since it is getting late. The afternoon & evening doesn't half fly by when you're having fun! :)</p>
+</article>
+<hr/>
+<article id="20160819">
+	<h4>19 August 2016</h4>
+	<p>> Operation: catchup!! Unlike the last day or two where circumstances just happened to work against me making good progress on my WebDev course, today was completely opposite. Far fewer phone calls and e-mails to distract me today - and when I started Unit 6 I realised that there much fewer assessment questions than on most other Units, so I was able to get through the whole Unit in just one day. Woop woop!</p>
+	<p>> Unit 6 is all about "Principles of Database Concepts", and the assessments covered:</p>
+	<ul>
+		<li>Describing the basic structure of databases and distinguishing between relational databases and non-relational databases.</li>
+		<li>Going into more detail on relational databases, explaining what is meant by the terms:</li>
+		<ul>
+			<li>Entities</li>
+			<li>Attributes</li>
+			<li>Relationships - and delving further into:</li>
+			<ul>
+				<li>One-To-One</li>
+				<li>One-To-Many</li>
+				<li>Many-To-Many</li>
+			</ul>
+		</ul>
+		<li>Understanding of how to use basic Structured Query Language (SQL) statements to access data, in the usual form:</li>
+		<ul>
+			<li>SELECT...</li>
+			<li>FROM...</li>
+			<li>WHERE...</li>
+			<li>ORDER BY...</li>
+		</ul>
+		<li>Identifying 3 database vendors, researching and writing up a basic description of them.</li>
+	</ul>
+	<p>> All pretty familiar stuff, and all just wordy descriptive stuff which was mostly fairly easy. With only a handful of actual assessment questions, the word counts expected were slightly more than on other Units so there was a bit more waffle required! Really the only question that I thought was a bit of a drag was the last one, which required doing some extra research outside of the Study Materials.</p>
+	<p>> But all in all it was a nice easy Unit to get me back on track. Looking ahead to the next few Units coming up I am not going to get an easy day like this again any time soon. Starting to get into some of the more development-relevant subjects, and the number of assessment questions on these is far higher so are certainly going to take more time to get through - but should be interesting and mostly familiar subject matter.</p>
+	<p>> There was one big #facepalm moment reading through the Study Materials today: on the page describing how to put together a SQL statement, the example clearly stated to output ONE field and ONE field only from a DB table - but their "solution" SQL query began "SELECT table.field1, table.field2". Needless to say, I left a comment on this section to notify whoever-it-may-concern of the booboo!</p>
+</article>
+<hr/>
+<article id="20160818">
+	<h4>18 August 2016</h4>
+	<p>> Had good intentions today of quickly zipping through my e-mails and then having a good crack on with the WebDev course to finish off the "overdue" Unit 5 and get a good start on Unit 6. Well, things didn't quite go to plan. Soooo many e-mails to deal with, and lots of phone calls that helped to soak up yet more time like a sponge. All work-related, important, and all definitely worth my time... but just completely obliterated my plan for the day - only really got restarted with WebDev course mid-afternoon!</p>
+	<p>> But I did manage to stick with it until a little later than normal, and amongst a few other phone calls & stuff. Was really starting to get quite peeved this afternoon though with the poor quality of the study materials that I was reading through. So many spelling mistakes, punctuation & grammatical errors, and poorly put-together sentences. It is so difficult to read and digest when there are so many obvious errors - it simply cannot have had any proof-reading whatsoever. If it was a general Blog or an article somewhere it wouldn't have passed my "three strikes and out" test i.e. I'll put up with a couple of goofs but get to three and I refuse to read any more. But since I HAVE to read it to complete my course I need to grit my teeth and plough on through! I found myself having to read through each section twice, though: once to read it and highlight all the errors; then look at the actual assessment question and read through it all again - the 2nd time actually digesting the content. Once I'd actually read the content it was mostly quite interesting, but boy was it hard work! More than once the word "innocuous" had been written as "in noxious"! Seriously!?!? An example of a particularly poor section is pictured below. The highlighted text & blue pins are the bits that I've left a comment on for the material to be corrected (hopefully - if by commenting it highlights the error(s) to somebody that has the ability to make the change).</p>
+	<img class="Img_20160818" src="images/20160818_img1.jpg" alt="18-Aug Blog Image"/>
+	<div class="clearfix visible-lg-block"></div>
+	<p>> The topics covered today to complete the assessment for Unit 5 included:</p>
+	<ul>
+		<li>Following the last question yesterday, explaining the functionality & potential dangers of Spyware.</li>
+		<li>Describing what elements of privacy an Internet user should be concerned with / aware of.</li>
+		<li>Identifying appropriate use of company computer systems and personal systems.</li>
+		<li>Explaining Copyright issues pertaining to materials available on the Internet and work completed through employment.</li>
+		<li>Explaining the purpose of encrypting company transmissions.</li>
+		<li>Explaining the needs of company encryption policies and what issues may help to shape them.</li>
+		<li>Discussing the "Right To Be Forgotten" law, and the possible ramifications of damaging posts on the Internet.</li>
+	</ul>
+	<p>> My main desktop PC was slowing right down to a crawl again today. It has 4GB of RAM which ought to be just about enough for Win10 - and for the first few days it is fine and works nice and quickly. But over time the amount of committed memory just creeps up & up until the committed amount exceeds the actual physical RAM, and then when I try to do anything it spends a-g-e-s ragging the platters off the hard drive swapping data in & out of the page file - the hard drive on 100% utilisation for minutes at a time. Surely that's not right? So - not that I actually had the time today!, but - I spent a little while Googling to see if others had similar problems. Found a couple of really interesting and well-detailed forum posts on the subject. I always use the Task Manager to analyse certain metrics for each process, but I learned some useful things with the reading and will keep a closer eye on stuff now I understand it a little better - and might find a reason for it. Possibly a memory leak from a dodgy driver. We'll see... In frustration I just restarted the PC to get it back to it's "quick" state, so will need a few days for it to start to go downhill again.</p>
+</article>
+<hr/>
+<article id="20160817">
+	<h4>17 August 2016</h4>
+	<p>> Was able to spent another bit of time on the WebDev course and complete another few assessment questions on Unit 5 today - would have gotten through another few but decided to spent the last couple of hours in the kitchen instead, preparing a yummy roast chicken dinner followed by rhubarb crumble & custard! WebDev topics digested today included:</p>
+	<ul>
+		<li>Explaining the function and differences between:</li>
+		<ul>
+			<li>Software Patches</li>
+			<li>Software Updates</li>
+		</ul>
+		<li>Understanding the steps a user should take in dealing with an unexpected e-mail from an unknown source with an attachment.</li>
+		<li>Explaining what steps should be taken if you suspect that your computer has been infected with a virus.</li>
+		<li>Identifying how "Lock"ing your computer can increase security.</li>
+		<li>Describing what a virus and a worm is, and what sets them apart from each other.</li>
+	</ul>
+	<p>> Aside from the WebDev course, my brain has been cogitating recently on something I could have a go at creating in PHP. The basic idea comes from an issue that I always came across in various types of office work: I can use calendars in Outlook to schedule meetings & appointments, and can synchronise this with my phone & Apple calendar - but I've not come across a good way of integrating this with my "To Do" lists. I tend to organise myself around tasks that need doing daily, weekly, monthly, and one-off / ad-hoc - and whilst I could add these tasks into an Outlook / Apple calendar to repeat with the required frequency, it was always rather cumbersome if anything needed moving: say you have busy day with lots of meetings which means you don't have time to do all the particular daily/weekly/monthly tasks that you would have normally done that day.</p>
+	<p>> I am interested in creating a system which allows you to "bump" certain tasks easily to the next (or any other) day, perhaps allowing you to set a deadline on when tasks need to be completed. Lots of ideas on what extra functions / information I could incorporate into this and how to make it easy to use. The ultimate end-goal is to create a system that combines all meetings & appointments with other one-off / repeating tasks to build up a plan for everything that you need to do in a day, which you can then tick off once completed.</p>
+	<p>> Been thinking about the database structure and tables that I would need to create to do this. I could create a mainly text-based version to begin with to get all the logic, PHP & MySQL commands sorted - then look at jazzing this up into a nice user interface using my front-end skills.</p>
+	<p>> And following that - it would be a great place to look at how I can synchronise this system with an actual Outlook / Apple calendar so that the information can be read / written / updated on each device with access. Could be good fun, this... but spending excess amounts of time on this will seriously cut into my WebDev course studying time!! And I've again already found myself a little behind schedule by not completing Unit 5 yet - if I'm to stick to my [arbitrary] target I need to have Unit 6 boxed-off by the end of Friday!</p>
+</article>
+<hr/>
+<article id="20160816">
+	<h4>16 August 2016</h4>
+	<p>> Busy morning working on other things, but had a few hours today to make a start on WebDev Unit 5. This Unit is concerned with the principles of Internet security, and the topics covered today included:</p>
+	<ul>
+		<li>Encryption of wireless networks:</li>
+		<ul>
+			<li>Wired Equivalent Privacy (WEP)</li>
+			<li>Wi-Fi Protected Access (WPA)</li>
+			<li>WPA2</li>
+		</ul>
+		<li>Methods of online protection:</li>
+		<ul>
+			<li>Authentication</li>
+			<li>Digital Certificates</li>
+			<li>Encryption</li>
+			<li>Firewalls</li>
+		</ul>
+		<li>Identifying how encryption helps ensure that certain user-end transactions are secure, pertaining in particular to:</li>
+		<ul>
+			<li>Data confidentiality</li>
+			<li>Data integrity</li>
+			<li>Non-repudiation</li>
+		</ul>
+		<li>Describing what a computer virus is, what it does, how it can spread, and what methods a user can employ to minimise their exposure to them.</li>
+	</ul>
+	<p>> Also today I was having a little nosey around at the 123-Reg hosting extras / features. In particular I was interested in what website building tools and content management systems I had at my disposal. I would have to upgrade my plan to get access to WordPress, but there is a useful looking tool that I could use whereby I can choose a theme and customise it to my needs. Will probably be worthwhile having a play with that and seeing what I can do with it, just for the experience - and to then inspect all of the CSS & stuff to see if I can learn any new tricks :D</p>
+</article>
+<hr/>
+<article id="20160815">
+	<h4>15 August 2016</h4>
+	<p>> Good day catching up with where I wanted to be on my WebDev course - completed the assignment questions for Unit 4. Again, quite an interesting few topics covered which helped to fill some gaps in my technical knowledge:</p>
+	<ul>
+		<li>Understanding the uses and underlying technology of RSS/Atom feeds</li>
+		<li>Understanding the function and hierarchical structure of the Domain Name System</li>
+		<li>Describing IPv4 and IPv6</li>
+		<li>Defining shared domains</li>
+	</ul>
+</article>
+<hr/>
+<article id="20160812">
+	<h4>12 August 2016</h4>
+	<p>> Again not had a great deal of time to do much of my WebDev course - only managed to get through a few more topics on Unit 4:</p>
+	<ul>
+		<li>Explaining the purpose of:</li>
+		<ul>
+			<li>Remote Access Protocols</li>
+			<li>Point-to-Point Protocols</li>
+			<li>Point-to-Point Protocols over Ethernet</li>
+		</ul>
+		<li>Identify different types of Internet bandwidth technologies:</li>
+		<ul>
+			<li>Ethernet (802.3)</li>
+			<li>Wireless / Wi-Fi (802.11)</li>
+			<li>Copper & Fibre Optic cabling</li>
+		</ul>
+		<li>Describe how to map protocols to specific business services e.g. POP vs IMAP, TCP vs UDP</li>
+	</ul>
+	<p>> Some interesting topics covered. But by having a couple of busy days with other things and therefore not completing Unit 4 today I am now a little behind schedule! Plus I still haven't done the 10 minute Webcast needed to complete Unit 2. Must crack on with it next week!</p>
+	<p>> I was having a little play about with some CSS today, and rediscovered a couple of very useful features: the flexbox and transitions. I MUST have covered these well over a year ago when I first worked my way through my "CSS3 In Easy Steps" book, but these particular features had completely fallen out of my brain amongst all the other new things I was learning with HTML5, JavaScript, PHP, MySQL, etc! Sooo much to learn it is no surprise that some things were not retained. Might be an idea to go through this [and possibly other books] again to refill in some gaps. So much to do, so little time! :(</p>
+</article>
+<hr/>
+<article id="20160811">
+	<h4>11 August 2016</h4>
+	<p>> Not had a lot of time for either website fettling or WebDev course today, but I did read through and complete one assessment question on:</p>
+	<ul>
+		<li>Weighing up the benefits & drawbacks of cloud computing</li>
+	</ul>
+	<p>> That is all. Oh, and moved the July blog posts out of the "latest" category.</p>
+</article>
+<hr/>
+<article id="20160810">
+	<h4>10 August 2016</h4>
+	<p>> Spent some more time today on my WebDev course, completing the last couple of Unit 3 assessment questions before moving on to Unit 4. The final questions on Unit 3 covered:</p>
+	<ul>
+		<li>Concerns/issues with using Web-based or IMAP-based e-mail setups</li>
+		<li>Comparing the pros & cons of using e-mails Vs text messaging in a business context</li>
+	</ul>
+	<p>> Unit 4 focuses on "Understanding Internet Architecture". First impressions from the topics covered today are that this unit is very wordy - a lot of information to take in, rather than demonstrating practical skills. But it's an interesting topic and helping to fill in several gaps so I'm quite enjoying this one so far. The topics I've looked at today are:</p>
+	<ul>
+		<li>Distinguishing between SERVERS and</li>
+		<ul>
+			<li>THIN Clients</li>
+			<li>THICK Clients</li>
+		</ul>
+		<li>Understanding what protocols are and their use for the Internet e.g. HTTP, TCP, UDP, IP</li>
+		<li>Explaining the infrastructure required to support an Internet client, including basic hardware and software</li>
+	</ul>
+</article>
+<hr/>
+<article id="20160809">
+	<h4>09 August 2016</h4>
+	<p>> Had an e-mail through from 123-Reg this morning regarding my support ticket asking about how to configure the IIS server to ensure it is always serving gzip-compressed versions where possible. It was pretty useless:</p>
+	<p>> "coding related issues fall out of our area of expertise. If the code that you have added for gzip compression..." [i.e. THE CODE GIVEN ON THEIR WEBSITE] "...does not work, please search for another one and then test it."</p>
+	<p>> Wow, gee, thanks for all your help! Not like I didn't think of that already and spend several hours trying to fix it myself before contacting you. Gah!!!</p>
+	<p>> Didn't really do any more with my website today anyway, I've been back on the WebDev course. Started Unit 3 today, which is concerned with "Configuring an e-mail client to send and receive e-mail in a workplace context". Piece of cake. The first assignment question was to demonstrate that I knew how to set up an e-mail client. As it happened, I received the free laptop that comes with the course yesterday, which was useful as I could put a fresh install of Office on it and screenshot each step of the process that I go through in configuring Outlook to the correct IMAP and SMTP servers. Other topics covered included:</p>
+	<ul>
+		<li>Understanding MIME, S/MIME, PGP and GPG - some new knowledge for me there which was good</li>
+		<li>Demonstrate how to create an e-mail signature and understand why this is useful in a business context</li>
+		<li>Understand e-mail threads, replying, reply-all-ing, forwarding, CC-ing, BCC-ing</li>
+		<li>How to filter spam</li>
+		<li>Advantages of, and issues with business e-mail</li>
+		<li>How to set up auto-replies / out of office messages</li>
+		<li>How to add e-mail attachments</li>
+	</ul>
+	<p>> All pretty basic stuff, but as with the earlier Units still time-consuming to read through all the material and actually answer the questions with the requisite level of detail and screenshots where appropriate. Have a couple more questions to answer on this Unit then it's another one ready to submit... although I can't actually submit it yet since I still have the Webcast from Unit 2 to do and I can't submit Unit(n+1) until Unit(n) has been submitted, moderated, and granted an overall pass.</p>
+	<p>> I am beginning to get a little bit irritated at the number of obvious spelling and grammatical errors that are actually in the course content. They lay it on thick about ensuring that when communicating in a business context you have to be very careful with your spelling & grammar, and then make a large number of errors themselves! I have started using the 'social' feature to highlight these errors as I come across them, and posting the corrections. There are occasional little hangman and wordsearch games to break up the course as you go through the material. One of the wordsearches had the word "protcol" to find, so I was like do I actually look for the mis-spelled word or will it be in the grid as "protocol"? Turns out it was in the letter grid mis-spelled. Unbelievable! It's kind of amusing, really, but considering the cost of the course I'd have thought they would have done some decent proof-reading, otherwise it kinda brings the whole integrity into question!</p>
+</article>
+<hr/>
+<article id="20160808">
+	<h4>08 August 2016</h4>
+	<p>> Having a look through Google's PageSpeed Insights on the WebMaster tools today to see how I can try to speed up my website loading time.</p>
+	<p>> Been investigating the "Leverage Browser Caching" suggestion, and looking up how to modify the web.config and .htaccess files to put this into effect. After some minor changes the PageSpeed Insights are showing slightly improved speed and this item is now checked off the list.</p>
+	<p>> The next item that PageSpeed is advising about is enabling compression. I thought a few months ago that this had been resolved by adding a bunch of &lt;httpCompression&gt; code to the web.config file but obviously not! Spent several hours researching this trying to figure out what else I need to do to get this working. It wasn't compressing the pages on the localserver either. The actual localhost fix was quite simple once I'd spent time trying to find the solution - since I am running an Apache server I found an option to enable zlib output compression in the PHP settings.</p>
+	<p>> But no matter what I tried with the web.config file, I could not get the remote IIS server to give me the compressed version - as evidenced on the Dev Tools: the size/content values are the same, and there is no "Content-Encoding: gzip" line in the response headers.</p>
+	<p>> Had a brief online chat with 123-Reg support to explain the problem, but due to the technical nature of it they have raised a support ticket rather than being able to look into straight away. I did find after that that when I request an .html file, the response DOES come back with gzip encoding. Perhaps there is some issue with the Dynamic configuration that is not apparent for Static content? Shall await a response from 123-Reg before spending any more time on this!</p>
+	<p>> Next issue: Optimise images. A few images on the header were larger than they needed to be, but the main issue was picked up on the "Links" page - which was no surprise since it was full of screenshots in .png format! Reduced the size of each image down to something similar to the largest that it needs to be [depending on the screensize], and saved as .jpg files. This has taken loads of time off the page-loading time, but PageSpeed Insights is still not happy and thinks there is more to be done - it mainly saying now that the images could be losslessly compressed to reduce the sizes by another two-thirds!</p>
+	<p>> Converted all of the .jpg files to .tif to take advantage of the LZW compression... but found that .tif images actually do not display on Chrome, so changed those back - d'oh!! Not sure how to implement a lossless compression then as PageSpeed is suggesting... more research needed!</p>
+</article>
+<hr/>
+<article id="20160805">
+	<h4>05 August 2016</h4>
+	<p>> Completed my assessment for WebDev Unit 2 today... well, almost. Continuing with the communication theme, the topics studied today included:</p>
+	<ul>
+		<li>VoIP</li>
+		<li>social networking</li>
+		<li>WEB2.0</li>
+		<li>mashups</li>
+		<li>blogging</li>
+		<li>news feeds</li>
+		<li>folksonomies</li>
+		<li>webcasts & webinars Vs face-to-face meetings</li>
+		<li>how to present technical info to a non-technical audience</li>
+		<li>what expenses you can claim as an IT professional</li>
+	</ul>
+	<p>> Again, some interesting topics to help broaden my knowledge... but a section on expenses?!</p>
+	<p>> Have left one assessment question for now... I need to prepare and present a 10 minute webcast on a subject of my choice. It won't actually be a real one that is broadcast live but I need to demonstrate that I understand the principles of how to actually create one and make it interesting for the audience. Rather lacking in enthusiasm for creating a video of myself! Cringe! And no idea what subject I could base it on that I could jabber on about for 10 mins, will give it some thought over the weekend...</p>
+	<p>> Had my first results returned this afternoon: all questions and hence the unit passed. Woohoo! 1 down, 21 to go.</p>
+</article>
+<hr/>
+<article id="20160804">
+	<h4>04 August 2016</h4>
+	<p>> Made a start today on Unit 2 of my WebDev course. Was hoping to get further with it than I actually did - my plans were scuppered by a town-wide power-cut this afternoon which lasted the best part of 2 hours! I still intend to finish this unit tomorrow, though - so I'll just have to crack on even more to keep to my schedule.</p>
+	<p>> Of the Unit that I did read through and do the assessments on, it was very much more of the hard slog on simple stuff: this unit is mainly (so far) involved with using the Internet as form of communication, and part of the assessment is in demonstrating the ability to communicate over e-mail effectively - and I had to draft 3 separate e-mails to the local council, the local PCC, and my MP asking for information relating to cybercrime!</p>
+	<p>> I kind of understand the point of it - to get a well-rounded view of things and demonstrate key skills, but this is very much not what I had in mind for a course that is entitled "Web Design and Development". I am sure the more relevant and interesting topics will come soon enough once I've got this basic stuff done. Getting to the end of this course will be a masterclass in patience as much as anything else! Just got to focus on the end goal.</p>
+</article>
+<hr/>
+<article id="20160802">
+	<h4>02 August 2016</h4>
+	<p>> Spent a large part of the day continuing with Unit 1 of my WebDev course. I'd read through all the material yesterday and just had the assessment to do. Despite much of this being previous knowledge, the assessments are still taking a very long time to wade through - many of the questions requiring a couple of hundred words of explanations, and in being able to demonstrate I can do certain things (like install a web browser, open & switch between browsers/windows/tabs, navigate hyperlinks, etc) I need to take loads of screenshots to show what I am doing on the screen and then upload them to my answer. It's all simple stuff but ever so time-consuming!</p>
+	<p>> It seemed like a very long day, and was glad to complete the assessment and get it submitted. It's the first one, and will take a few days to come back from the assessor with a mark, but all being well I should find that I have answered the questions correctly and with a sufficient level of detail.</p>
+	<p>> Whilst I was faffing about with different browsers, I pointed the latest version of Firefox at my website and realised that the gradient fill is not displaying in the same way that it does on Chrome, IE, and Safari - it is pushed out to the right of the main body rather than being overlaid on top of it. A single line to specify the position soon sorted it.</p>
+</article>
+<hr/>
+<article id="20160801">
+	<h4>01 August 2016</h4>
+	<p>> Today I started work on a new course that I've signed up for: it is to gain a certificate in <a href="https://www.innovateawarding.org/qualifications/qualifications-list/it/certificate-in-web-design-and-development-rqf/" target="_blank">Web Design and Development</a> and I am hopeful that the new qualification will help me in my web development career. Although I have some professional experience with development, and I am learning more and more all the time with my own studies and experiments with creating, maintaining, and improving this website, one thing I do lack is an actual proper qualification in the field. It's one thing knowing that I can do certain things, it's another thing being able to convince any potential employers!</p>
+	<p>> The course is being offered by <a href="http://thetrainingroom.com" target="_blank">The Training Room</a>, and included in their fees is 3 years of career support to help students and graduates get into work during/following the course and to be on hand in the early years of career progression and development.</p>
+	<p>> The first few modules of the course that I have looked at so far have mainly been in establishing "soft skills" that are required in general for any sort of employment; establishing my level of maths, English, logical reasoning; psychometric testing; advice on how to apply for jobs, and interview tips.</p>
+	<p>> Also made a start on some of the meatier stuff of the course. Aimed at beginners, it begins with a lot of introductory stuff about various types of networks, explaining some simple terms and ideas, and delves a little into security aspects. Much of this I already knew about, but it was good to actually do some proper reading and formal learning on the subject to cover areas about which I wasn't quite so knowledgeable.</p>
+	<p>> There are a few more modules which cover all the basics before the modules that cover the actual coding, but once I get to the coding my intention is to use this site to upload all the assignments that the course covers and have a copy of my online portfolio here for easy viewing.</p>
+</article>
