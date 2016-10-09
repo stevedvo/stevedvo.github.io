@@ -42,15 +42,17 @@
 
 			#btnnav
 			{
-				margin: 5px 20px 0px 0px;
-				float: right;
+				display: flex;
+				list-style-type: none;
 			}
 
-			#btnnav>button
+			#btnnav>li
 			{
 				height: 30px;
-				width: 30px;
+				/*width: 30px;*/
 				border: 0px;
+				/*display: inline-flex;*/
+				flex: auto;
 			}
 
 			#header>header>h1
@@ -242,12 +244,14 @@
 	<body>
 		<div id="wrapper">
 			<section id="header">
-				<nav id="btnnav">
-					<button>Nav1</button>
-					<button>Nav2</button>
-					<button>Nav3</button>
-					<button>Nav4</button>
-					<button>Nav5</button>
+				<nav>
+					<ul id="btnnav">
+						<li><button>Nav1</button></li>
+						<li><button>Nav2</button></li>
+						<li><button>Nav3</button></li>
+						<li><button>Nav4</button></li>
+						<li><button>Nav5</button></li>
+					</ul>
 				</nav>
 				<header>
 					<h1>BASIC WEB PAGE</h1>
