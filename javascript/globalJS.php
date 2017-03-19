@@ -21,13 +21,13 @@
 
 		$("#burger").css('color', '#337ab7');
 		
-		$(".navitem").mouseover(function()
+		$(".navitem").mouseenter(function()
 		{
 			$(this).css('background', 'yellow');
 			$(this).css('color', 'black');
 		});
 
-		$(".top").mouseout(function()
+		$(".top").mouseleave(function()
 		{
 			$(this).animate({backgroundColor: jQuery.Color({alpha: 0}), color: "#337ab7"}, 250);
 		});
