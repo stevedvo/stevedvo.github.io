@@ -4,6 +4,7 @@
 		 	<label for="viewperiod"></label>
 		 	<select name="viewperiod" id="viewperiod">
 		 		<option value="Latest_menu">Latest</option>
+		 		<option value="Oct-2016_menu">Oct 2016</option>
 		 		<option value="Sep-2016_menu">Sep 2016</option>
 		 		<option value="Aug-2016_menu">Aug 2016</option>
 		 		<option value="Jul-2016_menu">Jul 2016</option>
@@ -19,6 +20,10 @@
 
 <section id="Latest_menu" class="period hidden-lg hidden-md hidden-sm">
 	<?php include("about_5_latest.html"); ?>
+</section>
+
+<section id="Oct-2016_menu" class="period" style="display: none;">
+	<?php include("about_5_201610.html"); ?>
 </section>
 
 <section id="Sep-2016_menu" class="period" style="display: none;">
