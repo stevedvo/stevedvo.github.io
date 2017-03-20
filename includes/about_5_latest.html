@@ -4,6 +4,30 @@
 </article>
 <hr/> -->
 
+<article id="20170123">
+	<h4>23 January 2017</h4>
+	<p>> Started work on new new project today: a website build for a site which will have an Arabic translation as part of it. Not done an awful lot of work before on multilingual WordPress sites, let alone ones which require a Right-to-Left conversion, but it looks like an interesting project and one which will certainly help me with learning lots.</p>
+	<p>> Even without yet having fully signed-off PSD designs, we had enough to do go to get cracking: set my local machine up for development of the project, created a BitBucket repo. Did some reading-up on some plug-ins for translation, and through searches of the WP Codex and previous projects I collected several snippets of code to help me with creating custom post types, additional options pages, etc.</p>
+	<p>> Ran through the pages that I could see from the web-based prototype and put together a plan of what I'd need to put on the templates, and started creating the theme with the custom post types and Advanced Custom Fields, and putting the page structure and menus together.</p>
+</article>
+<hr/>
+<article id="20170120">
+	<h4>20 January 2017</h4>
+	<p>> A task came across my desk today to look into a site to put on some Google tracking [pay-per-click] and supply a product feed that can be used for Google Shopping. Not an area I was familiar with, but I had some time to read up about the theory behind what's going on whilst the site files were downloading and I was setting things up in the background with BitBucket repos and branches, etc. Managed the first half of the task OK - found a PHP file that is called upon a successful transaction and looked up what methods I can call for the WooCommerce $order object to return the variables that the Google tracking code needs. The 2nd part was quite tricky - don't seem to be able to export the Product list from WooCommerce in the required XML format for the Google Merchant Centre. Found one or two plug-ins that ought to do the job, but these will need to be paid for.</p>
+	<p>> Quite a frustrating end to the day doing what should have been a fairly simple task: grab the site files & DB from a 3rd-party server [which we had the login credentials for], spin up a new install on WPEngine and host the site from there. Anticipated maybe just 30 mins to create a new live WPEngine install, then copy over the site files through FileZilla, amend the SQL export from &lt;staging domain&gt; to &lt;WPEngine domain&gt; and import. It was not that simple! Despite the DB supposedly coming from the staging site the WP settings were pointing at the live domain so when I tried to navigate to the WPEngine site it was taking me to the old site! Tried to fix that with some more DB tweaks but was getting flummoxed as to why it wasn't working. Tried various things, including attempting to restore the install back to it's original state [although THAT failed somehow!]. Getting a bit tired and frustrated towards the end of the day I asked for some assistance and I was pointed towards the WPEngine caching which was causing some of the problems.</p>
+	<p>> Eventually managed to get the site up & running as well as I expected: there are still several things not quite right but these are down to the theme settings not getting copied over with the site files & DB. I have no idea how the theme stores this info but on several of the themes that this particular client favours there is more tweaking to do once the main files have been imported.</p>
+</article>
+<hr/>
+<article id="20170118">
+	<h4>18 January 2017</h4>
+	<p>> Had a play with a couple of other sites at the end of the day: one on DotNetNuke which needed some content tweaks; and one on Magento which had a bug regarding an inability to upload images for products. The Magento issue was caused by some SWF files that were missing from one of the folders - unbelievable that it relies on Flash!! Found copies of the files on a 3rd-party public GitHub repo, and with these I was able to fix the fault on the local version of the site. It became apparent then that those files had been intentionally removed a few months ago due to security concerns! Will maybe look for better solutions to implement a fix on the live site...</p>
+</article>
+<hr/>
+<article id="20170117">
+	<h4>17 January 2017</h4>
+	<p>> It's been a little while since my last Blog update. It has been rather a busy time with the Christmas holidays and then the birth of my new boy! I had taken a couple of weeks leave to help out with things and get in some crucial daddy-boy bonding time, but I am back at work now. Whilst I was at home, I did manage to get in a few sessions of coding my own projects: my main focus has been the PHP Shopping List app that I started last month. Quite a fun little project working with PHP & MySQL to get something useful out of it and help with the grocery shopping.</p>
+</article>
+<hr/>
 <article id="20161220">
 	<h4>20 December 2016</h4>
 	<p>> Got into work early this morning, and continued the effort to try and get a really old version of PHP set up on a dev environment to test the changes that had been made for the Yacht Marina site. After not really making much progress, and considering the early hour and our confidence that the fixes would actually work as intended, we decided to put the changes live - and it worked. Hurrah! Ever so annoying having to work to such an early PHP version but there have definitely been lessons learned, here!</p>
