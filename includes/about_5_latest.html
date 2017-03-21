@@ -4,6 +4,22 @@
 </article>
 <hr/> -->
 
+<article id="20170130">
+	<h4>30 January 2017</h4>
+	<p>> Have been busy at work mainly building the English/Arabic multilingual site. Improving my knowledge and skills with WordPress in how to make it easier to build pages from common template parts which are constructed from Advanced Custom Fields. As well as investigating how WordPress deals with RTL languages, and finding an RTL version of Bootstrap to load at the appropriate time.</p>
+	<p>> Also had a little task today to look into the Google reCAPTCHA on a site so that the client could use it on a different site of theirs. Not scrutinised exactly how this works before so was good to get my head into it and understand the process. Found it a little confusing to begin with, but then realised that the reCAPTCHA had NOT actually been implemented correctly on the site in the first place!</p>
+</article>
+<hr/>
+<article id="20170125">
+	<h4>25 January 2017</h4>
+	<p>> Had another little task today for the site I was working on recently which is looking to start advertising their products on Google Shopping. The issue they have is that a large number of their product images have their company watermark on them. This was added onto the images via a WordPress plug-in, but the option to keep the original un-watermarked images had not been checked [to save disk space usage, no doubt!] - but the problem is that Google do NOT like you to use watermarked images on their Shopping utility.</p>
+	<p>> The client sent us a small number of the original images to see what we could do with them. One method would obviously be to just upload the new images to the media library then go through every product in the backend, and manually select the new image in each case. With literally thousands of products & images, this would be a very slow boring task!</p>
+	<p>> Another option would be to store all the new images in a single directory on the server, then make amendments to the database to update the filepath that each image is pointing at... but hacking away at the DB in this way seemed a little scary - especially if doing this on a live site.</p>
+	<p>> The solution I came up with was to export the WooCommerce product data to a CSV file and import in Excel. Put together a little formula to split out the filepath and filename of each of the images. Extracted all the original images that the client sent to us and dumped a Windows CMD directory listing into a text file. Imported the text file into Excel and did a lookup to see which of the original image filenames matched the filenames from the WooCommerce export, and which 'Uploads' subfolder these files reside in.</p>
+	<p>> So then I could sort this by the folder hierarchy and fairly quickly just overwrite the image files in the correct 'Uploads' subfolder [after backing up first, obviously!]. Another bit of complexity is that when uploading files into the WP media library it automatically creates smaller thumbnail versions of each image [typically a set of 3 or 4 files per image] - which were also being used on the back- and front-end. So to solve this I ran a Photoshop batch operation to resize the images to specified dimensions, and then figured out how to put together a rename command at the Windows cmd prompt to append the correct 'XXXxYYY' width & height numerals to the resized files.</p>
+	<p>> Also, to keep file sizes low, I ran everything through <a href="https://tinypng.com/" target="_blank">TinyPNG</a> before I copied them over to the server. It took a nice little bit of figuring out various things: exporting data, importing data, Excel formulae, batch jobs, etc., but I got the whole process nailed down and I was quite pleased with the result in the end and am confident that the process could be repeated for the remainder of the original files when they become available.</p>
+</article>
+<hr/>
 <article id="20170123">
 	<h4>23 January 2017</h4>
 	<p>> Started work on new new project today: a website build for a site which will have an Arabic translation as part of it. Not done an awful lot of work before on multilingual WordPress sites, let alone ones which require a Right-to-Left conversion, but it looks like an interesting project and one which will certainly help me with learning lots.</p>
