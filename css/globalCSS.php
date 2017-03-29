@@ -78,7 +78,12 @@
 
 	@media only screen and (min-width: 992px)
 	{
-		#profilePic, #sidebar-wrapper
+		#profilePic
+		{
+			max-width: 158px;
+		}
+
+		#sidebar-wrapper
 		{
 			width: 14.28571429%;
 		}
