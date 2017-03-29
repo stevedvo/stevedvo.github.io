@@ -4,81 +4,35 @@
 </article>
 <hr/> -->
 
+<!-- <article id="">
+	<h4></h4>
+	<p>> </p>
+</article>
+<hr/> -->
 
 
+<article id="20170313">
+	<h4>13 March 2017</h4>
+	<p>> The last few days at work have mostly been tackling little issues/bugs/enhancements with either new or existing sites: some things fairly easy, some things taking a little time to wrap my head around and figure out. A particularly satisfying win today came in-between tasks as I was playing around with my Git / BitBucket settings.</p>
+	<p>> In a nutshell, ever since I started work here I have always connected to our BitBucket repositories over HTTPS - which has meant that every time I do a 'git pull' or a 'git push' I have had to input my password for authentication. This gets really tiresome really quickly!</p>
+	<p>> In the process of moving my website to different hosting [finally moving away from the pathetically slow 123-Reg hosting - yay!] I have been reading up a bit more about making an SSH terminal connexion, SSH private & public key pairs, etc. When I first started work here I tried to sort this out using the BitBucket tutorials but could never get it working right. Now, however, my bro has sent me <a href="https://help.github.com/articles/connecting-to-github-with-ssh/" target="_blank">a link</a> which explains everything much more clearly and I have successfully set my machine up to use the SSH keys and changed the remote URL to the SSH version. Now all the pulling & pushing with the remote is authenticated by the SSH keys and no more passwords required. Hurrah!</p>
+</article>
+<hr/>
+<article id="20170308">
+	<h4>08 March 2017</h4>
+	<p>> Have had my eye on local PHP groups for the last couple of weeks. I used to attend the occasional <a href="https://phpminds.org/" target="_blank">php[MiNDS]</a> talks when I worked with DVO Media, but haven't been to anything since I moved further south. Found a couple of local-ish groups that meet in Bristol and Reading, which aren't exactly on my doorstep but are close enough to home and work (respectively) to be feasible.</p>
+	<p>> The Bristol talks [with <a href="http://phpsw.uk/" target="_blank">PHP South West</a>] were scheduled for this evening so I decided I'd better register with <a href="https://www.meetup.com/" target="_blank">meetup.com</a> and join the group so they can manage the numbers.</p>
+	<p>> Just about made it on time after leaving work and driving the hour or so to Bristol to park up and find the place. The talks this evening were:</p>
+	<ul>
+		<li><a href="https://www.slideshare.net/Brunty/bdd-behat-72979884" target="_blank">Behaviour Driven Development</a> by <a href="https://twitter.com/Brunty" target="_blank">Matt Brunt</a></li>
+		<li><a href="http://slides.com/tomadam/remote-debugging-with-xdebug#/" target="_blank">Remote Debugging with XDebug</a> by Tom Adam</li>
+	</ul>
+	<p>> Both talks were very interesting, especially the first. The XDebug talk was a good refresher of some things that I learned whilst at DVO Media, however I have still yet to actually use it properly in my development - I still var_dump and exit - but I really ought to make use of this powerful tool.</p>
+</article>
+<hr/>
 <article id="20170307">
 	<h4>07 March 2017</h4>
 	<p>> Had a little bit of 'free' time today in-between projects, which I made good use of: set up a local WordPress instance to practice working with Advanced Custom Fields - specifically investigating how to make use of certain field types that I haven't used before/much: 'Gallery', 'Embed', 'Date/Time Picker', 'Flexible Content', 'Google Map'.</p>
 	<p>> Spent a little while playing around with the Google Map field type - grabbed some code from the ACF documentation and used it to display a map on the front end with markers placed at specified places. The JavaScript calculates the map centre and zoom level based upon the markers specified. Also, using methods learned from another project, figured out how to give each of the markers a custom map pin icon.</p>
 	<p>> Quite a nice useful couple of hours of self-teaching :)</p>
-</article>
-<hr/>
-<article id="20170227">
-	<h4>27 February 2017</h4>
-	<p>> The last few days at work have been busy working on the latest WordPress build: creating the page templates, Advanced Custom Fields, adding & refining the CSS & JavaScript, etc. Did some work on the Contact page this morning, which yielded some good learning points!</p>
-	<p>> Adding the Google Maps was not as straight forward as I thought it would be. Thought it would be a simple case of copy-pasting some code from another site, and then simply tweaking it for the particular location & zoom level. But when I did this the map was just blank, albeit with a marker visible and some other controls & stuff. Eventually after a little while faffing about I discovered that it is quite important for the dimensions of the containing div to be specified before the GMap JavaScript is run, but the height of the div was being calculated dynamically according to the window size AFTER the script was called. So once I'd gotten the order of stuff sorted out it worked fine.</p>
-	<p>> On this particular page there are actually TWO Google maps: a small one zoomed in only a couple of levels from max, and a larger map at the bottom zoomed out from that a few steps to see a wider view of the main roads surrounding. Here I discovered something else important: trying to plonk more than one map on a page is not straight forward! Google spits out a console warning/error since it doesn't like more than one call to the API on a single page load, and only one of the maps actually loads as expected, with the other one only loading as a static image! Fixed this by re-arranging the JS functions to both be placed at the end of the PHP/HTML section, and contained within a master map initialisation function, so the API call only needs to be run once and called back to the master function which sorts out both of the maps. Neat!</p>
-	<p>> After that, and some subsequent CSS tweaking for non-mobile devices, the contact page was finished at around lunchtime. I spent a little more time tweaking CSS on other areas: I was never happy with how the footer looked: using the font sizes exactly as depicted on the mobile design PSD [which was 750px wide!] made things look ridiculously large, so I reduced them to something sensible and ensured that the headings were using the correct font. Few other little tweaks and then uploaded the newest version of the site to WPEngine ready for QA.</p>
-	<p>> Had some time to do some further investigation into a niggly JavaScript / jQuery issue relating to the <code>mouseover</code>/<code>mouseout</code> effect that I'd been trying to get sorted on a part of the homepage. The set up is that there is a row of images, and when you hover over one of the images an overlay slides in from the bottom with some image details contained within it, and this overlay is clickable to take the user to a specific page relating to the image/overlay. When you cease hovering over the image then the overlay slides back down again out of sight. I was initiating the reveal of the overlay with a jQuery <code>mouseover</code> event, and was trying to make the overlay disappear again with the <code>mouseout</code> event - but the problem was that by hovering the cursor on the overlay, this was being treated as a <code>mouseout</code> event for the image behind - the end result being that there would be a multitude of <code>mouseover</code> & <code>mouseout</code> events stacking up for each image and the overlay would be bouncing up & down like crazy!</p>
-	<p>> Reading up about this on the jQuery docs I discovered that <a href="https://api.jquery.com/mouseover/">it is known that these two events will cause undesirable results</a>, and they even had a demo set up to compare how this works against two other events: <code>mouseenter</code> and <code>mouseleave</code>. Switched to using this other pair of functions and it works a dream! Exactly what I needed! Amazing the hours spent trying to figure out a clever workaround to something before finding a better solution that takes only minutes to implement!! It's all good learning :)</p>
-</p>
-</article>
-<hr/>
-<article id="20170217">
-	<h4>17 February 2017</h4>
-	<p>> I'd ordered some new RAM for my laptop recently, and the 16GB matched pair arrived in the post today :D. Far too exciting to leave this until the weekend so I decided I'd get it installed this evening.</p>
-	<p>> Only took a few mins to power the laptop down, undo a few screws at the back, ping out the existing 2x4GB SODIMMs and replace with the 2x8GB ones, then power back up. I'd not really thought before, but I realised I could use the 4GB modules in the TTR laptop [the free one I got when I signed up to the WebDev course last year] to boost that from 4GB to 8GB. The RAM upgrade I'd just done was so simple I thought I'd crack right on with it. This one not so simple, however. <a href="https://www.piriform.com/speccy" target="_blank">Speccy</a> reported that the 4GB was being provided by a single RAM module, and there was a free slot. Realised that to get to the RAM slots you have to take the whole laptop apart! Thanks, ASUS. Gotta unscrew and disconnect the keyboard, battery, hard drive, DVD drive, CPU, etc.. EVERYTHING - since the RAM slots are on the underside of the motherboard.</p>
-	<p>> I says "slots"... but it actually transpired that Speccy was not actually reporting the truth! There is ONE slot only, and therefore no capacity for additional RAM modules. So I had to put everything back together and reboot it exactly as it was before. That little pointless exercise probably took me about 45-55 minutes. #FML</p>
-</p>
-</article>
-<hr/>
-<article id="20170216">
-	<h4>16 February 2017</h4>
-	<p>> Working on a new project today - another WordPress build, but this one does not look as complex as the last one: it's not multilingual with a RTL language for a start! Created custom post types and added new posts and ACFs for them, then was able to put together the menu structure for them [which mixes pages with custom posts]. A lot of time spent on creating the ACFs for all the different page sections, then worked on the header and displaying the nav menus in approximately the desired format [although I don't have the PSDs yet], which included sorting out a mobile sidebar menu which animates in from the right and 'pushes' the main page content off-screen upon clicking the burger icon. I was directed to some code online which does this sort of effect without any JS [just CSS] so I modified/customised that to get the effect that I want. Pretty swish!</p>
-	<p>> Hoping to be able to re-use a lot of code that I've already created for previous sites to help get this project sorted a bit quicker :)</p>
-</p>
-</article>
-<hr/>
-<article id="20170214">
-	<h4>14 February 2017</h4>
-	<p>> Discussing the EN/AR site with the Project Manager, we were concerned that the functionality of the secondary/tertiary navigation menus would not be able to deal with more pages than were specified in the PSDs, so we decided that we ought to cover that possibility/functionality. I figured out a way to dynamically create elements which contain the expanding boxes for the user to interact with - but only on menu items which have a sub-menu to reveal - and position these in the correct place; and then ensure that each of those boxes performs an action to reveal the correct corresponding sub-menu, AND make sure that any & all of the content which follows is offset by the correct vertical amount. Started off with the mobile nav menu, and once I was happy with that I worked on the desktop menu. AND THEN checked and tweaked loads of CSS to get everything looking right on the Arabic version.</p>
-	<p>> Spending a lot of extra time on this project with tweaks/enhancements, but I am happy with the end results that I am coming out with. Lots of nice jQuery going on, and cool to have put together a menu system that works in this way - I'm sure that code will come in handy in the future.</p>
-</article>
-<hr/>
-<article id="20170213">
-	<h4>13 February 2017</h4>
-	<p>> Another day working the EN/AR site. Main thing to tackle today was to get the mobile menu working with the 2nd & 3rd levels of options down, which took a fair amount of poking around with jQuery and CSS to get the right result. Was a little confused why some of the divs were overlapping each other and just plain not working as I thought they would when I set them to 'float', so there was a good deal of manual positioning going on, and some thought required to get the showing & hiding of various sections working correctly in cases where, for example, the main menu is closed whilst the 2nd/3rd tier sub-menu is still open. Got it all sorted out after a couple of hours, then moved on to the finishing touches of the CSS for the desktop version of the sub-menus, including a couple of little pointy arrow bits which needed positioning in exactly the right places and adjusting slightly for each screen size.</p>
-	<p>> AND THEN sorting out all the CSS for the Arabic version of the sections I'd just been working on. A couple of head-scratchy moments in figuring out how to compensate for the RTL behaviour, especially with the pointy arrows.</p>
-</article>
-<hr/>
-<article id="20170211">
-	<h4>11 February 2017</h4>
-	<p>> Was rummaging about in the loft today and found a spare HDTV that was no longer being used [having been replaced by larger TVs]. Checked the inputs and realised it could be used with my existing cables to display my desktop computer screen. My existing monitor isn't especially small, but not as large as a 26" telly! The colours/brightness need tweaking a bit, but other than that it's pretty good! :D</p>
-</article>
-<hr/>
-<article id="20170210">
-	<h4>10 February 2017</h4>
-	<p>> More work on the EN/AR site today: working on various little tweaks, bug fixes, niggles, and getting the local site to a point where I felt happy that it was ready for QA. Then transferring all the site files & DB to a transferable install on WPEngine for staging. The staging environment not working properly straight away. Despite copying everything over from local the WPML plug-in still needed configuring "for first use", and several of the ACF image fields needed repopulating. Couple of other issues/bugs moving onto the different environment which needed investigating and fixing before I was finally able to say it was QA-ready in the early afternoon, and then had some info from the client with some updated content.</p>
-</article>
-<hr/>
-<article id="20170209">
-	<h4>09 February 2017</h4>
-	<p>> Our broadband router at home is several years old and extremely annoying! For the last few months [or more] it would not be uncommon for it to lose the broadband connexion and require turning off & on again. A few weeks ago we decided that enough was enough and shopped around for a new broadband deal.</p>
-	<p>> We were switched over onto our new fibre broadband today, which had the effect that we couldn't access the Internet at all with our existing router, so I spent some of this evening after work installing the new router [which had arrived last week] and setting it up with the WiFi, DHCP & other settings. Then tested the download speed, of course! What animal would install a new router on a new broadband package and NOT test how much faster it is?!? Result: approx 35Mb/s - around twice as fast as we were getting before. Woop woop! Not that we particularly upgraded for the download speed, it was mainly just to get a router that didn't need kicking 3 times a day!</p>
-</article>
-<hr/>
-<article id="20170208">
-	<h4>08 February 2017</h4>
-	<p>> Still working on the EN/AR site, and have created a page that displays a Custom Post Type which has it's own Taxonomy attached to it, and the Categories listed on the page to allow the user to select one of the Categories to filter which of the CPTs are shown. Found that there is actually a WordPress bug that doesn't allow the "ALL" button to link to the correct root page for a custom taxonomy. Devised a quick solution to get around this by adding an extra couple of ACFs and replacing the 'broken' ALL button with one that has the correct target link assigned to it.</p>
-	<p>> On the 'Gallery' section of the site, got the gallery images displaying in columns for desktops and at full width for mobile, then worked on getting the hover-effect overlays positioned and working correctly, and with the styling in place. Then the next part was creating a lightbox effect so that when you click an image a larger version pops up on the screen, with the rest of the page being 'dimmed'.</p>
-	<p>> Sorted that out with some CSS, absolute positioning, bit of jQuery to show/hide stuff. The extra fun part about that was in figuring out how to set up some next/previous arrows to allow the user to quickly select adjacent images. Hit on the idea of looping through the WP query separately to build a PHP array of image URLs, and then assigning the current_post number to each of the image-containing &lt;div&gt;s that are clicked to open up the lightbox. The idea being that if you know which item in the array you are currently viewing it is easy to know which item in the array is immediately before/after.</p>
-	<p>> A bit tricky to then figure out how to use the current_post data with JavaScript to ensure that the correct image is displayed initially - ended up changing the array to a JavaScript type, but I got there in the end. Very pleased with my work on this - was a good problem to solve! Once working on the main gallery page, I copied a lot of the code onto the correct template file for the view-by-category page. Plus figured out how to customise the WP query to actually only display the images from the category specified. Once that was working I duplicated the English ACFs & gallery pages into Arabic and RTL'd all the styling as required, and then optimised the code a bit to pull in template parts rather than duplicating the gallery output code.</p>
-	<p>> Productive and fun day! Lots of new problems solved :D</p>
-</article>
-<hr/>
-<article id="20170201">
-	<h4>01 February 2017</h4>
-	<p>> Had a day working on the EN/AR multilingual site that I am building. First thing I tackled was some CSS that had been niggling away in my mind in the wee hours of the morning, and I managed to come up with a good solution after a little bit of trial & improvement. The problem was a div which needed a hover effect to give it a semi-transparent coloured overlay and with some opaque text on top. I had tried sorting it with jQuery mouseover/mouseout events but I was struggling to stop it flickering when hovering over the text that is revealed. Resolved it using just CSS and ditching the jQuery.</p>
-	<p>> Also I'd been struggling to get the text centred horizontally & vertically: again I was trying to be clever with jQuery yesterday and figure out how I could put calculations in that would re-evaluate the x & y values upon resize etc. Ended up sorting out a solution for this in pure CSS too - so the first hour was quite satisfying!</p>
-	<p>> Worked some more with the multilingual plug-in that we are using for the site. Now I've got one page all sorted in English I wondered how easy it would be to convert to Arabic. The plug-in didn't seem to work perfectly straight away - took me some time to sort out an issue with certain ACFs not loading - especially images! Even after importing & translating the ACFs I was getting strange behaviour. Eventually resolved it by removing every item from each Field Group on the Arabic backend and then copying the Field Contents back over from the English version. There does indeed seem to be some slight incompatibilty issues with <a href="https://www.advancedcustomfields.com/" target="_blank">Advanced Custom Fields</a> and <a href="https://wpml.org/" target="_blank">WPML</a>!</p>
 </article>
