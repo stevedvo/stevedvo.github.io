@@ -1,6 +1,4 @@
-﻿<!DOCTYPE html>
-
-<html lang="en">
+﻿<html lang="en">
 
 	<head>
 		<meta name="description" content="Useful links and resources for information and updates on current events."/>

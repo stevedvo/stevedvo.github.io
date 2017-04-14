@@ -1,6 +1,4 @@
-﻿<!DOCTYPE html>
-
-<html lang="en">
+﻿<html lang="en">
 
 	<head>
 		<meta name="description" content="Animation using the HTML5 Canvas and JavaScript."/>

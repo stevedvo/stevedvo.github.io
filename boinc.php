@@ -1,6 +1,4 @@
-﻿<!DOCTYPE html>
-
-<html lang="en">
+﻿<html lang="en">
 
 	<head>
 		<meta name="description" content="My interest and history with participation in distributed computing projects."/>
@@ -8,7 +6,7 @@
 			$page_title = "stevedeveaux.com";
 			include ("includes/headinfo.html");
 		?>
-		<img src="http://boincstats.com/signature/-1/user/2736906/sig.png" style="display:none;"/>
+		<!-- <img src="http://boincstats.com/signature/-1/user/2736906/sig.png" style="display:none;"/> -->
 		<title><?php echo $page_title; ?></title>
 		<?php
 			include ("javascript/globalJS.php");

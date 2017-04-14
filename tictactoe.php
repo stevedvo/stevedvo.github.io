@@ -1,6 +1,4 @@
-﻿<!DOCTYPE html>
-
-<html lang="en">
+﻿<html lang="en">
 
 	<head>
 		<meta name="description" content="Tic Tac Toe / Noughts & Crosses game made using JavaScript."/>

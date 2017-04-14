@@ -1,6 +1,4 @@
-﻿<!DOCTYPE html>
-
-<html lang="en">
+﻿<html lang="en">
 
 	<head>
 		<meta name="description" content="Information about Sepsis (aka septicaemia / blood-poisoning): what it is, how it is diagnosed, and how it is treated. More info from UK Sepsis Trust."/>

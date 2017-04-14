@@ -1,6 +1,4 @@
-﻿<!DOCTYPE html>
-
-<html lang="en">
+﻿<html lang="en">
 
 	<head>
 		<meta name="description" content="Astronomy Pictures, mostly taken through my Orion SkyQuest XT8 Dobsonian reflecting telescope using my Nikon E4500 digital camera."/>
