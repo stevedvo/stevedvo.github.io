@@ -1,4 +1,4 @@
-﻿<html lang="en">
+<html lang="en">
 
 	<head>
 		<meta name="description" content="Puzzles to test the brain."/>
@@ -510,14 +510,14 @@
 
 			function preRender ()
 			{
-				var pages = ["animation", "astropics", "boinc", "index", "links", "sepsis", "tictactoe"];
+				var pages = ["animation", "astropics", "boinc", "home", "links", "sepsis", "tictactoe"];
 				
 				for (i=0 ; i<pages.length ; i++)
 				{
 					var pre = document.createElement ("link");
 					pre.rel = "prerender prefetch dns-prefetch";
 
-					pre.href = pages[i]+".php";
+					pre.href = "includes/"+pages[i]+".php";
 					document.getElementsByTagName("head")[0].appendChild(pre);					
 				}
 			}

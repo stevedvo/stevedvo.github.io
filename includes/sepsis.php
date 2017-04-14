@@ -1,12 +1,11 @@
-﻿<html lang="en">
+<html lang="en">
 
 	<head>
-		<meta name="description" content="My interest and history with participation in distributed computing projects."/>
+		<meta name="description" content="Information about Sepsis (aka septicaemia / blood-poisoning): what it is, how it is diagnosed, and how it is treated. More info from UK Sepsis Trust."/>
 		<?php
 			$page_title = "stevedeveaux.com";
 			include ("includes/headinfo.html");
 		?>
-		<!-- <img src="http://boincstats.com/signature/-1/user/2736906/sig.png" style="display:none;"/> -->
 		<title><?php echo $page_title; ?></title>
 		<?php
 			include ("javascript/globalJS.php");
@@ -17,41 +16,41 @@
 		<script type="text/javascript">
 			var AJAXResp;
 
-			function init_boinc ()
+			function init_sepsis ()
 			{
-				$("#boincsections").selectmenu(
+				$("#sepsissections").selectmenu(
 				{
 					change: function(event, data)
 					{
-						$(".boincsection").css('display', 'none');
-						$("#"+$("#boincsections option:selected").val()).css('display', 'block');			
+						$(".sepsissection").css('display', 'none');
+						$("#"+$("#sepsissections option:selected").val()).css('display', 'block');			
 					}
 				});
 			}
 
 			function preRender ()
 			{
-				var pages = ["animation", "astropics", "index", "links", "maths", "sepsis", "tictactoe"];
+				var pages = ["animation", "astropics", "boinc", "home", "links", "maths", "tictactoe"];
 				
 				for (i=0 ; i<pages.length ; i++)
 				{
 					var pre = document.createElement ("link");
 					pre.rel = "prerender prefetch dns-prefetch";
 
-					pre.href = pages[i]+".php";
+					pre.href = "includes/"+pages[i]+".php";
 					document.getElementsByTagName("head")[0].appendChild(pre);					
 				}
 			}
 
 			function doAJAX ()
 			{
-				dest = ["asteroids", "climate", "cosmology", "einstein", "lhc", "milkyway", "seti", "yoyo"];
+				dest = ["Diagnosis", "Treatment", "Goals", "Links"];
 				sections = [];
 
 				for (j=0 ; j<dest.length ; j++)
 				{
 					sections[j] = new XMLHttpRequest();
-					sections[j].open("GET", "includes/boinc_"+dest[j]+".php", true);
+					sections[j].open("GET", "includes/sepsis_"+(j+2)+".php", true);
 					sections[j].send(null);
 				}
 
@@ -88,59 +87,14 @@
 					{
 						AJAXResp = sections[3].responseText;
 						$("#"+dest[3]+"_menu, #"+dest[3]+"_tab").html(AJAXResp);
-					}
-				}
-
-				sections[4].onreadystatechange = function()
-				{
-					if ((sections[4].readyState === 4) && (sections[4].status === 200))
-					{
-						AJAXResp = sections[4].responseText;
-						$("#"+dest[4]+"_menu, #"+dest[4]+"_tab").html(AJAXResp);
-					}
-				}
-
-				sections[5].onreadystatechange = function()
-				{
-					if ((sections[5].readyState === 4) && (sections[5].status === 200))
-					{
-						AJAXResp = sections[5].responseText;
-						$("#"+dest[5]+"_menu, #"+dest[5]+"_tab").html(AJAXResp);
-					}
-				}
-
-				sections[6].onreadystatechange = function()
-				{
-					if ((sections[6].readyState === 4) && (sections[6].status === 200))
-					{
-						AJAXResp = sections[6].responseText;
-						$("#"+dest[6]+"_menu, #"+dest[6]+"_tab").html(AJAXResp);
-					}
-				}
-
-				sections[7].onreadystatechange = function()
-				{
-					if ((sections[7].readyState === 4) && (sections[7].status === 200))
-					{
-						AJAXResp = sections[7].responseText;
-						$("#"+dest[7]+"_menu, #"+dest[7]+"_tab").html(AJAXResp);
 						$(".vert_tabs").tabs("refresh");
 					}
 				}
 
 				preRender();
 			}
-			document.addEventListener("DOMContentLoaded", init_boinc, false);
+			document.addEventListener("DOMContentLoaded", init_sepsis, false);
 		</script>
-		<style type="text/css">
-			#boinc_acronym
-			{
-				border: thin yellow solid;
-				float: left;
-				margin: 0px 10px 10px 0px;
-				padding: 5px 5px 0px 5px;
-			}
-		</style>
 	</head>
 
 	<body onload = doAJAX()>
@@ -149,10 +103,10 @@
 				<img id="gradfill" src="images/gradfill.png" alt="gradfill"/>
 				<?php
 					include ("includes/header.html");
-					include ("includes/boinc.html");
+					include ("includes/sepsis.html");
 				?>
 			</div>
-		</div>		
+		</div>
 	</body>
 
 </html>

@@ -1,4 +1,4 @@
-﻿<html lang="en">
+<html lang="en">
 
 	<head>
 		<meta name="description" content="Useful links and resources for information and updates on current events."/>
@@ -6,11 +6,11 @@
 			$page_title = "stevedeveaux.com";
 			include ("includes/headinfo.html");
 		?>
-		<img src="images/bbc_news.jpg" style="display:none;"/>
+<!-- 		<img src="images/bbc_news.jpg" style="display:none;"/>
 		<img src="images/bbc_weather.jpg" style="display:none;"/>
 		<img src="images/wikipedia.jpg" style="display:none;"/>
 		<img src="images/wiktionary.jpg" style="display:none;"/>
-		<title><?php echo $page_title; ?></title>
+ -->		<title><?php echo $page_title; ?></title>
 		<?php
 			include ("javascript/globalJS.php");
 			include ("css/globalCSS.php");
@@ -20,14 +20,14 @@
 
 			function preRender ()
 			{
-				var pages = ["animation", "astropics", "boinc", "index", "maths", "sepsis", "tictactoe"];
+				var pages = ["animation", "astropics", "boinc", "home", "maths", "sepsis", "tictactoe"];
 				
 				for (i=0 ; i<pages.length ; i++)
 				{
 					var pre = document.createElement ("link");
 					pre.rel = "prerender prefetch dns-prefetch";
 
-					pre.href = pages[i]+".php";
+					pre.href = "includes/"+pages[i]+".php";
 					document.getElementsByTagName("head")[0].appendChild(pre);					
 				}
 			}

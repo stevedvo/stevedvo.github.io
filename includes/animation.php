@@ -1,4 +1,4 @@
-﻿<html lang="en">
+<html lang="en">
 
 	<head>
 		<meta name="description" content="Animation using the HTML5 Canvas and JavaScript."/>
@@ -92,14 +92,14 @@
 
 			function preRender ()
 			{
-				var pages = ["astropics", "boinc", "index", "links", "maths", "sepsis", "tictactoe"];
+				var pages = ["astropics", "boinc", "home", "links", "maths", "sepsis", "tictactoe"];
 				
 				for (i=0 ; i<pages.length ; i++)
 				{
 					var pre = document.createElement ("link");
 					pre.rel = "prerender prefetch dns-prefetch";
 
-					pre.href = pages[i]+".php";
+					pre.href = "includes/"+pages[i]+".php";
 					document.getElementsByTagName("head")[0].appendChild(pre);					
 				}
 			}

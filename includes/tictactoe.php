@@ -1,4 +1,4 @@
-﻿<html lang="en">
+<html lang="en">
 
 	<head>
 		<meta name="description" content="Tic Tac Toe / Noughts & Crosses game made using JavaScript."/>
@@ -230,14 +230,14 @@
 
 			function preRender ()
 			{
-				var pages = ["astropics", "animation", "boinc", "index", "links", "maths", "sepsis"];
+				var pages = ["astropics", "animation", "boinc", "home", "links", "maths", "sepsis"];
 				
 				for (i=0 ; i<pages.length ; i++)
 				{
 					var pre = document.createElement ("link");
 					pre.rel = "prerender prefetch dns-prefetch";
 
-					pre.href = pages[i]+".php";
+					pre.href = "includes/"+pages[i]+".php";
 					document.getElementsByTagName("head")[0].appendChild(pre);					
 				}
 			}

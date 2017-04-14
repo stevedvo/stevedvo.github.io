@@ -6,31 +6,31 @@
 	switch ($page)
 	{
 		case '':
-			$load = 'home.php';
+			$load = 'includes/home.php';
 			break;
 		case 'home':
-			$load = 'home.php';
+			$load = 'includes/home.php';
 			break;
 		case 'animation':
-			$load = 'animation.php';
+			$load = 'includes/animation.php';
 			break;
 		case 'astropics':
-			$load = 'astropics.php';
+			$load = 'includes/astropics.php';
 			break;
 		case 'boinc':
-			$load = 'boinc.php';
+			$load = 'includes/boinc.php';
 			break;
 		case 'links':
-			$load = 'links.php';
+			$load = 'includes/links.php';
 			break;
 		case 'maths':
-			$load = 'maths.php';
+			$load = 'includes/maths.php';
 			break;
 		case 'sepsis':
-			$load = 'sepsis.php';
+			$load = 'includes/sepsis.php';
 			break;
 		case 'tictactoe':
-			$load = 'tictactoe.php';
+			$load = 'includes/tictactoe.php';
 			break;
 		default:
 			$load = 'includes/404.html';

@@ -1,11 +1,12 @@
-﻿<html lang="en">
+<html lang="en">
 
 	<head>
-		<meta name="description" content="Astronomy Pictures, mostly taken through my Orion SkyQuest XT8 Dobsonian reflecting telescope using my Nikon E4500 digital camera."/>
+		<meta name="description" content="My interest and history with participation in distributed computing projects."/>
 		<?php
 			$page_title = "stevedeveaux.com";
 			include ("includes/headinfo.html");
 		?>
+		<!-- <img src="http://boincstats.com/signature/-1/user/2736906/sig.png" style="display:none;"/> -->
 		<title><?php echo $page_title; ?></title>
 		<?php
 			include ("javascript/globalJS.php");
@@ -16,41 +17,41 @@
 		<script type="text/javascript">
 			var AJAXResp;
 
-			function init_astropics ()
+			function init_boinc ()
 			{
-				$("#astrosections").selectmenu(
+				$("#boincsections").selectmenu(
 				{
 					change: function(event, data)
 					{
-						$(".astrosection").css('display', 'none');
-						$("#"+$("#astrosections option:selected").val()).css('display', 'block');			
+						$(".boincsection").css('display', 'none');
+						$("#"+$("#boincsections option:selected").val()).css('display', 'block');			
 					}
 				});
 			}
 
 			function preRender ()
 			{
-				var pages = ["animation", "boinc", "index", "links", "maths", "sepsis", "tictactoe"];
+				var pages = ["animation", "astropics", "home", "links", "maths", "sepsis", "tictactoe"];
 				
 				for (i=0 ; i<pages.length ; i++)
 				{
 					var pre = document.createElement ("link");
 					pre.rel = "prerender prefetch dns-prefetch";
 
-					pre.href = pages[i]+".php";
+					pre.href = "includes/"+pages[i]+".php";
 					document.getElementsByTagName("head")[0].appendChild(pre);					
 				}
 			}
 
 			function doAJAX ()
 			{
-				dest = ["Sun", "Moon", "Planets", "Constellations", "Events", "Other"];
+				dest = ["asteroids", "climate", "cosmology", "einstein", "lhc", "milkyway", "seti", "yoyo"];
 				sections = [];
 
 				for (j=0 ; j<dest.length ; j++)
 				{
 					sections[j] = new XMLHttpRequest();
-					sections[j].open("GET", "includes/astropics_"+(j+1)+".php", true);
+					sections[j].open("GET", "includes/boinc_"+dest[j]+".php", true);
 					sections[j].send(null);
 				}
 
@@ -105,52 +106,39 @@
 					{
 						AJAXResp = sections[5].responseText;
 						$("#"+dest[5]+"_menu, #"+dest[5]+"_tab").html(AJAXResp);
+					}
+				}
+
+				sections[6].onreadystatechange = function()
+				{
+					if ((sections[6].readyState === 4) && (sections[6].status === 200))
+					{
+						AJAXResp = sections[6].responseText;
+						$("#"+dest[6]+"_menu, #"+dest[6]+"_tab").html(AJAXResp);
+					}
+				}
+
+				sections[7].onreadystatechange = function()
+				{
+					if ((sections[7].readyState === 4) && (sections[7].status === 200))
+					{
+						AJAXResp = sections[7].responseText;
+						$("#"+dest[7]+"_menu, #"+dest[7]+"_tab").html(AJAXResp);
 						$(".vert_tabs").tabs("refresh");
-						$(".thumb").attr('title', 'Click to see larger version');
-						$(".thumb").click(function()
-						{
-							lrgStr = $(this).attr('src').replace("thb", "lrg");
-							lrgImg = window.open(lrgStr, "PopUp", "top=0,left=0,width="+window.screen.availWidth+",height="+window.screen.availHeight+",location=no");
-						});
 					}
 				}
 
 				preRender();
 			}
-			document.addEventListener("DOMContentLoaded", init_astropics, false);
+			document.addEventListener("DOMContentLoaded", init_boinc, false);
 		</script>
 		<style type="text/css">
-			.screenshot-container, .astropic-container
+			#boinc_acronym
 			{
-				padding-bottom: 30px;
-			}
-
-			.astropic-container
-			{
-				margin-top: 10px;
-			}
-
-			.screenshot, .thumb, .astropic
-			{
-				width: 100%;
-			}
-
-			@media only screen and (max-width: 479px)
-			{
-				.screenshot-container, .astropic-container
-				{
-					float: left;
-					width: 50%;
-				}
-			}
-
-			@media only screen and (min-width: 480px) and (max-width: 767px)
-			{
-				.screenshot-container, .astropic-container
-				{
-					float: left;
-					width: 33.33333333%;
-				}
+				border: thin yellow solid;
+				float: left;
+				margin: 0px 10px 10px 0px;
+				padding: 5px 5px 0px 5px;
 			}
 		</style>
 	</head>
@@ -161,7 +149,7 @@
 				<img id="gradfill" src="images/gradfill.png" alt="gradfill"/>
 				<?php
 					include ("includes/header.html");
-					include ("includes/astropics.html");
+					include ("includes/boinc.html");
 				?>
 			</div>
 		</div>		
