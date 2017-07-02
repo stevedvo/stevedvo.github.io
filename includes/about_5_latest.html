@@ -4,9 +4,17 @@
 </article>
 <hr/> -->
 
+<article id="20170331">
+	<h4>31 March 2017</h4>
+	<p>> Had a task today to sort out a couple of requested improvements to a lightbox gallery that I'd coded previously on a website build. The client asked if we could put in a smooth animated effect when changing images. The current behaviour was instant, since the images changed by having JavaScript dynamically amend the src attribute of the image element in the lightbox. Didn't think I could make that transition in any way, but found an alternative by recoding it to load all of the images on page refresh but have them all hidden and positioned absolutely. Then only displaying the image clicked on, or the prev/next image when clicking the appropriate buttons. Needed some extra CSS to sort out the different position styles and the knock-on effects, but I got it done. Used the jQuery fadeIn & fadeOut methods to get the transition, and the overall result works well. For improved page-loading times, I could have looked at lazy-loading / AJAX, but there is not likely to be that many images in this particular instance.</p>
+	<p>> On my main current build project, I had some fun sorting out the logic required to display a WordPress news/blog summary page, whereby the individual article previews are grouped in rows of three. The first row of three has a large image on the left and two images stacked above one another on the right, then the 2nd row has this arrangement reversed, and the rows alternate in this way. So I figured out how to loop through the posts and group them in sets of three to get the rows, alternate the row class to determine the styling, and insert all the HTML in the right places to make sure the page is built correctly. Good little challenge, that.</p>
+</article>
+<hr/>
 <article id="20170329">
 	<h4>29 March 2017</h4>
 	<p>> Was awake very early this morning and not able to get back to sleep, so decided to get up, make a large mug of coffee, and scratch the itch that is the 'un-optimised images' that is affecting my website's PageSpeed Insights score. Set myself the task of looking into each of the images that PageSpeed Insights is reporting needs compressing/resizing: about a dozen in total. Opened them up Photoshop, resized to the max they would ever need to be, resaved the JPGs at a lower quality level [with very little noticeable effect], then re-tinified them on <a href="https://tinypng.com/" target="_blank">TinyPNG</a>. Committed changes to my repo, then SSH'd into the server and pulled the changes onto the live site. Result is that my PageSpeed score has now increased from 72 all the way up to around 96!! Yippee! Very happy with my mornings work :D :D</p>
+	<p>> Spent some time at ACTUAL work having a play with a Digital Ocean droplet, figuring out how to SSH into the server and use Git in the same way that I'm doing with my own website on that server, to remove the need to continually use SFTP and never know what the most recently changed files are. Made some good progress with it: managed to get an SSH connexion into the server and used apt-get to install Git, so at least a local repo is set up. Next job will be to connect this to the remote master repo so that the server and the master branch can be kept in sync - but that can come later.</p>
+	<p>> Did some work on another site that I am developing to understand how the Bootstrap modal works. It's not too difficult to get set up, and then fairly easy to customise all the styling as required.</p>
 </article>
 <hr/>
 <article id="20170327">
